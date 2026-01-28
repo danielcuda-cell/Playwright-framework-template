@@ -1,8 +1,9 @@
-import { defineConfig, devices } from '@playwright/test';
 import { loadEnv } from './envLoader';
 
 // Loads the correct .env
 loadEnv();
+
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -42,15 +43,8 @@ export default defineConfig({
       name: 'api-test',
       testMatch: ['**/api/tests/**/*.spec.ts'],
       use: {
-        baseURL: process.env.API_URL
+        baseURL: process.env.API_BASE_URL
       }
     }
   ],
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
 });

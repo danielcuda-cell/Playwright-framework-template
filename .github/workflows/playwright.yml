@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
-    # Matriz de navegadores (corre en paralelo)
+    # Browsers matrix (runs in parallel)
     strategy:
       fail-fast: false
       matrix:
@@ -36,7 +36,7 @@ jobs:
       run: |
         npx playwright test --project=${{ matrix.browser }} --reporter=junit,html
 
-    # Subir reportes JUnit (test results)
+    # Upload JUnit reports (test results)
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -44,7 +44,7 @@ jobs:
         path: test-results/
         retention-days: 30
 
-    # Subir videos/screenshots/traces
+    # Upload videos/screenshots/traces
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -57,7 +57,7 @@ jobs:
           **/screenshot.png
         retention-days: 30
 
-    # Subir reporte HTML
+    # Upload html report
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
