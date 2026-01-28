@@ -256,7 +256,7 @@ it is a standard automation framework for the company.
 
 ---
 
-📎 Final Notes
+## 📎 Final Notes
 
 Use this repository as the starting point for all automation initiatives.
 Any improvements made here should benefit all future projects.
