@@ -175,12 +175,21 @@ test.describe('@api @smoke', () => {
   // tests
 });
 ```
----
-
 Run tests by tag:
 ```ts
 npx playwright test --grep @smoke
 ```
+
+---
+
+Run Playwright UI Mode:
+```ts
+npx playwright test --ui
+```
+
+Run Specific Proyect:
+```ts
+npx playwright test --project="project-name"
 
 ---
 
