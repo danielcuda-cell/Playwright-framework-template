@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "playwright test",
     "record-test": "playwright codegen",
     "show-report": "playwright show-report",
-    "test-and-report": "playwright test && playwright show-report"
+    "test-and-report": "playwright test && playwright show-report",
+    "allure:report": "powershell -Command \"if (Test-Path allure-report/history) { Copy-Item allure-report/history allure-results -Recurse -Force }; npx allure generate allure-results -o allure-report --clean\"",
+    "allure:open": "npx allure open allure-report"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +17,9 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1",
-    "ajv": "^8.17.1"
+    "ajv": "^8.17.1",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5"
   },
   "dependencies": {
     "ajv-formats": "^3.0.1",

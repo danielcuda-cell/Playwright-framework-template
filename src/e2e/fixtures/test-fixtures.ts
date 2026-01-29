@@ -11,7 +11,6 @@ export const test = base.extend<MyFixtures>({
         const loginPage = new LoginPage(page);
         await use(loginPage);
     },
-
 });
 
 export { expect } from '@playwright/test';

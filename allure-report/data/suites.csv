@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","18986","Wrong Login","chrome-e2e","2026-01-29","passed","2026-01-29","","e2e\tests\login.spec.ts","",""
+"","1099","POST /users - create user","api-test","2026-01-29","passed","2026-01-29","Resources API","api\tests\resources\resources.spec.ts","",""

@@ -13,7 +13,7 @@ export function loadEnv() {
 
   dotenv.config({ path: envPath });
 
-  // Validación de variables importantes
+  // Important variables validation
   const requiredVars = ['BASE_URL', 'API_BASE_URL'];
   requiredVars.forEach(v => {
     if (!process.env[v]) {
