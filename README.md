@@ -2,7 +2,7 @@
 
 This repository is a **company-wide automation testing template** built with **Playwright** and **TypeScript**, designed to be reused across projects and teams.
 
-Its goal is to provide a **ready-to-use, scalable, and maintainable** automation foundation so that any new project can start testing immediately without reinventing the wheel.
+Its goal is to provide a **ready-to-use, scalable, and maintainable** automation foundation so that any new project can start testing immediately without reinventing the wheel.<br><br>
 
 ---
 
@@ -12,7 +12,7 @@ Its goal is to provide a **ready-to-use, scalable, and maintainable** automation
 - Enable fast onboarding for new QA engineers
 - Separate test logic from business logic
 - Support both **UI (E2E)** and **API** testing
-- Be CI/CD ready from day one
+- Be CI/CD ready from day one<br><br>
 
 ---
 
@@ -21,18 +21,7 @@ Its goal is to provide a **ready-to-use, scalable, and maintainable** automation
 - Playwright
 - TypeScript
 - Node.js
-- dotenv
-
-
----
-
-
-# 🧪 Playwright Automation Template (UI + API)
-
-This repository is a **company-wide automation testing template** built with **Playwright** and **TypeScript**, designed to be reused across projects and teams.
-
-Its goal is to provide a **ready-to-use, scalable, and maintainable** automation foundation so that any new project can start testing immediately without reinventing the wheel.
-
+- dotenv<br><br>
 
 ---
 
@@ -81,7 +70,7 @@ src/
 - Route all API calls through clients
 - Validate API responses using schemas
 - Centralize test data and utilities
-- Reuse flows instead of duplicating steps
+- Reuse flows instead of duplicating steps<br><br>
 
 
 ---
@@ -99,7 +88,7 @@ API_BASE_URL=https://reqres.in/api
 API_TOKEN=dev_api_token
 ```
 
-The `envLoader.ts` file automatically loads the correct environment configuration.
+The `envLoader.ts` file automatically loads the correct environment configuration.<br><br>
 
 ---
 
@@ -110,7 +99,7 @@ The project defines **separate Playwright projects** for UI and API testing:
 - `chrome-e2e` → UI End-to-End tests
 - `api-test` → API tests
 
-Each project has its own `baseURL`, allowing independent execution and configuration.
+Each project has its own `baseURL`, allowing independent execution and configuration.<br><br>
 
 ---
 
@@ -128,7 +117,7 @@ Benefits:
 
 * Single responsibility per client
 * Easy maintenance when APIs change
-* Cleaner and more readable tests
+* Cleaner and more readable tests<br><br>
 
 ---
 
@@ -140,20 +129,20 @@ This approach:
 
 * Detects breaking API changes early
 * Improves test reliability
-* Avoids fragile assertions
+* Avoids fragile assertions<br><br>
 
 ---
 
-### 🧪 Test Organization
-## UI Tests (E2E)
+## 🧪 Test Organization
+### UI Tests (E2E)
 
 * Implemented using Page Object Model
 * Reusable flows live in e2e/tests/common
-* Tests focus on user behavior, not UI details
+* Tests focus on user behavior, not UI details<br><br>
 
 ---
 
-## API Tests
+### API Tests
 
 * Organized by resource
 
@@ -163,7 +152,7 @@ Covers:
 * GET
 * GET ALL
 * PUT
-* DELETE
+* DELETE<br><br>
 
 ---
 
@@ -190,23 +179,116 @@ npx playwright test --ui
 Run Specific Proyect:
 ```ts
 npx playwright test --project="project-name"
+```
 
 ---
 
 
 ## 📊 Reporting
+Allure Report with Local History
+This project uses Allure Report to visualize test execution results, with local execution history enabled (trends, duration, retries, etc.).
 
-Default Playwright HTML report
+### 🧩 Prerequisites
 
-The template is prepared for future integration with:
+* Node.js (v18+ recommended)
+* Java JDK (required by Allure)
+* Java must be accessible from the command line:
+```ts
+java --version
+```
+* npm (comes with Node.js)
 
-Allure
+### 📦 Dependencies Used
 
+* @playwright/test
+* allure-playwright
+* allure-commandline (via npx)
+
+### ▶️ Recommended Execution Flow
+
+To ensure Allure history works correctly, it is important NOT to delete the allure-results or allure-report directories.
+
+# Recommended flow:
+
+* npm run test
+* npm run allure:report
+* npm run allure:open
+
+### 🗂️ How History Works
+
+Allure does not store execution history automatically.
+History is preserved by reusing the history folder between executions.
+
+The allure:report script performs the following steps:
+
+* Copies the previous history:
+allure-report/history → allure-results/history
+
+
+* Generates a new report:
+allure-results → allure-report
+
+This enables:
+
+* 📈 Trends
+* ⏱ Duration Trends
+* 🔁 Retry / Flaky tests
+  
+### 📁 Expected Folder Structure
+
+After multiple executions, the structure should look like:
+```ts
+allure-results/
+ ├── *.json
+ └── history/
+     ├── history.json
+     ├── history-trend.json
+     ├── duration-trend.json
+     └── retry-trend.json
+
+allure-report/
+ ├── index.html
+ └── history/
+     ├── history.json
+     ├── history-trend.json
+     ├── duration-trend.json
+     └── retry-trend.json
+```
+
+### 👀 Where to See the History in the UI
+
+Once the report is opened (npm run allure:open), history is available in:
+
+Overview → Trends
+
+Overview → Duration Trends
+
+Retries / Flaky tests
+
+### ℹ️ Allure does not display a list of executions (runs).
+Execution history is shown in an aggregated format using trend charts.
+
+### ❗ Important Rules
+
+* ❌ Do not delete allure-report
+* ❌ Do not delete allure-results
+* ❌ Do not run allure open without regenerating the report
+
+Deleting these directories will reset the execution history.
+
+### 🚀 Recommended Usage
+
+### Remember, always use the full flow to avoid manual mistakes:
+
+* npm run test
+* npm run allure:report
+* npm run allure:open<br><br>
+  
 ---
 
 ## CI artifacts
 
-External reporting tools
+External reporting tools<br><br>
 
 ---
 
@@ -243,7 +325,7 @@ This template is designed to:
 * Scale easily with CI/CD pipelines
 
 This is not just a test repository —
-it is a standard automation framework for the company.
+it is a standard automation framework for the company.<br><br>
 
 ---
 
@@ -252,7 +334,7 @@ it is a standard automation framework for the company.
 * Do not bypass clients or page objects
 * Add new clients before adding new tests
 * Keep tests small and focused
-* DO NOT treat this template as the single source of truth. This template acts as a reference architecture to ensure consistency, while remaining flexible to adapt over time
+* DO NOT treat this template as the single source of truth. This template acts as a reference architecture to ensure consistency, while remaining flexible to adapt over time<br><br>
 
 ---
 
