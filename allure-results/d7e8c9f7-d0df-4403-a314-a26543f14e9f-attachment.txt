@@ -1,0 +1,12 @@
+{
+  statusCode: 200,
+  message: [ 'Get data successfully' ],
+  data: {
+    id: '1abfbd92-09ad-4c6e-9498-aea65a588574',
+    name: 'Test Company JP2gb3Zc',
+    slug: 'test-company-jp2gb3zc',
+    createdAt: '2026-02-23T21:50:23.961Z',
+    updatedAt: '2026-02-23T21:50:23.961Z',
+    status: 'active'
+  }
+}

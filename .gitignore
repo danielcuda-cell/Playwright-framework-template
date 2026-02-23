@@ -6,5 +6,5 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 
-# Environment variables
-# .env*
+Environment variables
+.env*

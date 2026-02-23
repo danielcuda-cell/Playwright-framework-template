@@ -1,0 +1,12 @@
+{
+  statusCode: 200,
+  message: [ 'Get data successfully' ],
+  data: {
+    id: 'e4b60980-87a7-462b-ad97-aa1c791fd6cb',
+    name: 'Test Company LvH1Ryg8',
+    slug: 'test-company-lvh1ryg8',
+    createdAt: '2026-02-23T21:27:39.611Z',
+    updatedAt: '2026-02-23T21:27:39.611Z',
+    status: 'active'
+  }
+}
