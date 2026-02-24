@@ -33,4 +33,12 @@ export class companiesClient {
             data: payload
         });
     }
+
+    async deleteCompany(companyId: string): Promise<APIResponse> {
+        return this.request.delete(`${this.baseUrl}/companies/${companyId}`, {});
+    }
+
+    async restoreDeletedCompany(companyId: string): Promise<APIResponse> {
+        return this.request.patch(`${this.baseUrl}/companies/${companyId}/restore`, {});
+    }
 }

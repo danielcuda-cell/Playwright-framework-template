@@ -6,7 +6,7 @@ import { validateSchema } from "../../utils/helper";
 import createCompanySchema from "../../schemas/companies/createCompany.schema.json";
 
 
-test("POST company @api @companies", async () => {
+test("CREATE company - happy path @api @companies", async () => {
     const apiContext = await getAuthApiContext();
     const companies = new companiesClient(apiContext);
     const companyName = "Test Company " + randomString();
@@ -28,7 +28,7 @@ test("POST company @api @companies", async () => {
 });
 
 
-test("POST company with name already in use @api @companies", async () => {
+test("CREATE company with name already in use @api @companies", async () => {
     const apiContext = await getAuthApiContext();
     const companies = new companiesClient(apiContext);
     const companyName = "Test Company " + randomString();
@@ -54,7 +54,7 @@ test("POST company with name already in use @api @companies", async () => {
 });
 
 
-test("POST company without auth token @api @companies", async () => {
+test("CREATE company without auth token @api @companies", async () => {
     const apiContext = await getNoAuthApiContext();
     const companies = new companiesClient(apiContext);
     const companyName = "Test Company " + randomString();

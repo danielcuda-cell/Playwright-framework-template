@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "required": ["statusCode", "message", "data"],
+  "properties": {
+    "statusCode": {
+      "type": "integer",
+      "const": 201
+    },
+    "message": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "createdAt",
+        "updatedAt",
+        "deletedAt",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deletedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
