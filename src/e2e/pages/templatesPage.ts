@@ -312,41 +312,44 @@ export class TemplatesPage {
 
     // ─── Rule content assertions (use in creation flow where dialog is accessible) ─
 
-    async assertVisibilityRuleTarget(dropdownTitle: string, optionLabel: string, targetName: string) {
+    /**
+     * Opens the rules dialog for an option and verifies all three rule types
+     * (Visibility, Filter, Autoselect) in a single dialog session.
+     */
+    async assertAllRulesForOption(
+        dropdownTitle: string,
+        optionLabel: string,
+        expected: {
+            visibility: { target: string };
+            filter: { target: string; allowedValues: string[] };
+            autoselect: { target: string; defaultValue: string };
+        },
+    ) {
         await this.openRulesDialogForOption(dropdownTitle, optionLabel);
         const dialog = this.page.getByRole('dialog');
+
+        // ── Visibility rule ──
         await dialog.getByRole('button', { name: 'Visibility', exact: true }).click();
-        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
-        await dialog.getByLabel('Close').click();
-    }
+        // Saved row must show the target component name
+        const visRow = dialog.getByRole('row').filter({ hasText: expected.visibility.target });
+        await expect(visRow).toBeVisible({ timeout: 5000 });
 
-    async assertFilterRuleContent(
-        dropdownTitle: string,
-        optionLabel: string,
-        targetName: string,
-        allowedValues: string[],
-    ) {
-        await this.openRulesDialogForOption(dropdownTitle, optionLabel);
-        const dialog = this.page.getByRole('dialog');
+        // ── Filter rule ──
         await dialog.getByRole('button', { name: 'Filter', exact: true }).click();
-        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
-        for (const value of allowedValues) {
-            await expect(dialog.getByText(value).first()).toBeVisible({ timeout: 5000 });
+        // Saved row must show the target component and every allowed value
+        const filterRow = dialog.getByRole('row').filter({ hasText: expected.filter.target });
+        await expect(filterRow).toBeVisible({ timeout: 5000 });
+        for (const value of expected.filter.allowedValues) {
+            await expect(filterRow.getByText(value).first()).toBeVisible({ timeout: 5000 });
         }
-        await dialog.getByLabel('Close').click();
-    }
 
-    async assertAutoselectRuleContent(
-        dropdownTitle: string,
-        optionLabel: string,
-        targetName: string,
-        defaultValue: string,
-    ) {
-        await this.openRulesDialogForOption(dropdownTitle, optionLabel);
-        const dialog = this.page.getByRole('dialog');
+        // ── Autoselect rule ──
         await dialog.getByRole('button', { name: 'Autoselect', exact: true }).click();
-        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
-        await expect(dialog.getByText(defaultValue).first()).toBeVisible({ timeout: 5000 });
+        // Saved row must show the target component and the default value
+        const autoselectRow = dialog.getByRole('row').filter({ hasText: expected.autoselect.target });
+        await expect(autoselectRow).toBeVisible({ timeout: 5000 });
+        await expect(autoselectRow.getByText(expected.autoselect.defaultValue).first()).toBeVisible({ timeout: 5000 });
+
         await dialog.getByLabel('Close').click();
     }
 }

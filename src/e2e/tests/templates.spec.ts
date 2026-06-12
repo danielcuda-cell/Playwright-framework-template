@@ -61,12 +61,14 @@ test.describe('Panel Templates', () => {
         // Autoselect rule → target: drop 3, default value: Option 1
         await templatesPage.addAutoselectRule(DROP_1, 'Option 1', DROP_3, 'Option 1');
 
-        // Step 6: Validate specific rule content before saving
-        // (rules dialog is only accessible in the creation flow; in a saved template
-        //  the rack group components are rendered inside a disabled wrapper)
-        await templatesPage.assertVisibilityRuleTarget(DROP_1, 'Option 1', DROP_3);
-        await templatesPage.assertFilterRuleContent(DROP_1, 'Option 1', DROP_3, ['Option 1', 'Option 2']);
-        await templatesPage.assertAutoselectRuleContent(DROP_1, 'Option 1', DROP_3, 'Option 1');
+        // Step 6: Validate all 3 rules and their specific targets/options before saving.
+        // (The rules dialog is only accessible here, in the creation flow. In a saved
+        //  template the rack-group is rendered inside a disabled wrapper.)
+        await templatesPage.assertAllRulesForOption(DROP_1, 'Option 1', {
+            visibility: { target: DROP_3 },
+            filter:     { target: DROP_3, allowedValues: ['Option 1', 'Option 2'] },
+            autoselect: { target: DROP_3, defaultValue: 'Option 1' },
+        });
 
         // Step 7: Save as Draft (method waits for Edit button to confirm view mode)
         await templatesPage.saveAsDraft();
