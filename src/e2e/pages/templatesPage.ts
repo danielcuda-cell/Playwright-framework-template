@@ -283,11 +283,20 @@ export class TemplatesPage {
     }
 
     async assertOptionHasRuleConfigured(dropdownTitle: string, optionLabel: string) {
-        // When rules exist on an option, the button text changes from "Add rule" to "Edit rule"
+        // When rules exist, the button visible text changes from "Add rule" to "Edit rule"
         const titleParagraph = this.page.locator('p').filter({ hasText: dropdownTitle }).first();
         const contentArea = titleParagraph.locator('..');
         const optionRow = contentArea.locator('p').filter({ hasText: optionLabel }).first().locator('..');
         await expect(optionRow.getByText('Edit rule')).toBeVisible({ timeout: 5000 });
+    }
+
+    async assertOptionHasNoRule(dropdownTitle: string, optionLabel: string) {
+        // Without rules, button text stays "Add rule" (not "Edit rule")
+        const titleParagraph = this.page.locator('p').filter({ hasText: dropdownTitle }).first();
+        const contentArea = titleParagraph.locator('..');
+        const optionRow = contentArea.locator('p').filter({ hasText: optionLabel }).first().locator('..');
+        await expect(optionRow.getByText('Add rule')).toBeVisible({ timeout: 5000 });
+        await expect(optionRow.getByText('Edit rule')).not.toBeVisible();
     }
 
     async assertRulesSavedInDialog(dropdownTitle: string, optionLabel: string, ruleTypes: string[]) {
@@ -298,6 +307,46 @@ export class TemplatesPage {
             await dialog.getByRole('button', { name: tabName }).click();
             await expect(dialog.getByText('No rules yet.')).not.toBeVisible({ timeout: 3000 });
         }
+        await dialog.getByLabel('Close').click();
+    }
+
+    // ─── Rule content assertions (use in creation flow where dialog is accessible) ─
+
+    async assertVisibilityRuleTarget(dropdownTitle: string, optionLabel: string, targetName: string) {
+        await this.openRulesDialogForOption(dropdownTitle, optionLabel);
+        const dialog = this.page.getByRole('dialog');
+        await dialog.getByRole('button', { name: 'Visibility', exact: true }).click();
+        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
+        await dialog.getByLabel('Close').click();
+    }
+
+    async assertFilterRuleContent(
+        dropdownTitle: string,
+        optionLabel: string,
+        targetName: string,
+        allowedValues: string[],
+    ) {
+        await this.openRulesDialogForOption(dropdownTitle, optionLabel);
+        const dialog = this.page.getByRole('dialog');
+        await dialog.getByRole('button', { name: 'Filter', exact: true }).click();
+        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
+        for (const value of allowedValues) {
+            await expect(dialog.getByText(value).first()).toBeVisible({ timeout: 5000 });
+        }
+        await dialog.getByLabel('Close').click();
+    }
+
+    async assertAutoselectRuleContent(
+        dropdownTitle: string,
+        optionLabel: string,
+        targetName: string,
+        defaultValue: string,
+    ) {
+        await this.openRulesDialogForOption(dropdownTitle, optionLabel);
+        const dialog = this.page.getByRole('dialog');
+        await dialog.getByRole('button', { name: 'Autoselect', exact: true }).click();
+        await expect(dialog.getByText(new RegExp(targetName)).first()).toBeVisible({ timeout: 5000 });
+        await expect(dialog.getByText(defaultValue).first()).toBeVisible({ timeout: 5000 });
         await dialog.getByLabel('Close').click();
     }
 }

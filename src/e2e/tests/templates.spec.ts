@@ -61,7 +61,14 @@ test.describe('Panel Templates', () => {
         // Autoselect rule → target: drop 3, default value: Option 1
         await templatesPage.addAutoselectRule(DROP_1, 'Option 1', DROP_3, 'Option 1');
 
-        // Step 6: Save as Draft (method waits for Edit button to confirm view mode)
+        // Step 6: Validate specific rule content before saving
+        // (rules dialog is only accessible in the creation flow; in a saved template
+        //  the rack group components are rendered inside a disabled wrapper)
+        await templatesPage.assertVisibilityRuleTarget(DROP_1, 'Option 1', DROP_3);
+        await templatesPage.assertFilterRuleContent(DROP_1, 'Option 1', DROP_3, ['Option 1', 'Option 2']);
+        await templatesPage.assertAutoselectRuleContent(DROP_1, 'Option 1', DROP_3, 'Option 1');
+
+        // Step 7: Save as Draft (method waits for Edit button to confirm view mode)
         await templatesPage.saveAsDraft();
     });
 
@@ -98,11 +105,20 @@ test.describe('Panel Templates', () => {
         await templatesPage.assertDropdownHasOptions(DROP_2, OPTIONS);
         await templatesPage.assertDropdownHasOptions(DROP_3, OPTIONS);
 
-        // Validate rules applied indicators (components inside racks are read-only in template edit mode)
+        // Validate that rules survived the save/reopen cycle.
+        // Components inside racks are read-only in the saved template editor, so
+        // the rules dialog cannot be opened here — specific content was validated
+        // in test 1 before saving. What IS accessible confirms persistence:
+
+        // "RULES APPLIED" badge on the component confirms at least one rule exists
         await templatesPage.assertRulesAppliedToDropdown(DROP_1);
+        // "RULE APPLIED" badge on Option 1 confirms rules are bound to that option
         await templatesPage.assertRuleAppliedToOption(DROP_1, 'Option 1');
-        // Option 1's "Add rule" button shows "Edit rule" text when rules are configured
+        // The "Add rule" button changes its visible text to "Edit rule" when rules exist
         await templatesPage.assertOptionHasRuleConfigured(DROP_1, 'Option 1');
+        // Option 2 and 3 should NOT have rules
+        await templatesPage.assertOptionHasNoRule(DROP_1, 'Option 2');
+        await templatesPage.assertOptionHasNoRule(DROP_1, 'Option 3');
     });
 
 });
