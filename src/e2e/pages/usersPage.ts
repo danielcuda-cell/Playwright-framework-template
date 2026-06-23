@@ -6,10 +6,31 @@ export class UsersPage {
     private readonly heading: Locator;
     private readonly searchInput: Locator;
 
+    // ─── Create User dialog ───────────────────────────────────────────────────────
+    private readonly addUserButton: Locator;
+    private readonly createUserDialog: Locator;
+    private readonly fullNameInput: Locator;
+    private readonly phoneInput: Locator;
+    private readonly emailInput: Locator;
+    private readonly createUserSubmitButton: Locator;
+    private readonly cancelButton: Locator;
+    private readonly closeDialogButton: Locator;
+    private readonly dialogErrorBanner: Locator;
+
     constructor(page: Page) {
         this.page = page;
         this.heading     = page.locator('input[name="search"]'); // table search — reliable page-ready indicator
         this.searchInput = page.locator('input[name="search"]');
+
+        this.addUserButton        = page.getByRole('button', { name: 'Add User' });
+        this.createUserDialog     = page.getByRole('dialog').filter({ hasText: 'Create User' });
+        this.fullNameInput        = page.getByPlaceholder('Enter full name');
+        this.phoneInput           = page.getByPlaceholder('+1 (234) 567-8901');
+        this.emailInput           = page.getByPlaceholder('Enter email');
+        this.createUserSubmitButton = this.createUserDialog.getByRole('button', { name: 'Create User' });
+        this.cancelButton         = this.createUserDialog.getByRole('button', { name: 'Cancel' });
+        this.closeDialogButton    = this.createUserDialog.getByRole('button', { name: 'Close' });
+        this.dialogErrorBanner    = this.createUserDialog.locator('[role="alert"], .error-banner, [class*="error"], [class*="banner"]').first();
     }
 
     // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -43,6 +64,60 @@ export class UsersPage {
         await expect(
             this.page.getByRole('cell', { name: email }).or(this.page.locator(`td:has-text("${email}")`))
         ).toBeVisible({ timeout: 10000 });
+    }
+
+    async clickAddUser() {
+        await this.addUserButton.click();
+    }
+
+    async fillCreateUserForm(data: {
+        fullName: string;
+        phone: string;
+        email: string;
+    }) {
+        await this.fullNameInput.fill(data.fullName);
+        await this.phoneInput.fill(data.phone);
+        await this.emailInput.fill(data.email);
+    }
+
+    async submitCreateUserForm() {
+        await this.createUserSubmitButton.click();
+    }
+
+    async closeCreateUserDialog() {
+        await this.closeDialogButton.click();
+    }
+
+    async cancelCreateUserDialog() {
+        await this.cancelButton.click();
+    }
+
+    async assertCreateUserDialogOpen() {
+        await expect(this.createUserDialog).toBeVisible({ timeout: 5000 });
+    }
+
+    async assertCreateUserDialogClosed() {
+        await expect(this.createUserDialog).not.toBeVisible({ timeout: 5000 });
+    }
+
+    async assertErrorBannerVisible(messageFragment?: string) {
+        await expect(this.dialogErrorBanner).toBeVisible({ timeout: 8000 });
+        if (messageFragment) {
+            await expect(this.dialogErrorBanner).toContainText(messageFragment);
+        }
+    }
+
+    async assertErrorBannerNotVisible() {
+        await expect(this.dialogErrorBanner).not.toBeVisible();
+    }
+
+    async getErrorBannerText(): Promise<string> {
+        await expect(this.dialogErrorBanner).toBeVisible({ timeout: 8000 });
+        return (await this.dialogErrorBanner.innerText()).trim();
+    }
+
+    async assertNoToastVisible() {
+        await expect(this.page.locator('[class*="toast"], [role="status"]')).not.toBeVisible({ timeout: 3000 });
     }
 
     async assertUserData(email: string, data: {
