@@ -17,13 +17,16 @@ export async function getAuthToken(): Promise<string> {
     const response = await context.post(
         `${process.env.AUTH_BASE_URL}/oauth/token`,
         {
-            data: {               
-            client_id: process.env.AUTH0_CLIENT_ID,
-            client_secret: process.env.AUTH0_CLIENT_SECRET,
-            audience: process.env.AUTH0_AUDIENCE,
-            grant_type: "client_credentials"
-                }
-        }           
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                client_id: process.env.AUTH0_CLIENT_ID,
+                client_secret: process.env.AUTH0_CLIENT_SECRET,
+                audience: process.env.AUTH0_AUDIENCE,
+                grant_type: 'client_credentials'
+            }
+        }
     );
 
     if (!response.ok()) {

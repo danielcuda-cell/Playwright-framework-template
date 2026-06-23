@@ -9,8 +9,9 @@ import getCompanyByIdSchema from "../../schemas/companies/getCompanyById.schema.
 
 test("GET all companies @api @companies", async () => {
     const apiContext = await getAuthApiContext();
+    const companies = new companiesClient(apiContext);
 
-    const response = await apiContext.get('/companies');
+    const response = await companies.getAllCompanies();
     expect(response.status()).toBe(200);
 
     const body = await response.json();

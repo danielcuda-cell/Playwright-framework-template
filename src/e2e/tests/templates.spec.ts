@@ -123,4 +123,18 @@ test.describe('Panel Templates', () => {
         await templatesPage.assertOptionHasNoRule(DROP_1, 'Option 3');
     });
 
+    // ─── Publish template ─────────────────────────────────────────────────────────
+
+    test('should publish the template and validate it appears in the Active list', async ({ templatesPage }) => {
+        await templatesPage.filterByStatus('Draft');
+        await templatesPage.openTemplate(templateName);
+        await templatesPage.enterEditMode();
+        await templatesPage.publish();
+
+        // After publishing, navigate to the templates list and confirm Active status
+        await templatesPage.goto();
+        await templatesPage.filterByStatus('Active');
+        await templatesPage.assertTemplateVisible(templateName);
+    });
+
 });

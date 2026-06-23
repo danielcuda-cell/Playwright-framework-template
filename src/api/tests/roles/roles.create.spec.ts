@@ -6,7 +6,7 @@ import { validateSchema } from "../../utils/helper";
 import createRoleSchema from "../../schemas/roles/createRole.schema.json";
 
 
-test("CREATE role - happy path@api @companies", async () => {
+test("CREATE role - happy path@api @roles", async () => {
     const apiContext = await getAuthApiContext();
     const roles = new rolesClient(apiContext);
     const roleName = "Test role name " + randomString();
@@ -32,7 +32,7 @@ test("CREATE role - happy path@api @companies", async () => {
 });
 
 
-test("CREATE role with name already in use @api @companies", async () => {
+test("CREATE role with name already in use @api @roles", async () => {
     const apiContext = await getAuthApiContext();
     const roles = new rolesClient(apiContext);
     const roleName = "Test role name " + randomString();
@@ -66,7 +66,7 @@ test("CREATE role with name already in use @api @companies", async () => {
 });
 
 
-test("CREATE role with label already in use @api @companies", async () => {
+test("CREATE role with label already in use @api @roles", async () => {
     const apiContext = await getAuthApiContext();
     const roles = new rolesClient(apiContext);
     const roleName = "Test role name " + randomString();
@@ -100,7 +100,7 @@ test("CREATE role with label already in use @api @companies", async () => {
 });
 
 
-test("CREATE role without auth token @api @companies", async () => {
+test("CREATE role without auth token @api @roles", async () => {
     const apiContext = await getNoAuthApiContext();
     const roles = new rolesClient(apiContext);
     const roleName = "Test role name " + randomString();

@@ -9,7 +9,8 @@
     "show-report": "playwright show-report",
     "test-and-report": "playwright test && playwright show-report",
     "allure:report": "powershell -Command \"if (Test-Path allure-report/history) { Copy-Item allure-report/history allure-results -Recurse -Force }; npx allure generate allure-results -o allure-report --clean\"",
-    "allure:open": "npx allure open allure-report"
+    "allure:open": "npx allure open allure-report",
+    "generate:test": "tsx scripts/generateTest.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,9 @@
     "allure-playwright": "^3.4.5"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
     "ajv-formats": "^3.0.1",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "mailslurp-client": "^17.2.0"
   }
 }

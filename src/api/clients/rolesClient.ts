@@ -25,19 +25,19 @@ export class rolesClient {
         });
     }
 
-    async getRoleById(companyId: string): Promise<APIResponse> {
-        return this.request.get(`${this.baseUrl}/role/${companyId}`, {
+    async getRoleById(roleId: string): Promise<APIResponse> {
+        return this.request.get(`${this.baseUrl}/role/${roleId}`, {
         });
     }
 
-    async updateRole(companyId: string, payload: { name: string }): Promise<APIResponse> {
-        return this.request.patch(`${this.baseUrl}/role/${companyId}`, {
+    async updateRole(roleId: string, payload: { label?: string, name?: string, description?: string }): Promise<APIResponse> {
+        return this.request.patch(`${this.baseUrl}/role/${roleId}`, {
             data: payload
         });
     }
 
-    async deleteRole(companyId: string): Promise<APIResponse> {
-        return this.request.delete(`${this.baseUrl}/role/${companyId}`, {});
+    async deleteRole(roleId: string): Promise<APIResponse> {
+        return this.request.delete(`${this.baseUrl}/role/${roleId}`, {});
     }
 
 }

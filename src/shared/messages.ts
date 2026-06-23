@@ -1,5 +1,5 @@
 export class LoginMessages {
-    INVALID_CREDENTIALS = 'Invalid username or password!';
+    INVALID_CREDENTIALS = "We couldn't complete your request. Please try again or use forgot password.";
 }
 
 export class RegisterMessages {

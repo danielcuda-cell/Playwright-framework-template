@@ -222,11 +222,17 @@ export class TemplatesPage {
         await this.closeRulesDialog();
     }
 
-    // ─── Editor: Save ─────────────────────────────────────────────────────────────
+    // ─── Editor: Save / Publish ───────────────────────────────────────────────────
 
     async saveAsDraft() {
         await this.saveAsDraftButton.click();
         await expect(this.editButton).toBeVisible({ timeout: 15000 });
+    }
+
+    async publish() {
+        await this.page.getByRole('button', { name: 'Publish', exact: true }).click();
+        // Brief wait for the publish request to complete before navigating away
+        await this.page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
     }
 
     async enterEditMode() {

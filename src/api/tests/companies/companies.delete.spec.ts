@@ -2,9 +2,6 @@ import { test, expect } from "@playwright/test";
 import { companiesClient } from "../../clients/companiesClient";
 import { getAuthApiContext } from "../../utils/apiContext";
 import { randomString } from "../../../shared/utils/random";
-import { validateSchema } from "../../utils/helper";
-import updateCompanySchema from "../../schemas/companies/updateCompany.schema.json";
-
 
 test("DELETE company - happy path @api @companies", async () => {
     const apiContext = await getAuthApiContext();
