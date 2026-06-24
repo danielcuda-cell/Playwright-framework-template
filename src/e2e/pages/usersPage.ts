@@ -120,8 +120,29 @@ export class UsersPage {
         }
     }
 
+    async selectJobFunction(value: string) {
+        await this.createUserDialog.locator('[id*="job-function"], [class*="job-function"]').first().click();
+        await this.page.getByRole('option', { name: value }).click();
+    }
+
+    async selectRole(value: string) {
+        await this.createUserDialog.locator('[id*="role"], [class*="role"]').first().click();
+        await this.page.getByRole('option', { name: value }).click();
+    }
+
+    async selectCompany(value: string) {
+        await this.createUserDialog.locator('[id*="company"], [class*="company"]').first().click();
+        await this.page.getByRole('option', { name: value }).click();
+    }
+
     async submitCreateUserForm() {
         await this.createUserSubmitButton.click();
+    }
+
+    async assertUserCreatedSuccessfully(email: string) {
+        await this.assertCreateUserDialogClosed();
+        await this.searchUser(email);
+        await this.assertUserRowVisible(email);
     }
 
     async closeCreateUserDialog() {
