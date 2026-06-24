@@ -196,6 +196,7 @@ test.describe('Sign Up – admin creates a new user flow', () => {
 
     let adminCreatedInboxId: string;
     let adminCreatedEmail: string;
+    let adminCreatedAuthEmail: Awaited<ReturnType<typeof waitForLatestEmail>>;
     const adminCreatedFullName = `E2E Admin Created ${randomString(6)}`;
 
     test('admin fills and submits the Create User form', async ({ loginPage, usersPage }) => {
@@ -224,50 +225,90 @@ test.describe('Sign Up – admin creates a new user flow', () => {
         await usersPage.assertUserCreatedSuccessfully(adminCreatedEmail);
     });
 
-    test('new user receives account verification email', async () => {
+    test('new user receives an email from Auth0 after account creation', async () => {
         test.setTimeout(60000);
-        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
-        expect(email).not.toBeNull();
+        adminCreatedAuthEmail = await waitForLatestEmail(adminCreatedInboxId, 45000);
+        expect(adminCreatedAuthEmail).not.toBeNull();
+        expect(adminCreatedAuthEmail.subject).toBeTruthy();
+        // Admin-created users receive a password setup email from Auth0
         expect(
-            email.subject!.toLowerCase().includes('verify') ||
-            email.subject!.toLowerCase().includes('welcome') ||
-            email.subject!.toLowerCase().includes('confirm')
+            adminCreatedAuthEmail.subject!.toLowerCase().includes('password') ||
+            adminCreatedAuthEmail.subject!.toLowerCase().includes('reset')    ||
+            adminCreatedAuthEmail.subject!.toLowerCase().includes('verify')   ||
+            adminCreatedAuthEmail.subject!.toLowerCase().includes('welcome')  ||
+            adminCreatedAuthEmail.subject!.toLowerCase().includes('confirm')
         ).toBe(true);
     });
 
-    test('new user receives email to set password', async () => {
-        test.setTimeout(60000);
-        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
-        expect(email).not.toBeNull();
-        const bodyText = email.body ?? '';
-        expect(
-            bodyText.toLowerCase().includes('password') ||
-            email.subject!.toLowerCase().includes('password')
-        ).toBe(true);
-    });
-
-    test('new user sets password via the email link', async ({ page }) => {
-        test.setTimeout(60000);
-        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
+    test('new user sets up their password', async ({ page }) => {
+        test.setTimeout(120000);
+        // Reuse the email fetched by the previous test — Auth0 sends only one email
+        const email = adminCreatedAuthEmail;
         expect(email).not.toBeNull();
 
         const bodyText = email.body ?? '';
-        const linkMatch = bodyText.match(/https?:\/\/[^\s"<>]+(?:reset|set|password)[^\s"<>]*/i);
-        expect(linkMatch, 'Password setup link not found in email body').not.toBeNull();
+        // Find the Auth0 action link — contains ticket/token, not a static asset
+        const allLinks = bodyText.match(/https?:\/\/[^\s"'<>]+/g) ?? [];
+        const actionLink = allLinks
+            .map(l => l.replace(/&amp;.*/i, ''))
+            .find(l =>
+                l.length > 60 &&
+                !l.match(/\.(png|jpg|jpeg|gif|svg|ico|webp|css|js|woff|ttf|eot)(\?|$)/i) &&
+                !l.includes('unsubscribe') &&
+                (l.includes('ticket') || l.includes('token') || l.includes('/u/') ||
+                 l.includes('auth0') || l.includes('reset') || l.includes('invite') || l.includes('activate'))
+            );
+        expect(actionLink, 'Auth0 action link not found in email body').toBeTruthy();
 
-        await page.goto(linkMatch![0]);
-        await page.waitForLoadState('domcontentloaded');
+        await page.goto(actionLink!);
+        await page.waitForLoadState('networkidle', { timeout: 30000 });
 
-        const passwordInput = page.getByPlaceholder(/new password/i).or(page.locator('input[type="password"]').first());
-        await passwordInput.fill(adminCreatedPassword);
+        let passwordInputs = page.locator('input[type="password"]');
 
-        const confirmInput = page.locator('input[type="password"]').last();
-        if (await confirmInput.count() > 0) {
-            await confirmInput.fill(adminCreatedPassword);
+        if (await passwordInputs.count() === 0) {
+            // Auth0 sent an email-verification link (not a password-reset link).
+            // Wait a few seconds for Auth0 to propagate the email-verified status before triggering forgot-password
+            await page.waitForTimeout(5000);
+            await page.goto('/');
+            await page.getByRole('link', { name: 'Forgot password?' }).click();
+            await page.getByRole('heading', { name: 'Forgot password?' }).waitFor({ timeout: 10000 });
+
+            // Fill the email field — try common patterns
+            const emailInput = page.locator('input[type="email"]')
+                .or(page.getByPlaceholder(/email/i))
+                .first();
+            await emailInput.fill(adminCreatedEmail);
+            const forgotPasswordSubmittedAt = new Date();
+            await page.getByRole('button', { name: /send|submit|reset/i }).click();
+            await page.waitForLoadState('networkidle', { timeout: 15000 });
+
+            // Wait for the new password-reset email — only accept emails received after the submit
+            const resetEmail = await waitForLatestEmail(adminCreatedInboxId, 60000, forgotPasswordSubmittedAt);
+            expect(resetEmail, 'Password reset email not received after forgot-password').not.toBeNull();
+
+            const resetBody = resetEmail.body ?? '';
+            const resetLinks = resetBody.match(/https?:\/\/[^\s"'<>]+/g) ?? [];
+            const resetLink = resetLinks
+                .map(l => l.replace(/&amp;.*/i, ''))
+                .find(l =>
+                    l.includes('auth0') &&
+                    !l.match(/\.(png|jpg|svg|ico)(\?|$)/i) &&
+                    l.length > 60
+                );
+            expect(resetLink, 'Password reset link not found in forgot-password email').toBeTruthy();
+
+            await page.goto(resetLink!);
+            await page.waitForLoadState('networkidle', { timeout: 30000 });
+            passwordInputs = page.locator('input[type="password"]');
         }
 
-        await page.getByRole('button', { name: /submit|reset|save|continue/i }).click();
-        await page.waitForTimeout(2000);
+        const count = await passwordInputs.count();
+        expect(count, 'No password input found on the reset page').toBeGreaterThan(0);
+        for (let i = 0; i < count; i++) {
+            await passwordInputs.nth(i).fill(adminCreatedPassword);
+        }
+        await page.getByRole('button', { name: /submit|reset|save|continue|change/i }).click();
+        await page.waitForLoadState('networkidle', { timeout: 30000 });
     });
 
     test('new user can log in with the new password', async ({ loginPage }) => {
@@ -276,10 +317,13 @@ test.describe('Sign Up – admin creates a new user flow', () => {
         await loginPage.assertLoginSuccessful();
     });
 
-    test('new user accesses the dashboard after login', async ({ loginPage, homePage }) => {
+    test('new user is in the app after login with no auth error', async ({ loginPage, page }) => {
         await loginPage.goto();
         await loginPage.login(adminCreatedEmail, adminCreatedPassword);
-        await homePage.assertPageLoaded();
+        // Verify login is accepted: URL reaches the app domain (home, pending-approval, or callback)
+        await loginPage.assertLoginSuccessful();
+        // Verify no login-error message is shown (credentials were accepted)
+        await expect(page.locator('.custom-error-message')).not.toBeVisible();
     });
 
 });

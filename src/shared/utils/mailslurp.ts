@@ -16,6 +16,6 @@ export async function createInbox(): Promise<{ id: string; emailAddress: string 
     return { id: inbox.id!, emailAddress: inbox.emailAddress! };
 }
 
-export async function waitForLatestEmail(inboxId: string, timeoutMs = 30000) {
-    return getClient().waitForLatestEmail(inboxId, timeoutMs, true);
+export async function waitForLatestEmail(inboxId: string, timeoutMs = 30000, since?: Date) {
+    return getClient().waitForLatestEmail(inboxId, timeoutMs, true, undefined, since);
 }

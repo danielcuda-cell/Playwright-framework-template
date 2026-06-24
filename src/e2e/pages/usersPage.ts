@@ -121,18 +121,18 @@ export class UsersPage {
     }
 
     async selectJobFunction(value: string) {
-        await this.createUserDialog.locator('[id*="job-function"], [class*="job-function"]').first().click();
-        await this.page.getByRole('option', { name: value }).click();
+        await this.jobFunctionSelect.fill(value);
+        await this.createUserDialog.getByRole('option', { name: value, exact: true }).click();
     }
 
     async selectRole(value: string) {
-        await this.createUserDialog.locator('[id*="role"], [class*="role"]').first().click();
-        await this.page.getByRole('option', { name: value }).click();
+        await this.roleSelect.fill(value);
+        await this.createUserDialog.getByRole('option', { name: value, exact: true }).click();
     }
 
     async selectCompany(value: string) {
-        await this.createUserDialog.locator('[id*="company"], [class*="company"]').first().click();
-        await this.page.getByRole('option', { name: value }).click();
+        await this.companySelect.fill(value);
+        await this.createUserDialog.getByRole('option', { name: value }).click();
     }
 
     async submitCreateUserForm() {
