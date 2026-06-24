@@ -83,7 +83,8 @@ test.describe('Sign Up – full flow', () => {
     });
 
     test('should receive a confirmation email from Auth0', async () => {
-        const email = await waitForLatestEmail(inboxId, 30000);
+        test.setTimeout(60000);
+        const email = await waitForLatestEmail(inboxId, 45000);
         expect(email).not.toBeNull();
         expect(email.subject).toBeTruthy();
         // Auth0 sends a "verify your email" or "welcome" email on signup
@@ -166,6 +167,24 @@ test.describe('Sign Up – full flow', () => {
             role:    'Default',
             company: 'N/A',
         });
+    });
+
+    test('admin should change the new user role to Reader', async ({ loginPage, usersPage }) => {
+        await loginPage.goto();
+        await loginPage.login(adminEmail, adminPassword);
+        await loginPage.assertLoginSuccessful();
+
+        await usersPage.goto();
+        await usersPage.changeUserRole(userEmail, 'Reader');
+
+        await usersPage.searchUser(userEmail);
+        await usersPage.assertUserData(userEmail, { role: 'Reader' });
+    });
+
+    test('user with Reader role should land on home dashboard after login', async ({ loginPage, homePage }) => {
+        await loginPage.goto();
+        await loginPage.login(userEmail, userPassword);
+        await homePage.assertPageLoaded();
     });
 
 });

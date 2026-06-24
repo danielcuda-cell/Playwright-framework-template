@@ -12,10 +12,18 @@ export class UsersPage {
     private readonly fullNameInput: Locator;
     private readonly phoneInput: Locator;
     private readonly emailInput: Locator;
+    private readonly jobFunctionSelect: Locator;
+    private readonly roleSelect: Locator;
+    private readonly companySelect: Locator;
     private readonly createUserSubmitButton: Locator;
     private readonly cancelButton: Locator;
     private readonly closeDialogButton: Locator;
     private readonly dialogErrorBanner: Locator;
+
+    // ─── Edit User dialog ─────────────────────────────────────────────────────────
+    private readonly editUserDialog: Locator;
+    private readonly editRoleSelect: Locator;
+    private readonly saveUserButton: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -23,14 +31,21 @@ export class UsersPage {
         this.searchInput = page.locator('input[name="search"]');
 
         this.addUserButton        = page.getByRole('button', { name: 'Add User' });
-        this.createUserDialog     = page.getByRole('dialog').filter({ hasText: 'Create User' });
-        this.fullNameInput        = page.getByPlaceholder('Enter full name');
-        this.phoneInput           = page.getByPlaceholder('+1 (234) 567-8901');
-        this.emailInput           = page.getByPlaceholder('Enter email');
+        this.createUserDialog     = page.locator('dialog').filter({ hasText: 'Create User' });
+        this.fullNameInput        = this.createUserDialog.getByPlaceholder('Enter full name');
+        this.phoneInput           = this.createUserDialog.getByPlaceholder('+1 (234) 567-8901');
+        this.emailInput           = this.createUserDialog.getByPlaceholder('Enter email');
+        this.jobFunctionSelect    = this.createUserDialog.locator('#job-function-selected');
+        this.roleSelect           = this.createUserDialog.locator('#role-option-selected');
+        this.companySelect        = this.createUserDialog.locator('#company-option-selected');
         this.createUserSubmitButton = this.createUserDialog.getByRole('button', { name: 'Create User' });
         this.cancelButton         = this.createUserDialog.getByRole('button', { name: 'Cancel' });
         this.closeDialogButton    = this.createUserDialog.getByRole('button', { name: 'Close' });
-        this.dialogErrorBanner    = this.createUserDialog.locator('[role="alert"], .error-banner, [class*="error"], [class*="banner"]').first();
+        this.dialogErrorBanner    = this.createUserDialog.locator('.bg-alert-50');
+
+        this.editUserDialog  = page.locator('dialog').filter({ hasText: 'Edit User' });
+        this.editRoleSelect  = this.editUserDialog.locator('#role-option-selected');
+        this.saveUserButton  = this.editUserDialog.getByRole('button', { name: 'Save' });
     }
 
     // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -60,6 +75,16 @@ export class UsersPage {
 
     // ─── Assertions ───────────────────────────────────────────────────────────────
 
+    async changeUserRole(email: string, newRole: string) {
+        await this.searchUser(email);
+        const row = this.page.locator('tr', { hasText: email });
+        await row.getByRole('combobox').click();
+        await this.page.getByRole('option', { name: newRole, exact: true }).click();
+        // Confirmation dialog — "Are you sure you want to assign the role X to this user?"
+        await this.page.getByRole('button', { name: 'Assign Role' }).click();
+        await expect(row.getByText(newRole)).toBeVisible({ timeout: 10000 });
+    }
+
     async assertUserRowVisible(email: string) {
         await expect(
             this.page.getByRole('cell', { name: email }).or(this.page.locator(`td:has-text("${email}")`))
@@ -74,10 +99,25 @@ export class UsersPage {
         fullName: string;
         phone: string;
         email: string;
+        jobFunction?: string;
+        role?: string;
+        company?: string;
     }) {
         await this.fullNameInput.fill(data.fullName);
         await this.phoneInput.fill(data.phone);
         await this.emailInput.fill(data.email);
+        if (data.jobFunction) {
+            await this.jobFunctionSelect.fill(data.jobFunction);
+            await this.createUserDialog.getByRole('option', { name: data.jobFunction, exact: true }).click();
+        }
+        if (data.role) {
+            await this.roleSelect.fill(data.role);
+            await this.createUserDialog.getByRole('option', { name: data.role, exact: true }).click();
+        }
+        if (data.company) {
+            await this.companySelect.fill(data.company);
+            await this.createUserDialog.getByRole('option', { name: data.company }).click();
+        }
     }
 
     async submitCreateUserForm() {

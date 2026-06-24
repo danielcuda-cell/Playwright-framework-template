@@ -25,7 +25,7 @@ export class PendingApprovalPage {
         this.completeInformationButton     = page.getByRole('button', { name: 'Complete information' });
 
         this.fullNameInput       = page.getByPlaceholder('Enter your full name');
-        this.phoneInput          = page.getByPlaceholder('Enter your phone number');
+        this.phoneInput          = page.getByPlaceholder('+1 (234) 567-8901');
         this.emailInput          = page.getByPlaceholder('Enter your email address');
         this.specialNotesInput   = page.getByPlaceholder('How did you find us?');
         this.submitRequestButton = page.getByRole('button', { name: 'Submit request' });
@@ -52,7 +52,7 @@ export class PendingApprovalPage {
     }
 
     async selectJobFunction(jobFunction: string) {
-        await this.page.locator('div[class*="control"]').click();
+        await this.page.locator('input[id*="job-function"]').click();
         await this.page.locator('[class*="option"]').filter({ hasText: jobFunction }).click();
     }
 
@@ -70,8 +70,8 @@ export class PendingApprovalPage {
         phone: string;
         specialNotes?: string;
     }) {
-        await this.fillFullName(data.fullName);
         await this.selectJobFunction(data.jobFunction);
+        await this.fillFullName(data.fullName);
         await this.fillPhone(data.phone);
         if (data.specialNotes) await this.fillSpecialNotes(data.specialNotes);
         await this.submitRequestButton.click();
