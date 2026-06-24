@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e586]:
+    - complementary "Main navigation" [ref=e1880]:
+      - generic [ref=e1881]:
+        - generic [ref=e1882]:
+          - img "Daeda panel logo" [ref=e1883]
+          - button "Collapse sidebar" [ref=e1884] [cursor=pointer]:
+            - img [ref=e1885]
+        - navigation [ref=e1888]:
+          - list [ref=e1889]:
+            - listitem [ref=e1890]:
+              - link "Home" [ref=e1891] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e1892]
+                - generic [ref=e1895]: Home
+    - generic [ref=e1896]:
+      - banner [ref=e1897]:
+        - navigation "Breadcrumb" [ref=e1900]:
+          - list [ref=e1901]:
+            - listitem [ref=e1902]:
+              - img [ref=e1904]
+              - generic [ref=e1909]: PANELS
+              - img [ref=e1911]
+              - generic [ref=e1913]: Templates
+        - generic [ref=e1915]:
+          - button "Notifications" [ref=e1916] [cursor=pointer]:
+            - img [ref=e1917]
+          - generic [ref=e1920]:
+            - button "Settings" [ref=e1921] [cursor=pointer]:
+              - img [ref=e1922]
+            - button "Support" [ref=e1925] [cursor=pointer]:
+              - img [ref=e1926]
+            - button "Log out" [ref=e1929] [cursor=pointer]:
+              - img [ref=e1930]
+          - generic [ref=e1933]:
+            - generic [ref=e1934]: "?"
+            - paragraph [ref=e1935]: Loading...
+      - main [ref=e1936]:
+        - generic [ref=e1937]:
+          - generic [ref=e1938]:
+            - generic [ref=e1939]:
+              - heading "Templates" [level=1] [ref=e1940]
+              - paragraph [ref=e1941]: Manage base templates for panel configurations
+            - button "Create New Template" [ref=e1942] [cursor=pointer]:
+              - img [ref=e1943]
+              - generic [ref=e1945]: Create New Template
+          - generic [ref=e1946]:
+            - generic [ref=e1949]:
+              - log [ref=e1951]
+              - generic [ref=e1952]:
+                - generic [ref=e1953]:
+                  - generic [ref=e1954]: Select...
+                  - combobox [ref=e1956]
+                - img [ref=e1959]
+            - generic [ref=e1963]:
+              - log [ref=e1965]
+              - generic [ref=e1966]:
+                - generic [ref=e1967]:
+                  - generic [ref=e1968]: All Panel Types (0)
+                  - combobox [ref=e1970]
+                - img [ref=e1973]
+  - button "Feedback" [ref=e62]:
+    - img [ref=e63]
+    - generic [ref=e65]: Feedback
+  - button "Debug" [ref=e66]:
+    - img [ref=e67]
+    - generic [ref=e76]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e77]

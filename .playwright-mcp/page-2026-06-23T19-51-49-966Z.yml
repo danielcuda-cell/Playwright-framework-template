@@ -1,0 +1,94 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search..." [ref=e27]
+        - generic [ref=e29]:
+          - button "Notifications" [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+          - generic [ref=e34]:
+            - button "Settings" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button "Support" [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "Log out" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+          - generic [ref=e47]:
+            - generic [ref=e48]: "?"
+            - paragraph [ref=e49]: Loading...
+      - main [ref=e50]:
+        - generic [ref=e52]:
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e57]:
+                - generic:
+                  - log
+                  - generic:
+                    - generic:
+                      - generic: All Roles
+                    - generic:
+                      - generic:
+                        - img
+              - generic [ref=e59]:
+                - generic:
+                  - log
+                  - generic:
+                    - generic:
+                      - generic: All Companies
+                    - generic:
+                      - generic:
+                        - img
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - img [ref=e62]
+                - textbox "Search..." [ref=e65]
+              - button "Add User" [ref=e66] [cursor=pointer]:
+                - generic [ref=e67]:
+                  - img [ref=e68]
+                  - generic [ref=e71]: Add User
+          - generic [ref=e74]:
+            - table [ref=e76]:
+              - rowgroup [ref=e77]:
+                - row "Full Name Phone Email Role Company Job Function" [ref=e78]:
+                  - cell "Full Name" [ref=e79]
+                  - cell "Phone" [ref=e80]
+                  - cell "Email" [ref=e81]
+                  - cell "Role" [ref=e82]
+                  - cell "Company" [ref=e83]
+                  - cell "Job Function" [ref=e84]
+                  - cell [ref=e85]
+              - rowgroup [ref=e86]:
+                - row [ref=e87]:
+                  - cell [ref=e88]
+            - generic [ref=e91]:
+              - generic [ref=e92]: Showing 1-0 of 0 users
+              - generic [ref=e93]:
+                - button "Previous" [disabled] [ref=e94]:
+                  - img [ref=e95]
+                  - text: Previous
+                - button "Next" [disabled] [ref=e97]:
+                  - text: Next
+                  - img [ref=e98]
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e115]

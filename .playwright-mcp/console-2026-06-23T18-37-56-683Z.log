@@ -1,0 +1,26 @@
+[    1325ms] [LOG] Timestamp: 2026-06-23T18:37:58.007Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1325ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1325ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(1)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1325ms] [INFO] Timestamp: 2026-06-23T18:37:58.007Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1325ms] [INFO] Metadata: {requestId: req_1782239877574_0003, method: GET, url: /users/cmm2ha6c700013701kcw1i91f/companies, status: 200, duration: 433} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1370ms] [LOG] Timestamp: 2026-06-23T18:37:58.052Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1370ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1370ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1370ms] [INFO] Timestamp: 2026-06-23T18:37:58.052Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1370ms] [INFO] Metadata: {requestId: req_1782239877574_0001, method: GET, url: /modules, status: 200, duration: 478} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1407ms] [LOG] Timestamp: 2026-06-23T18:37:58.089Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1407ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1407ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1408ms] [INFO] Timestamp: 2026-06-23T18:37:58.089Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1408ms] [INFO] Metadata: {requestId: req_1782239877574_0002, method: GET, url: /profile/me, status: 200, duration: 515} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1440ms] [LOG] Timestamp: 2026-06-23T18:37:58.122Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1440ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1440ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(21)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1440ms] [INFO] Timestamp: 2026-06-23T18:37:58.122Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1440ms] [INFO] Metadata: {requestId: req_1782239877574_0004, method: GET, url: /states, status: 200, duration: 548} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1443ms] [LOG] Timestamp: 2026-06-23T18:37:58.125Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1443ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1443ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    1443ms] [INFO] Timestamp: 2026-06-23T18:37:58.125Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1443ms] [INFO] Metadata: {requestId: req_1782239877574_0005, method: GET, url: /projects, status: 200, duration: 551} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1644ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://app.dev.dap.daedalusindustrial.com/admin/orders?_rsc=vf1hk:0

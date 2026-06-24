@@ -1,0 +1,166 @@
+- generic [ref=e1]:
+  - generic [ref=e4018]:
+    - banner [ref=e4021]:
+      - generic [ref=e4022]:
+        - button "Back" [ref=e4023] [cursor=pointer]:
+          - img [ref=e4024]
+        - generic [ref=e4026]: Standard details
+      - generic [ref=e4027]:
+        - button "Cancel" [ref=e4028] [cursor=pointer]:
+          - generic [ref=e4029]: Cancel
+        - button "Save as Draft" [ref=e4030] [cursor=pointer]:
+          - generic [ref=e4233]: Save as Draft
+        - button "Preview" [ref=e4032] [cursor=pointer]:
+          - img [ref=e4033]
+          - generic [ref=e4036]: Preview
+        - button "Publish" [ref=e4037] [cursor=pointer]:
+          - generic [ref=e4234]: Publish
+      - dialog [ref=e4241]:
+        - generic [ref=e4243]:
+          - generic [ref=e4244]:
+            - heading "Are you sure you want to leave this page?" [level=2] [ref=e4245]
+            - button "Close" [active] [ref=e4246] [cursor=pointer]:
+              - img [ref=e4247]
+          - paragraph [ref=e4251]: Your changes might not be saved.
+          - generic [ref=e4252]:
+            - button "Cancel" [ref=e4253] [cursor=pointer]:
+              - generic [ref=e4254]: Cancel
+            - button "Save as draft" [ref=e4255] [cursor=pointer]:
+              - generic [ref=e4256]: Save as draft
+            - button "Leave this page" [ref=e4257] [cursor=pointer]:
+              - generic [ref=e4258]: Leave this page
+    - generic [ref=e4039]:
+      - generic [ref=e4040]:
+        - generic [ref=e4041]:
+          - generic [ref=e4042]: STANDARD NAME
+          - generic [ref=e4043]: Draft
+        - generic [ref=e4044]:
+          - textbox "Enter a standard name" [ref=e4048]: e2e-std-explore
+          - button "Save" [disabled] [ref=e4049]:
+            - generic [ref=e4050]: Save
+      - generic [ref=e4051]:
+        - generic [ref=e4052]: Based on Template
+        - generic [ref=e4053]:
+          - generic [ref=e4054]: CONTROL
+          - generic [ref=e4055]: e2e-ctrl-xVAgPbTX
+    - generic [ref=e4058]:
+      - generic [ref=e4059]:
+        - heading "e2e-std-explore" [level=2] [ref=e4060]
+        - paragraph [ref=e4061]: Configure your standard
+      - generic [ref=e4063]:
+        - generic [ref=e4066]:
+          - generic [ref=e4067]:
+            - generic [ref=e4068]: SECTION 1
+            - button "Disable element" [ref=e4069]:
+              - img [ref=e4070]
+          - button "Rack 1 Disable element DROPDOWN Disable element drop 1 Option 1 RULE APPLIED Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element DROPDOWN Disable element drop 2 Option 1 Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element DROPDOWN Disable element drop 3 Option 1 Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element" [disabled] [ref=e4074]:
+            - generic [ref=e4079]:
+              - generic [ref=e4080]:
+                - heading "Rack 1" [level=3] [ref=e4081]
+                - button "Disable element" [disabled] [ref=e4082]:
+                  - img [ref=e4083]
+              - generic [ref=e4086]:
+                - button "DROPDOWN Disable element drop 1 Option 1 RULE APPLIED Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element" [disabled] [ref=e4087]:
+                  - generic [ref=e4088]:
+                    - generic [ref=e4089]:
+                      - paragraph [ref=e4091]: DROPDOWN
+                      - button "Disable element" [disabled] [ref=e4093]:
+                        - img [ref=e4094]
+                    - generic [ref=e4098]:
+                      - paragraph [ref=e4099]: drop 1
+                      - generic [ref=e4101]:
+                        - generic [ref=e4103]:
+                          - paragraph [ref=e4104]: Option 1
+                          - generic [ref=e4105]: RULE APPLIED
+                          - button "Add rule" [disabled] [ref=e4106] [cursor=pointer]:
+                            - img [ref=e4107]
+                            - text: Edit rule
+                          - button "Disable element" [disabled] [ref=e4109]:
+                            - img [ref=e4110]
+                        - generic [ref=e4114]:
+                          - paragraph [ref=e4115]: Option 2
+                          - button "Add rule" [disabled] [ref=e4116] [cursor=pointer]:
+                            - img [ref=e4117]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4119]:
+                            - img [ref=e4120]
+                        - generic [ref=e4124]:
+                          - paragraph [ref=e4125]: Option 3
+                          - button "Add rule" [disabled] [ref=e4126] [cursor=pointer]:
+                            - img [ref=e4127]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4129]:
+                            - img [ref=e4130]
+                - button "DROPDOWN Disable element drop 2 Option 1 Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element" [disabled] [ref=e4133]:
+                  - generic [ref=e4134]:
+                    - generic [ref=e4135]:
+                      - paragraph [ref=e4137]: DROPDOWN
+                      - button "Disable element" [disabled] [ref=e4139]:
+                        - img [ref=e4140]
+                    - generic [ref=e4144]:
+                      - paragraph [ref=e4145]: drop 2
+                      - generic [ref=e4147]:
+                        - generic [ref=e4149]:
+                          - paragraph [ref=e4150]: Option 1
+                          - button "Add rule" [disabled] [ref=e4151] [cursor=pointer]:
+                            - img [ref=e4152]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4154]:
+                            - img [ref=e4155]
+                        - generic [ref=e4159]:
+                          - paragraph [ref=e4160]: Option 2
+                          - button "Add rule" [disabled] [ref=e4161] [cursor=pointer]:
+                            - img [ref=e4162]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4164]:
+                            - img [ref=e4165]
+                        - generic [ref=e4169]:
+                          - paragraph [ref=e4170]: Option 3
+                          - button "Add rule" [disabled] [ref=e4171] [cursor=pointer]:
+                            - img [ref=e4172]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4174]:
+                            - img [ref=e4175]
+                - button "DROPDOWN Disable element drop 3 Option 1 Add rule Disable element Option 2 Add rule Disable element Option 3 Add rule Disable element" [disabled] [ref=e4178]:
+                  - generic [ref=e4179]:
+                    - generic [ref=e4180]:
+                      - paragraph [ref=e4182]: DROPDOWN
+                      - button "Disable element" [disabled] [ref=e4184]:
+                        - img [ref=e4185]
+                    - generic [ref=e4189]:
+                      - paragraph [ref=e4190]: drop 3
+                      - generic [ref=e4192]:
+                        - generic [ref=e4194]:
+                          - paragraph [ref=e4195]: Option 1
+                          - button "Add rule" [disabled] [ref=e4196] [cursor=pointer]:
+                            - img [ref=e4197]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4199]:
+                            - img [ref=e4200]
+                        - generic [ref=e4204]:
+                          - paragraph [ref=e4205]: Option 2
+                          - button "Add rule" [disabled] [ref=e4206] [cursor=pointer]:
+                            - img [ref=e4207]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4209]:
+                            - img [ref=e4210]
+                        - generic [ref=e4214]:
+                          - paragraph [ref=e4215]: Option 3
+                          - button "Add rule" [disabled] [ref=e4216] [cursor=pointer]:
+                            - img [ref=e4217]
+                            - text: Add rule
+                          - button "Disable element" [disabled] [ref=e4219]:
+                            - img [ref=e4220]
+        - generic [ref=e4226]:
+          - generic [ref=e4227]: SECTION 2
+          - button "Disable element" [ref=e4228]:
+            - img [ref=e4229]
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e115]
+  - status [ref=e4232]

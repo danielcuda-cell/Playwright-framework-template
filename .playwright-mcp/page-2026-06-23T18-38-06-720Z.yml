@@ -1,0 +1,308 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+            - listitem [ref=e148]:
+              - button "Dashboard" [expanded] [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]: Dashboard
+                - img [ref=e151]
+              - list [ref=e153]:
+                - listitem [ref=e154]:
+                  - link "My Orders" [ref=e155] [cursor=pointer]:
+                    - /url: /orders
+                    - img [ref=e156]
+                    - generic [ref=e160]: My Orders
+                - listitem [ref=e161]:
+                  - link "Orders" [ref=e162] [cursor=pointer]:
+                    - /url: /admin/orders
+                    - img [ref=e163]
+                    - generic [ref=e167]: Orders
+                - listitem [ref=e168]:
+                  - link "My Projects" [ref=e169] [cursor=pointer]:
+                    - /url: /projects
+                    - img [ref=e170]
+                    - generic [ref=e175]: My Projects
+            - listitem [ref=e176]:
+              - button "Management" [ref=e177] [cursor=pointer]:
+                - generic [ref=e178]: Management
+                - img [ref=e179]
+            - listitem [ref=e181]:
+              - button "Panels" [ref=e182] [cursor=pointer]:
+                - generic [ref=e183]: Panels
+                - img [ref=e184]
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search..." [ref=e27]
+        - generic [ref=e29]:
+          - button "Notifications" [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+          - generic [ref=e34]:
+            - button "Settings" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button "Support" [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "Log out" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+          - generic [ref=e47]:
+            - generic [ref=e48]: DC
+            - paragraph [ref=e49]: Daniel Cuda
+      - main [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - heading "Projects" [level=1] [ref=e54]
+              - paragraph [ref=e55]: Create and manage your projects
+            - generic [ref=e56]:
+              - button "New Project" [ref=e57] [cursor=pointer]:
+                - generic [ref=e58]:
+                  - img [ref=e59]
+                  - generic [ref=e64]: New Project
+              - button "New Order" [ref=e65] [cursor=pointer]:
+                - generic [ref=e66]:
+                  - img [ref=e67]
+                  - generic [ref=e69]: New Order
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e75]:
+                  - log [ref=e77]
+                  - generic [ref=e78]:
+                    - generic [ref=e79]:
+                      - generic [ref=e80]: Client
+                      - combobox [ref=e82]
+                    - img [ref=e85]
+                - generic [ref=e89]:
+                  - log [ref=e91]
+                  - generic [ref=e92]:
+                    - generic [ref=e93]:
+                      - generic [ref=e94]: Status
+                      - combobox [ref=e96]
+                    - img [ref=e99]
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - textbox "Search..." [ref=e105]
+            - generic [ref=e106]:
+              - table [ref=e108]:
+                - rowgroup [ref=e109]:
+                  - row "Projects Client Integrator Site Orders Status" [ref=e110]:
+                    - cell "Projects" [ref=e111]
+                    - cell "Client" [ref=e112]
+                    - cell "Integrator" [ref=e113]
+                    - cell "Site" [ref=e114]
+                    - cell "Orders" [ref=e115]
+                    - cell "Status" [ref=e116]
+                    - cell [ref=e117]
+                - rowgroup [ref=e118]:
+                  - row "New Project Test 2212 Daedalus Industries Daedalus Industries Daedalus Industries 1 Active Row actions View Details Edit Archive" [ref=e458]:
+                    - cell "New Project Test 2212" [ref=e187]
+                    - cell "Daedalus Industries" [ref=e188]
+                    - cell "Daedalus Industries" [ref=e189]
+                    - cell "Daedalus Industries" [ref=e190]
+                    - cell "1" [ref=e191]
+                    - cell "Active" [ref=e192]:
+                      - generic [ref=e195]:
+                        - log [ref=e197]
+                        - generic [ref=e198]:
+                          - generic [ref=e199]:
+                            - generic [ref=e200]: Active
+                            - combobox [ref=e202]
+                          - img [ref=e205]
+                    - cell "Row actions View Details Edit Archive" [ref=e459]:
+                      - button "Row actions" [active] [ref=e208] [cursor=pointer]:
+                        - img [ref=e209]
+                      - generic [ref=e460]:
+                        - link "View Details" [ref=e461] [cursor=pointer]:
+                          - /url: /projects/cmqik9dch0001ve25p0k5qioh
+                          - img [ref=e462]
+                          - text: View Details
+                        - button "Edit" [ref=e465] [cursor=pointer]:
+                          - img [ref=e466]
+                          - text: Edit
+                        - button "Archive" [ref=e469] [cursor=pointer]:
+                          - img [ref=e470]
+                          - text: Archive
+                  - row "test Daedalus Industries Daedalus Industries Daedalus Industries 0 Active Row actions" [ref=e213]:
+                    - cell "test" [ref=e214]
+                    - cell "Daedalus Industries" [ref=e215]
+                    - cell "Daedalus Industries" [ref=e216]
+                    - cell "Daedalus Industries" [ref=e217]
+                    - cell "0" [ref=e218]
+                    - cell "Active" [ref=e219]:
+                      - generic [ref=e222]:
+                        - log [ref=e224]
+                        - generic [ref=e225]:
+                          - generic [ref=e226]:
+                            - generic [ref=e227]: Active
+                            - combobox [ref=e229]
+                          - img [ref=e232]
+                    - cell "Row actions" [ref=e234]:
+                      - button "Row actions" [ref=e235] [cursor=pointer]:
+                        - img [ref=e236]
+                  - row "test 4 Daedalus Industries Daedalus Industries Daedalus Industries 3 Inactive Row actions" [ref=e240]:
+                    - cell "test 4" [ref=e241]
+                    - cell "Daedalus Industries" [ref=e242]
+                    - cell "Daedalus Industries" [ref=e243]
+                    - cell "Daedalus Industries" [ref=e244]
+                    - cell "3" [ref=e245]
+                    - cell "Inactive" [ref=e246]:
+                      - generic [ref=e249]:
+                        - log [ref=e251]
+                        - generic [ref=e252]:
+                          - generic [ref=e253]:
+                            - generic [ref=e254]: Inactive
+                            - combobox [ref=e256]
+                          - img [ref=e259]
+                    - cell "Row actions" [ref=e261]:
+                      - button "Row actions" [ref=e262] [cursor=pointer]:
+                        - img [ref=e263]
+                  - row "test 3 Daedalus Industries Daedalus Industries Daedalus Industries 3 Active Row actions" [ref=e267]:
+                    - cell "test 3" [ref=e268]
+                    - cell "Daedalus Industries" [ref=e269]
+                    - cell "Daedalus Industries" [ref=e270]
+                    - cell "Daedalus Industries" [ref=e271]
+                    - cell "3" [ref=e272]
+                    - cell "Active" [ref=e273]:
+                      - generic [ref=e276]:
+                        - log [ref=e278]
+                        - generic [ref=e279]:
+                          - generic [ref=e280]:
+                            - generic [ref=e281]: Active
+                            - combobox [ref=e283]
+                          - img [ref=e286]
+                    - cell "Row actions" [ref=e288]:
+                      - button "Row actions" [ref=e289] [cursor=pointer]:
+                        - img [ref=e290]
+                  - row "test Daedalus Industries Daedalus Industries Daedalus Industries 5 Active Row actions" [ref=e294]:
+                    - cell "test" [ref=e295]
+                    - cell "Daedalus Industries" [ref=e296]
+                    - cell "Daedalus Industries" [ref=e297]
+                    - cell "Daedalus Industries" [ref=e298]
+                    - cell "5" [ref=e299]
+                    - cell "Active" [ref=e300]:
+                      - generic [ref=e303]:
+                        - log [ref=e305]
+                        - generic [ref=e306]:
+                          - generic [ref=e307]:
+                            - generic [ref=e308]: Active
+                            - combobox [ref=e310]
+                          - img [ref=e313]
+                    - cell "Row actions" [ref=e315]:
+                      - button "Row actions" [ref=e316] [cursor=pointer]:
+                        - img [ref=e317]
+                  - row "test 2 Daedalus Industries Daedalus Industries test name 10 Active Row actions" [ref=e321]:
+                    - cell "test 2" [ref=e322]
+                    - cell "Daedalus Industries" [ref=e323]
+                    - cell "Daedalus Industries" [ref=e324]
+                    - cell "test name" [ref=e325]
+                    - cell "10" [ref=e326]
+                    - cell "Active" [ref=e327]:
+                      - generic [ref=e330]:
+                        - log [ref=e332]
+                        - generic [ref=e333]:
+                          - generic [ref=e334]:
+                            - generic [ref=e335]: Active
+                            - combobox [ref=e337]
+                          - img [ref=e340]
+                    - cell "Row actions" [ref=e342]:
+                      - button "Row actions" [ref=e343] [cursor=pointer]:
+                        - img [ref=e344]
+                  - row "test project 1 - edited test project 1 company test project 1 company - new edit test name 0 Active Row actions" [ref=e348]:
+                    - cell "test project 1 - edited" [ref=e349]
+                    - cell "test project 1 company" [ref=e350]
+                    - cell "test project 1 company - new edit" [ref=e351]
+                    - cell "test name" [ref=e352]
+                    - cell "0" [ref=e353]
+                    - cell "Active" [ref=e354]:
+                      - generic [ref=e357]:
+                        - log [ref=e359]
+                        - generic [ref=e360]:
+                          - generic [ref=e361]:
+                            - generic [ref=e362]: Active
+                            - combobox [ref=e364]
+                          - img [ref=e367]
+                    - cell "Row actions" [ref=e369]:
+                      - button "Row actions" [ref=e370] [cursor=pointer]:
+                        - img [ref=e371]
+                  - row "test Daedalus Industries Daedalus Industries Daedalus Industries 10 Active Row actions" [ref=e375]:
+                    - cell "test" [ref=e376]
+                    - cell "Daedalus Industries" [ref=e377]
+                    - cell "Daedalus Industries" [ref=e378]
+                    - cell "Daedalus Industries" [ref=e379]
+                    - cell "10" [ref=e380]
+                    - cell "Active" [ref=e381]:
+                      - generic [ref=e384]:
+                        - log [ref=e386]
+                        - generic [ref=e387]:
+                          - generic [ref=e388]:
+                            - generic [ref=e389]: Active
+                            - combobox [ref=e391]
+                          - img [ref=e394]
+                    - cell "Row actions" [ref=e396]:
+                      - button "Row actions" [ref=e397] [cursor=pointer]:
+                        - img [ref=e398]
+                  - row "test Daedalus Industries Daedalus Industries Daedalus Industries 4 Active Row actions" [ref=e402]:
+                    - cell "test" [ref=e403]
+                    - cell "Daedalus Industries" [ref=e404]
+                    - cell "Daedalus Industries" [ref=e405]
+                    - cell "Daedalus Industries" [ref=e406]
+                    - cell "4" [ref=e407]
+                    - cell "Active" [ref=e408]:
+                      - generic [ref=e411]:
+                        - log [ref=e413]
+                        - generic [ref=e414]:
+                          - generic [ref=e415]:
+                            - generic [ref=e416]: Active
+                            - combobox [ref=e418]
+                          - img [ref=e421]
+                    - cell "Row actions" [ref=e423]:
+                      - button "Row actions" [ref=e424] [cursor=pointer]:
+                        - img [ref=e425]
+                  - row "test Daedalus Industries Daedalus Industries Daedalus Industries 3 Active Row actions" [ref=e429]:
+                    - cell "test" [ref=e430]
+                    - cell "Daedalus Industries" [ref=e431]
+                    - cell "Daedalus Industries" [ref=e432]
+                    - cell "Daedalus Industries" [ref=e433]
+                    - cell "3" [ref=e434]
+                    - cell "Active" [ref=e435]:
+                      - generic [ref=e438]:
+                        - log [ref=e440]
+                        - generic [ref=e441]:
+                          - generic [ref=e442]:
+                            - generic [ref=e443]: Active
+                            - combobox [ref=e445]
+                          - img [ref=e448]
+                    - cell "Row actions" [ref=e450]:
+                      - button "Row actions" [ref=e451] [cursor=pointer]:
+                        - img [ref=e452]
+              - generic [ref=e123]:
+                - generic [ref=e124]: Showing 1-10 of 19 projects
+                - generic [ref=e125]:
+                  - button "Previous" [disabled] [ref=e126]:
+                    - img [ref=e127]
+                    - text: Previous
+                  - button "1" [disabled] [ref=e456]
+                  - button "2" [ref=e457] [cursor=pointer]
+                  - button "Next" [ref=e129] [cursor=pointer]:
+                    - text: Next
+                    - img [ref=e130]
+  - button "Feedback" [ref=e132]:
+    - img [ref=e133]
+    - generic [ref=e135]: Feedback
+  - button "Debug" [ref=e136]:
+    - img [ref=e137]
+    - generic [ref=e146]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e147]

@@ -1,0 +1,35 @@
+[    1417ms] [LOG] Timestamp: 2026-06-11T19:06:22.364Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1417ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1417ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1417ms] [INFO] Timestamp: 2026-06-11T19:06:22.364Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1417ms] [INFO] Metadata: {requestId: req_1781204781956_0002, method: GET, url: /profile/me, status: 200, duration: 408} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1485ms] [LOG] Timestamp: 2026-06-11T19:06:22.433Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1485ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1486ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1486ms] [INFO] Timestamp: 2026-06-11T19:06:22.433Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1486ms] [INFO] Metadata: {requestId: req_1781204781956_0001, method: GET, url: /modules, status: 200, duration: 477} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1561ms] [LOG] Timestamp: 2026-06-11T19:06:22.509Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1561ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1561ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1562ms] [INFO] Timestamp: 2026-06-11T19:06:22.509Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1562ms] [INFO] Metadata: {requestId: req_1781204781956_0003, method: GET, url: /home/dashboard, status: 200, duration: 552} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1926ms] [LOG] Timestamp: 2026-06-11T19:06:22.873Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1926ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1926ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(21)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1926ms] [INFO] Timestamp: 2026-06-11T19:06:22.873Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1926ms] [INFO] Metadata: {requestId: req_1781204782384_0006, method: GET, url: /users/cmm2ha6c700013701kcw1i91f/companies, status: 200, duration: 489} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1927ms] [LOG] Timestamp: 2026-06-11T19:06:22.875Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1927ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1927ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(1)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1928ms] [INFO] Timestamp: 2026-06-11T19:06:22.875Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1928ms] [INFO] Metadata: {requestId: req_1781204782384_0004, method: GET, url: /users/cmm2ha6c700013701kcw1i91f/companies, status: 200, duration: 491} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1943ms] [LOG] Timestamp: 2026-06-11T19:06:22.890Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1943ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1943ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(21)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    1943ms] [INFO] Timestamp: 2026-06-11T19:06:22.890Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    1943ms] [INFO] Metadata: {requestId: req_1781204782384_0005, method: GET, url: /states, status: 200, duration: 506} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2576ms] [LOG] Timestamp: 2026-06-11T19:06:23.523Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    2576ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    2576ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(3)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/fddda99813b76125.js:0
+[    2576ms] [INFO] Timestamp: 2026-06-11T19:06:23.523Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2576ms] [INFO] Metadata: {requestId: req_1781204782384_0007, method: GET, url: /template/list/active, status: 200, duration: 1139} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0

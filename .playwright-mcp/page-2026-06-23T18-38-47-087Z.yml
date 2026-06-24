@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search..." [ref=e27]
+        - generic [ref=e29]:
+          - button "Notifications" [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+          - generic [ref=e34]:
+            - button "Settings" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button "Support" [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "Log out" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+          - generic [ref=e47]:
+            - generic [ref=e48]: "?"
+            - paragraph [ref=e49]: Loading...
+      - main [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - heading "Parts" [level=1] [ref=e54]
+              - paragraph [ref=e55]: Manage your panel parts catalog
+            - generic [ref=e56]:
+              - button "Manage" [ref=e58] [cursor=pointer]:
+                - text: Manage
+                - img [ref=e59]
+              - button "Add Part" [ref=e61] [cursor=pointer]:
+                - generic [ref=e62]:
+                  - img [ref=e63]
+                  - generic [ref=e66]: Add Part
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - img [ref=e69]
+              - textbox "Search..." [ref=e72]
+            - generic [ref=e75]:
+              - log [ref=e77]
+              - generic [ref=e78]:
+                - generic [ref=e79]:
+                  - generic [ref=e80]: Category
+                  - combobox [ref=e82]
+                - img [ref=e89]
+            - generic [ref=e93]:
+              - log [ref=e95]
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - generic [ref=e98]: Manufacturer
+                  - combobox [ref=e100]
+                - img [ref=e107]
+            - generic [ref=e111]:
+              - log [ref=e113]
+              - generic [ref=e114]:
+                - generic [ref=e115]:
+                  - generic [ref=e116]: Family
+                  - combobox [ref=e118]
+                - img [ref=e125]
+          - generic [ref=e128]:
+            - table [ref=e130]:
+              - rowgroup [ref=e131]:
+                - row "Part Category Manufacturer Family" [ref=e132]:
+                  - cell "Part" [ref=e133]
+                  - cell "Category" [ref=e134]
+                  - cell "Manufacturer" [ref=e135]
+                  - cell "Family" [ref=e136]
+                  - cell [ref=e137]
+              - rowgroup [ref=e138]:
+                - row [ref=e139]:
+                  - cell [ref=e140]
+            - generic [ref=e143]:
+              - generic [ref=e144]: Showing 1-0 of 0 items
+              - generic [ref=e145]:
+                - button "Previous" [disabled] [ref=e146]:
+                  - img [ref=e147]
+                  - text: Previous
+                - button "Next" [disabled] [ref=e149]:
+                  - text: Next
+                  - img [ref=e150]
+  - button "Feedback" [ref=e152]:
+    - img [ref=e153]
+    - generic [ref=e155]: Feedback
+  - button "Debug" [ref=e156]:
+    - img [ref=e157]
+    - generic [ref=e166]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e167]

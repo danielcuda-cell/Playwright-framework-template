@@ -1,0 +1,266 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e1343]:
+    - banner [ref=e1347]:
+      - generic [ref=e1348]:
+        - button "Back" [ref=e1349] [cursor=pointer]:
+          - img [ref=e1350]
+        - generic [ref=e1352]: Template Builder
+      - generic [ref=e1551]:
+        - button "Cancel" [ref=e1552] [cursor=pointer]:
+          - generic [ref=e1553]: Cancel
+        - button "Save as Draft" [ref=e1554] [cursor=pointer]:
+          - generic [ref=e1555]: Save as Draft
+        - button "Preview" [ref=e1556] [cursor=pointer]:
+          - img [ref=e1557]
+          - generic [ref=e1560]: Preview
+        - button "Publish" [ref=e1561] [cursor=pointer]:
+          - generic [ref=e1562]: Publish
+    - generic [ref=e1353]:
+      - generic [ref=e1354]:
+        - generic [ref=e1355]:
+          - generic [ref=e1356]: TEMPLATE NAME
+          - textbox "Enter a template name" [ref=e1359]: e2e-ctrl-xVAgPbTX
+        - generic [ref=e1360]:
+          - generic [ref=e1361]: DRAFT
+          - button "Edit Changelog" [ref=e1563] [cursor=pointer]:
+            - generic [ref=e1365]: Edit Changelog
+      - generic [ref=e1366]:
+        - generic [ref=e1367]:
+          - generic [ref=e1368]:
+            - heading "Components" [level=2] [ref=e1369]
+            - paragraph [ref=e1370]: Drag fields to sections
+          - generic [ref=e1491]:
+            - button "Text input" [ref=e1492]:
+              - generic [ref=e1493] [cursor=pointer]:
+                - img [ref=e1494]
+                - generic [ref=e1497]: Text input
+            - button "Text area" [ref=e1498]:
+              - generic [ref=e1499] [cursor=pointer]:
+                - img [ref=e1500]
+                - generic [ref=e1503]: Text area
+            - button "Dropdown" [ref=e1504]:
+              - generic [ref=e1505] [cursor=pointer]:
+                - img [ref=e1506]
+                - generic [ref=e1509]: Dropdown
+            - button "Radio group" [ref=e1510]:
+              - generic [ref=e1511] [cursor=pointer]:
+                - img [ref=e1512]
+                - generic [ref=e1516]: Radio group
+            - button "Rack" [ref=e1517]:
+              - generic [ref=e1518] [cursor=pointer]:
+                - img [ref=e1519]
+                - generic [ref=e1521]: Rack
+            - button "Rack size" [ref=e1522]:
+              - generic [ref=e1523] [cursor=pointer]:
+                - img [ref=e1524]
+                - generic [ref=e1526]: Rack size
+            - button "Checkbox" [ref=e1527]:
+              - generic [ref=e1528] [cursor=pointer]:
+                - img [ref=e1529]
+                - generic [ref=e1532]: Checkbox
+            - button "Date" [ref=e1533]:
+              - generic [ref=e1534] [cursor=pointer]:
+                - img [ref=e1535]
+                - generic [ref=e1538]: Date
+            - button "Number" [ref=e1539]:
+              - generic [ref=e1540] [cursor=pointer]:
+                - img [ref=e1541]
+                - generic [ref=e1544]: Number
+            - button "Toggle" [ref=e1545]:
+              - generic [ref=e1546] [cursor=pointer]:
+                - img [ref=e1547]
+                - generic [ref=e1550]: Toggle
+        - generic [ref=e1373]:
+          - generic [ref=e1376]:
+            - generic [ref=e1377]:
+              - img [ref=e1564]
+              - button "Edit label" [ref=e1567]: SECTION 1
+              - button "Delete section f90cdf9a-ed2a-43ee-a123-569c32818cc1" [ref=e1568] [cursor=pointer]:
+                - img [ref=e1569]
+            - button "RACK GROUP Delete Rack Group Move up Move down Rack 1 Copy rack 14b44ef9-993f-468a-8925-3524a4274f2d Remove rack 14b44ef9-993f-468a-8925-3524a4274f2d DROPDOWN RULES APPLIED Copy component Remove component Edit component Move up Move down drop 1 Option 1 RULE APPLIED Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save DROPDOWN Copy component Remove component Edit component Move up Move down drop 2 Option 1 Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save DROPDOWN Copy component Remove component Edit component Move up Move down drop 3 Option 1 Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save Add Component" [disabled] [ref=e1572]:
+              - generic [ref=e1382]:
+                - generic [ref=e1573]:
+                  - generic [ref=e1574]:
+                    - button [ref=e1575]:
+                      - img [ref=e1576]
+                    - generic [ref=e1577]: RACK GROUP
+                  - generic [ref=e1578]:
+                    - button "Delete Rack Group" [disabled] [ref=e1579] [cursor=pointer]:
+                      - img [ref=e1580]
+                    - button "Move up" [disabled] [ref=e1583]:
+                      - img [ref=e1584]
+                    - button "Move down" [disabled] [ref=e1586]:
+                      - img [ref=e1587]
+                - generic [ref=e1385]:
+                  - generic [ref=e1386]:
+                    - heading "Rack 1" [level=3] [ref=e1387]
+                    - generic [ref=e1589]:
+                      - button "Copy rack 14b44ef9-993f-468a-8925-3524a4274f2d" [disabled] [ref=e1590] [cursor=pointer]:
+                        - img [ref=e1591]
+                      - button "Remove rack 14b44ef9-993f-468a-8925-3524a4274f2d" [disabled] [ref=e1594] [cursor=pointer]:
+                        - img [ref=e1595]
+                  - generic [ref=e1388]:
+                    - button "DROPDOWN RULES APPLIED Copy component Remove component Edit component Move up Move down drop 1 Option 1 RULE APPLIED Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save" [disabled] [ref=e1598]:
+                      - generic [ref=e1390]:
+                        - generic [ref=e1391]:
+                          - generic [ref=e1392]:
+                            - button [ref=e1599]:
+                              - img [ref=e1600]
+                            - paragraph [ref=e1393]: DROPDOWN
+                          - generic [ref=e1601]:
+                            - generic [ref=e1602]: RULES APPLIED
+                            - button "Copy component" [disabled] [ref=e1603] [cursor=pointer]:
+                              - img [ref=e1604]
+                            - button "Remove component" [disabled] [ref=e1607] [cursor=pointer]:
+                              - img [ref=e1608]
+                            - button "Edit component" [disabled] [ref=e1611] [cursor=pointer]:
+                              - img [ref=e1612]
+                            - button "Move up" [disabled] [ref=e1615]:
+                              - img [ref=e1616]
+                            - button "Move down" [disabled] [ref=e1618] [cursor=pointer]:
+                              - img [ref=e1619]
+                        - generic [ref=e1396]:
+                          - paragraph [ref=e1397]: drop 1
+                          - generic [ref=e1399]:
+                            - generic [ref=e1401]:
+                              - paragraph [ref=e1402]: Option 1
+                              - generic [ref=e1621]: RULE APPLIED
+                              - button "Add rule" [disabled] [ref=e1622] [cursor=pointer]:
+                                - img [ref=e1623]
+                                - text: Edit rule
+                            - generic [ref=e1404]:
+                              - paragraph [ref=e1405]: Option 2
+                              - button "Add rule" [disabled] [ref=e1625] [cursor=pointer]:
+                                - img [ref=e1626]
+                                - text: Add rule
+                            - generic [ref=e1407]:
+                              - paragraph [ref=e1408]: Option 3
+                              - button "Add rule" [disabled] [ref=e1628] [cursor=pointer]:
+                                - img [ref=e1629]
+                                - text: Add rule
+                        - generic:
+                          - generic:
+                            - switch "Required" [disabled] [ref=e1411]:
+                              - generic [ref=e1415]: Required
+                            - generic [ref=e1416]:
+                              - button "Cancel" [disabled] [ref=e1417]:
+                                - generic [ref=e1418]: Cancel
+                              - button "Save" [disabled] [ref=e1419]:
+                                - generic [ref=e1420]: Save
+                    - button "DROPDOWN Copy component Remove component Edit component Move up Move down drop 2 Option 1 Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save" [disabled] [ref=e1631]:
+                      - generic [ref=e1422]:
+                        - generic [ref=e1423]:
+                          - generic [ref=e1424]:
+                            - button [ref=e1632]:
+                              - img [ref=e1633]
+                            - paragraph [ref=e1425]: DROPDOWN
+                          - generic [ref=e1634]:
+                            - button "Copy component" [disabled] [ref=e1635] [cursor=pointer]:
+                              - img [ref=e1636]
+                            - button "Remove component" [disabled] [ref=e1639] [cursor=pointer]:
+                              - img [ref=e1640]
+                            - button "Edit component" [disabled] [ref=e1643] [cursor=pointer]:
+                              - img [ref=e1644]
+                            - button "Move up" [disabled] [ref=e1647] [cursor=pointer]:
+                              - img [ref=e1648]
+                            - button "Move down" [disabled] [ref=e1650] [cursor=pointer]:
+                              - img [ref=e1651]
+                        - generic [ref=e1428]:
+                          - paragraph [ref=e1429]: drop 2
+                          - generic [ref=e1431]:
+                            - generic [ref=e1433]:
+                              - paragraph [ref=e1434]: Option 1
+                              - button "Add rule" [disabled] [ref=e1653] [cursor=pointer]:
+                                - img [ref=e1654]
+                                - text: Add rule
+                            - generic [ref=e1436]:
+                              - paragraph [ref=e1437]: Option 2
+                              - button "Add rule" [disabled] [ref=e1656] [cursor=pointer]:
+                                - img [ref=e1657]
+                                - text: Add rule
+                            - generic [ref=e1439]:
+                              - paragraph [ref=e1440]: Option 3
+                              - button "Add rule" [disabled] [ref=e1659] [cursor=pointer]:
+                                - img [ref=e1660]
+                                - text: Add rule
+                        - generic:
+                          - generic:
+                            - switch "Required" [disabled] [ref=e1443]:
+                              - generic [ref=e1447]: Required
+                            - generic [ref=e1448]:
+                              - button "Cancel" [disabled] [ref=e1449]:
+                                - generic [ref=e1450]: Cancel
+                              - button "Save" [disabled] [ref=e1451]:
+                                - generic [ref=e1452]: Save
+                    - button "DROPDOWN Copy component Remove component Edit component Move up Move down drop 3 Option 1 Add rule Option 2 Add rule Option 3 Add rule Required Cancel Save" [disabled] [ref=e1662]:
+                      - generic [ref=e1454]:
+                        - generic [ref=e1455]:
+                          - generic [ref=e1456]:
+                            - button [ref=e1663]:
+                              - img [ref=e1664]
+                            - paragraph [ref=e1457]: DROPDOWN
+                          - generic [ref=e1665]:
+                            - button "Copy component" [disabled] [ref=e1666] [cursor=pointer]:
+                              - img [ref=e1667]
+                            - button "Remove component" [disabled] [ref=e1670] [cursor=pointer]:
+                              - img [ref=e1671]
+                            - button "Edit component" [disabled] [ref=e1674] [cursor=pointer]:
+                              - img [ref=e1675]
+                            - button "Move up" [disabled] [ref=e1678] [cursor=pointer]:
+                              - img [ref=e1679]
+                            - button "Move down" [disabled] [ref=e1681]:
+                              - img [ref=e1682]
+                        - generic [ref=e1460]:
+                          - paragraph [ref=e1461]: drop 3
+                          - generic [ref=e1463]:
+                            - generic [ref=e1465]:
+                              - paragraph [ref=e1466]: Option 1
+                              - button "Add rule" [disabled] [ref=e1684] [cursor=pointer]:
+                                - img [ref=e1685]
+                                - text: Add rule
+                            - generic [ref=e1468]:
+                              - paragraph [ref=e1469]: Option 2
+                              - button "Add rule" [disabled] [ref=e1687] [cursor=pointer]:
+                                - img [ref=e1688]
+                                - text: Add rule
+                            - generic [ref=e1471]:
+                              - paragraph [ref=e1472]: Option 3
+                              - button "Add rule" [disabled] [ref=e1690] [cursor=pointer]:
+                                - img [ref=e1691]
+                                - text: Add rule
+                        - generic:
+                          - generic:
+                            - switch "Required" [disabled] [ref=e1475]:
+                              - generic [ref=e1479]: Required
+                            - generic [ref=e1480]:
+                              - button "Cancel" [disabled] [ref=e1481]:
+                                - generic [ref=e1482]: Cancel
+                              - button "Save" [disabled] [ref=e1483]:
+                                - generic [ref=e1484]: Save
+                  - button "Add Component" [disabled] [ref=e1694] [cursor=pointer]:
+                    - img [ref=e1695]
+                    - text: Add Component
+            - button "Add Component" [ref=e1698] [cursor=pointer]:
+              - img [ref=e1699]
+              - text: Add Component
+          - generic [ref=e1487]:
+            - generic [ref=e1488]:
+              - img [ref=e1701]
+              - button "Edit label" [ref=e1704]: SECTION 2
+              - button "Delete section c8d5eee7-3640-4080-9381-9d925a0c92b1" [ref=e1705] [cursor=pointer]:
+                - img [ref=e1706]
+            - button "Add Component" [ref=e1710] [cursor=pointer]:
+              - img [ref=e1711]
+              - text: Add Component
+          - button "Add section" [ref=e1713] [cursor=pointer]:
+            - img [ref=e1714]
+            - generic [ref=e1716]: Add section
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e115]
+  - status [ref=e1490]

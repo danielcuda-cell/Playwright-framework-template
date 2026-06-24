@@ -1,0 +1,149 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e1717]:
+      - generic [ref=e1718]:
+        - generic [ref=e1719]:
+          - img "Daeda panel logo" [ref=e1720]
+          - button "Collapse sidebar" [ref=e1721] [cursor=pointer]:
+            - img [ref=e1722]
+        - navigation [ref=e1725]:
+          - list [ref=e1726]:
+            - listitem [ref=e1727]:
+              - link "Home" [ref=e1728] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e1729]
+                - generic [ref=e1732]: Home
+            - listitem [ref=e1733]:
+              - button "Dashboard" [ref=e1734] [cursor=pointer]:
+                - generic [ref=e1735]: Dashboard
+                - img [ref=e1736]
+            - listitem [ref=e1738]:
+              - button "Management" [ref=e1739] [cursor=pointer]:
+                - generic [ref=e1740]: Management
+                - img [ref=e1741]
+            - listitem [ref=e1743]:
+              - button "Panels" [expanded] [ref=e1744] [cursor=pointer]:
+                - generic [ref=e1745]: Panels
+                - img [ref=e1746]
+              - list [ref=e1748]:
+                - listitem [ref=e1749]:
+                  - link "Templates" [ref=e1750] [cursor=pointer]:
+                    - /url: /templates
+                    - img [ref=e1751]
+                    - generic [ref=e1756]: Templates
+                - listitem [ref=e1757]:
+                  - link "Standards" [ref=e1758] [cursor=pointer]:
+                    - /url: /standards
+                    - img [ref=e1759]
+                    - generic [ref=e1760]: Standards
+                - listitem [ref=e1761]:
+                  - link "Parts" [ref=e1762] [cursor=pointer]:
+                    - /url: /parts
+                    - img [ref=e1763]
+                    - generic [ref=e1765]: Parts
+                - listitem [ref=e1766]:
+                  - link "IO Modules" [ref=e1767] [cursor=pointer]:
+                    - /url: /io-modules
+                    - img [ref=e1768]
+                    - generic [ref=e1773]: IO Modules
+    - generic [ref=e1774]:
+      - banner [ref=e1775]:
+        - navigation "Breadcrumb" [ref=e1778]:
+          - list [ref=e1779]:
+            - listitem [ref=e1780]:
+              - img [ref=e1782]
+              - generic [ref=e1787]: PANELS
+              - img [ref=e1789]
+              - generic [ref=e1791]: Templates
+        - generic [ref=e1793]:
+          - button "Notifications" [ref=e1794] [cursor=pointer]:
+            - img [ref=e1795]
+          - generic [ref=e1798]:
+            - button "Settings" [ref=e1799] [cursor=pointer]:
+              - img [ref=e1800]
+            - button "Support" [ref=e1803] [cursor=pointer]:
+              - img [ref=e1804]
+            - button "Log out" [ref=e1807] [cursor=pointer]:
+              - img [ref=e1808]
+          - generic [ref=e1811]:
+            - generic [ref=e1812]: DC
+            - paragraph [ref=e1813]: Daniel Cuda
+      - main [ref=e1814]:
+        - generic [ref=e1815]:
+          - generic [ref=e1816]:
+            - generic [ref=e1817]:
+              - heading "Templates" [level=1] [ref=e1818]
+              - paragraph [ref=e1819]: Manage base templates for panel configurations
+            - button "Create New Template" [ref=e1820] [cursor=pointer]:
+              - img [ref=e1821]
+              - generic [ref=e1823]: Create New Template
+          - generic [ref=e1824]:
+            - generic [ref=e1827]:
+              - log [ref=e1829]
+              - generic [ref=e1830]:
+                - generic [ref=e1831]:
+                  - generic [ref=e1832]: Active (3)
+                  - combobox [ref=e1834]
+                - img [ref=e1837]
+            - generic [ref=e1841]:
+              - log [ref=e1843]
+              - generic [ref=e1844]:
+                - generic [ref=e1845]:
+                  - generic [ref=e1846]: All Panel Types (3)
+                  - combobox [ref=e1848]
+                - img [ref=e1851]
+          - generic [ref=e1854]:
+            - article [ref=e1855]:
+              - button "Open template Daedalus Template 01" [ref=e1856] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: ACTIVE
+                  - img
+                - generic [ref=e1857]:
+                  - generic [ref=e1858]:
+                    - generic [ref=e1859]: POWER
+                    - generic [ref=e1860]: Last Update 06/26
+                  - button "More options" [ref=e1862] [cursor=pointer]:
+                    - img [ref=e1863]
+                - generic:
+                  - heading "Daedalus Template 01" [level=3]
+            - article [ref=e1867]:
+              - button "Open template 4jun756 jose" [ref=e1868] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: ACTIVE
+                  - img
+                - generic [ref=e1869]:
+                  - generic [ref=e1870]:
+                    - generic [ref=e1871]: NETWORK
+                    - generic [ref=e1872]: Last Update 06/26
+                  - button "More options" [ref=e1874] [cursor=pointer]:
+                    - img [ref=e1875]
+                - generic:
+                  - heading "4jun756 jose" [level=3]
+            - article [ref=e1879]:
+              - button "Open template e2e-ctrl-xVAgPbTX" [ref=e1880] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: ACTIVE
+                  - img
+                - generic [ref=e1881]:
+                  - generic [ref=e1882]:
+                    - generic [ref=e1883]: CONTROL
+                    - generic [ref=e1884]: Last Update 06/26
+                  - button "More options" [ref=e1886] [cursor=pointer]:
+                    - img [ref=e1887]
+                - generic:
+                  - heading "e2e-ctrl-xVAgPbTX" [level=3]
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e1891]:
+        - img [ref=e1893]
+        - generic [ref=e1896]: Template published successfully
+  - alert [ref=e115]

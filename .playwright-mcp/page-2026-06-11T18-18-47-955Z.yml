@@ -1,0 +1,95 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - img [ref=e27]
+              - generic [ref=e32]: PANELS
+              - img [ref=e34]
+              - generic [ref=e36]: IO Modules
+        - generic [ref=e38]:
+          - button "Notifications" [ref=e39] [cursor=pointer]:
+            - img [ref=e40]
+          - generic [ref=e43]:
+            - button "Settings" [ref=e44] [cursor=pointer]:
+              - img [ref=e45]
+            - button "Support" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+            - button "Log out" [ref=e52] [cursor=pointer]:
+              - img [ref=e53]
+          - generic [ref=e56]:
+            - generic [ref=e57]: "?"
+            - paragraph [ref=e58]: Loading...
+      - main [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - heading "IO Modules" [level=1] [ref=e63]
+              - paragraph [ref=e64]: Manage your IO module catalog
+            - button "Add IO Module" [ref=e65] [cursor=pointer]:
+              - img [ref=e66]
+              - generic [ref=e69]: Add IO Module
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - textbox "Search..." [ref=e75]
+            - generic [ref=e78]:
+              - log [ref=e80]
+              - generic [ref=e81]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: Manufacturer
+                  - combobox [ref=e85]
+                - img [ref=e92]
+            - generic [ref=e96]:
+              - log [ref=e98]
+              - generic [ref=e99]:
+                - generic [ref=e100]:
+                  - generic [ref=e101]: Family
+                  - combobox [ref=e103]
+                - img [ref=e110]
+          - generic [ref=e113]:
+            - table [ref=e115]:
+              - rowgroup [ref=e116]:
+                - row "Module Label Description IO Points Manufacturer Family" [ref=e117]:
+                  - cell "Module" [ref=e118]
+                  - cell "Label" [ref=e119]
+                  - cell "Description" [ref=e120]
+                  - cell "IO Points" [ref=e121]
+                  - cell "Manufacturer" [ref=e122]
+                  - cell "Family" [ref=e123]
+                  - cell [ref=e124]
+              - rowgroup [ref=e125]:
+                - row [ref=e126]:
+                  - cell [ref=e127]
+            - generic [ref=e130]:
+              - generic [ref=e131]: Showing 1-0 of 0 items
+              - generic [ref=e132]:
+                - button "Previous" [disabled] [ref=e133]:
+                  - img [ref=e134]
+                  - text: Previous
+                - button "Next" [disabled] [ref=e136]:
+                  - text: Next
+                  - img [ref=e137]
+  - button "Feedback" [ref=e139]:
+    - img [ref=e140]
+    - generic [ref=e142]: Feedback
+  - button "Debug" [ref=e143]:
+    - img [ref=e144]
+    - generic [ref=e153]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e154]

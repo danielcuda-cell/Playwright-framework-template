@@ -1,0 +1,22 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img [ref=e5]
+    - generic [ref=e6]:
+      - heading "Welcome to DaedaPanel" [level=2] [ref=e7]:
+        - text: Welcome to
+        - text: DaedaPanel
+      - paragraph [ref=e8]: Lorem ipsum dolor sit amet, consectetur
+  - generic [ref=e10]:
+    - generic [ref=e131]:
+      - button "Go back to login" [ref=e132] [cursor=pointer]:
+        - img
+      - heading "Forgot password?" [level=1] [ref=e133]
+      - paragraph [ref=e134]: Please enter your email address. We will send you a link to reset your password.
+    - generic [ref=e21]:
+      - generic [ref=e143]:
+        - generic [ref=e144]: EMAIL ADDRESS
+        - textbox "Email" [ref=e146]:
+          - /placeholder: Type your email address
+          - text: invalid@test.com
+      - button "Send email" [ref=e147] [cursor=pointer]:
+        - generic [ref=e56]: Send Email

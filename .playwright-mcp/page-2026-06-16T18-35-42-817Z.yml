@@ -1,0 +1,38 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img [ref=e5]
+    - generic [ref=e6]:
+      - heading "Welcome to DaedaPanel" [level=2] [ref=e7]:
+        - text: Welcome to
+        - text: DaedaPanel
+      - paragraph [ref=e8]: Lorem ipsum dolor sit amet, consectetur
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Log in to your account" [level=1] [ref=e12]
+      - paragraph [ref=e13]: Welcome back! Please enter your details
+    - generic [ref=e21]:
+      - generic [ref=e33]:
+        - navigation [ref=e34]:
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - generic [ref=e37]: Log In
+            - listitem [ref=e38] [cursor=pointer]:
+              - link "Sign Up" [ref=e39]:
+                - /url: "#"
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: EMAIL ADDRESS
+            - textbox "Email" [ref=e45]:
+              - /placeholder: Type your email address
+          - generic [ref=e47]:
+            - generic [ref=e48]: PASSWORD
+            - generic [ref=e49]:
+              - textbox "Password" [ref=e50]:
+                - /placeholder: Type your password
+              - img [ref=e51] [cursor=pointer]
+          - paragraph [ref=e53]:
+            - link "Forgot password?" [ref=e54] [cursor=pointer]:
+              - /url: "#"
+      - button "Sign in" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: Log in
+    - paragraph

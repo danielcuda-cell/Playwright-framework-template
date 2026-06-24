@@ -5,6 +5,7 @@ import { randomString } from '../../shared/utils/random';
 
 const adminEmail    = process.env.E2E_USER_EMAIL!;
 const adminPassword = process.env.E2E_USER_PASSWORD!;
+const adminCreatedPassword = 'TestPass123!';
 
 test.describe.configure({ mode: 'serial' });
 
@@ -184,6 +185,100 @@ test.describe('Sign Up – full flow', () => {
     test('user with Reader role should land on home dashboard after login', async ({ loginPage, homePage }) => {
         await loginPage.goto();
         await loginPage.login(userEmail, userPassword);
+        await homePage.assertPageLoaded();
+    });
+
+});
+
+// ─── Admin creates a new user ──────────────────────────────────────────────────
+
+test.describe('Sign Up – admin creates a new user flow', () => {
+
+    let adminCreatedInboxId: string;
+    let adminCreatedEmail: string;
+    const adminCreatedFullName = `E2E Admin Created ${randomString(6)}`;
+
+    test('admin fills and submits the Create User form', async ({ loginPage, usersPage }) => {
+        const inbox = await createInbox();
+        adminCreatedInboxId = inbox.id;
+        adminCreatedEmail   = inbox.emailAddress;
+
+        await loginPage.goto();
+        await loginPage.login(adminEmail, adminPassword);
+        await loginPage.assertLoginSuccessful();
+
+        await usersPage.goto();
+        await usersPage.clickAddUser();
+        await usersPage.assertCreateUserDialogOpen();
+
+        await usersPage.fillCreateUserForm({
+            fullName: adminCreatedFullName,
+            phone: '+1 (555) 100-0001',
+            email: adminCreatedEmail,
+        });
+        await usersPage.selectJobFunction('Other');
+        await usersPage.selectRole('Reader');
+        await usersPage.selectCompany('Daedalus Industries');
+
+        await usersPage.submitCreateUserForm();
+        await usersPage.assertUserCreatedSuccessfully(adminCreatedEmail);
+    });
+
+    test('new user receives account verification email', async () => {
+        test.setTimeout(60000);
+        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
+        expect(email).not.toBeNull();
+        expect(
+            email.subject!.toLowerCase().includes('verify') ||
+            email.subject!.toLowerCase().includes('welcome') ||
+            email.subject!.toLowerCase().includes('confirm')
+        ).toBe(true);
+    });
+
+    test('new user receives email to set password', async () => {
+        test.setTimeout(60000);
+        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
+        expect(email).not.toBeNull();
+        const bodyText = email.body ?? '';
+        expect(
+            bodyText.toLowerCase().includes('password') ||
+            email.subject!.toLowerCase().includes('password')
+        ).toBe(true);
+    });
+
+    test('new user sets password via the email link', async ({ page }) => {
+        test.setTimeout(60000);
+        const email = await waitForLatestEmail(adminCreatedInboxId, 45000);
+        expect(email).not.toBeNull();
+
+        const bodyText = email.body ?? '';
+        const linkMatch = bodyText.match(/https?:\/\/[^\s"<>]+(?:reset|set|password)[^\s"<>]*/i);
+        expect(linkMatch, 'Password setup link not found in email body').not.toBeNull();
+
+        await page.goto(linkMatch![0]);
+        await page.waitForLoadState('domcontentloaded');
+
+        const passwordInput = page.getByPlaceholder(/new password/i).or(page.locator('input[type="password"]').first());
+        await passwordInput.fill(adminCreatedPassword);
+
+        const confirmInput = page.locator('input[type="password"]').last();
+        if (await confirmInput.count() > 0) {
+            await confirmInput.fill(adminCreatedPassword);
+        }
+
+        await page.getByRole('button', { name: /submit|reset|save|continue/i }).click();
+        await page.waitForTimeout(2000);
+    });
+
+    test('new user can log in with the new password', async ({ loginPage }) => {
+        await loginPage.goto();
+        await loginPage.login(adminCreatedEmail, adminCreatedPassword);
+        await loginPage.assertLoginSuccessful();
+    });
+
+    test('new user accesses the dashboard after login', async ({ loginPage, homePage }) => {
+        await loginPage.goto();
+        await loginPage.login(adminCreatedEmail, adminCreatedPassword);
         await homePage.assertPageLoaded();
     });
 

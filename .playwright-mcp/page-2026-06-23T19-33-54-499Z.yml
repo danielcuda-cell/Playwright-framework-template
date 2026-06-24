@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - main [ref=e233]:
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - button "Back" [ref=e237] [cursor=pointer]:
+            - img [ref=e238]
+          - generic [ref=e240]: Template Builder
+        - generic [ref=e241]:
+          - button "Cancel" [ref=e242] [cursor=pointer]:
+            - generic [ref=e244]: Cancel
+          - button "Save as Draft" [disabled] [ref=e245]:
+            - generic [ref=e247]: Save as Draft
+          - button "Preview" [disabled] [ref=e248]:
+            - generic [ref=e249]:
+              - img [ref=e250]
+              - generic [ref=e253]: Preview
+          - button "Publish" [disabled] [ref=e254]:
+            - generic [ref=e256]: Publish
+      - generic [ref=e257]:
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - generic [ref=e260]: TEMPLATE NAME
+            - textbox "Enter a template name" [ref=e263]: test-draft-check
+          - button "Edit Changelog" [ref=e265] [cursor=pointer]:
+            - generic [ref=e267]: Edit Changelog
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - heading "Components" [level=2] [ref=e271]
+              - paragraph [ref=e272]: Drag fields to sections
+            - generic [ref=e273]:
+              - button "Text input" [ref=e274]:
+                - generic [ref=e275] [cursor=pointer]:
+                  - img [ref=e276]
+                  - generic [ref=e279]: Text input
+              - button "Text area" [ref=e280]:
+                - generic [ref=e281] [cursor=pointer]:
+                  - img [ref=e282]
+                  - generic [ref=e285]: Text area
+              - button "Dropdown" [ref=e286]:
+                - generic [ref=e287] [cursor=pointer]:
+                  - img [ref=e288]
+                  - generic [ref=e291]: Dropdown
+              - button "Radio group" [ref=e292]:
+                - generic [ref=e293] [cursor=pointer]:
+                  - img [ref=e294]
+                  - generic [ref=e298]: Radio group
+              - button "Rack" [ref=e299]:
+                - generic [ref=e300] [cursor=pointer]:
+                  - img [ref=e301]
+                  - generic [ref=e303]: Rack
+              - button "Rack size" [ref=e304]:
+                - generic [ref=e305] [cursor=pointer]:
+                  - img [ref=e306]
+                  - generic [ref=e308]: Rack size
+              - button "Checkbox" [ref=e309]:
+                - generic [ref=e310] [cursor=pointer]:
+                  - img [ref=e311]
+                  - generic [ref=e314]: Checkbox
+              - button "Date" [ref=e315]:
+                - generic [ref=e316] [cursor=pointer]:
+                  - img [ref=e317]
+                  - generic [ref=e320]: Date
+              - button "Number" [ref=e321]:
+                - generic [ref=e322] [cursor=pointer]:
+                  - img [ref=e323]
+                  - generic [ref=e326]: Number
+              - button "Toggle" [ref=e327]:
+                - generic [ref=e328] [cursor=pointer]:
+                  - img [ref=e329]
+                  - generic [ref=e332]: Toggle
+          - button "Add section" [ref=e336] [cursor=pointer]:
+            - generic [ref=e337]:
+              - img [ref=e338]
+              - generic [ref=e340]: Add section
+  - button "Feedback" [ref=e92]:
+    - img [ref=e93]
+    - generic [ref=e95]: Feedback
+  - button "Debug" [ref=e96]:
+    - img [ref=e97]
+    - generic [ref=e106]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e107]
+  - status [ref=e341]

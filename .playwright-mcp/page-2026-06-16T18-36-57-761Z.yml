@@ -1,0 +1,71 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - img [ref=e5]
+    - generic [ref=e6]:
+      - heading "Welcome to DaedaPanel" [level=2] [ref=e7]:
+        - text: Welcome to
+        - text: DaedaPanel
+      - paragraph [ref=e8]: Lorem ipsum dolor sit amet, consectetur
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Create a new account" [level=1] [ref=e57]
+      - paragraph [ref=e13]: Welcome! Please register your new account
+    - generic [ref=e21]:
+      - generic [ref=e30]:
+        - generic:
+          - generic:
+            - generic:
+              - navigation:
+                - list:
+                  - listitem:
+                    - link "Log In":
+                      - /url: "#"
+                  - listitem:
+                    - generic: Sign Up
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: EMAIL ADDRESS
+                    - generic:
+                      - textbox "Email":
+                        - /placeholder: Type your email address
+                        - text: e2e-explore-test@mailslurp.com
+                  - generic:
+                    - generic:
+                      - generic: PASSWORD
+                      - generic:
+                        - textbox "Password":
+                          - /placeholder: Type your password
+                          - text: TestPass123!
+                        - img
+                    - generic:
+                      - paragraph:
+                        - img
+                        - text: At least 8 characters
+                      - paragraph: "Contain at least 3 of the following 4 types of characters:"
+                      - paragraph:
+                        - img
+                        - text: At least 1 lowercase
+                      - paragraph:
+                        - img
+                        - text: At least 1 uppercase
+                      - paragraph:
+                        - img
+                        - text: At least 1 number
+                      - paragraph:
+                        - img
+                        - text: At least 1 special character
+                  - generic:
+                    - generic:
+                      - generic: CONFIRM PASSWORD
+                      - generic:
+                        - textbox "Confirm Password":
+                          - /placeholder: Type your password
+                          - text: TestPass123!
+                        - img
+      - button "Sign Up" [active]:
+        - generic: Sign up
+      - generic [ref=e105]:
+        - img [ref=e107]
+        - paragraph [ref=e110]: Thanks for signing up.
+    - paragraph

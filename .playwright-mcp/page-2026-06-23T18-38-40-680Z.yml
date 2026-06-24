@@ -1,0 +1,84 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - textbox "Search..." [ref=e27]
+        - generic [ref=e29]:
+          - button "Notifications" [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+          - generic [ref=e34]:
+            - button "Settings" [ref=e35] [cursor=pointer]:
+              - img [ref=e36]
+            - button "Support" [ref=e39] [cursor=pointer]:
+              - img [ref=e40]
+            - button "Log out" [ref=e43] [cursor=pointer]:
+              - img [ref=e44]
+          - generic [ref=e47]:
+            - generic [ref=e48]: "?"
+            - paragraph [ref=e49]: Loading...
+      - main [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - button "List" [ref=e55] [cursor=pointer]:
+                - generic [ref=e56]: List
+              - button "Archived" [ref=e58] [cursor=pointer]:
+                - generic [ref=e59]: Archived
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e63]:
+                  - img [ref=e64]
+                  - heading "List" [level=1] [ref=e67]
+                - generic [ref=e68]:
+                  - generic [ref=e69]:
+                    - img [ref=e70]
+                    - textbox "Search..." [ref=e73]
+                  - button "Add Company" [ref=e74] [cursor=pointer]:
+                    - generic [ref=e75]:
+                      - img [ref=e76]
+                      - generic [ref=e79]: Add Company
+              - generic [ref=e81]:
+                - table [ref=e83]:
+                  - rowgroup [ref=e84]:
+                    - row "Company Name Standard" [ref=e85]:
+                      - cell "Company Name" [ref=e86]
+                      - cell "Standard" [ref=e87]
+                      - cell [ref=e88]
+                  - rowgroup [ref=e89]:
+                    - row [ref=e90]:
+                      - cell [ref=e91]
+                - generic [ref=e94]:
+                  - generic [ref=e95]: Showing 0-0 of 0 companies
+                  - generic [ref=e96]:
+                    - button "Previous" [disabled] [ref=e97]:
+                      - img [ref=e98]
+                      - text: Previous
+                    - button "Next" [disabled] [ref=e100]:
+                      - text: Next
+                      - img [ref=e101]
+          - generic [ref=e105]:
+            - heading "You have not selected a company yet" [level=3] [ref=e106]
+            - paragraph [ref=e108]: Select a company to view its details.
+  - button "Feedback" [ref=e109]:
+    - img [ref=e110]
+    - generic [ref=e112]: Feedback
+  - button "Debug" [ref=e113]:
+    - img [ref=e114]
+    - generic [ref=e123]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e124]

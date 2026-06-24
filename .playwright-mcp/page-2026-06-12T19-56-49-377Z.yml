@@ -1,0 +1,134 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4259]:
+    - complementary "Main navigation" [ref=e4260]:
+      - generic [ref=e4261]:
+        - generic [ref=e4262]:
+          - img "Daeda panel logo" [ref=e4263]
+          - button "Collapse sidebar" [ref=e4264] [cursor=pointer]:
+            - img [ref=e4265]
+        - navigation [ref=e4268]:
+          - list [ref=e4269]:
+            - listitem [ref=e4270]:
+              - link "Home" [ref=e4271] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e4272]
+                - generic [ref=e4275]: Home
+            - listitem [ref=e4276]:
+              - button "Dashboard" [ref=e4277] [cursor=pointer]:
+                - generic [ref=e4278]: Dashboard
+                - img [ref=e4279]
+            - listitem [ref=e4281]:
+              - button "Management" [ref=e4282] [cursor=pointer]:
+                - generic [ref=e4283]: Management
+                - img [ref=e4284]
+            - listitem [ref=e4286]:
+              - button "Panels" [expanded] [ref=e4287] [cursor=pointer]:
+                - generic [ref=e4288]: Panels
+                - img [ref=e4289]
+              - list [ref=e4291]:
+                - listitem [ref=e4292]:
+                  - link "Templates" [ref=e4293] [cursor=pointer]:
+                    - /url: /templates
+                    - img [ref=e4294]
+                    - generic [ref=e4299]: Templates
+                - listitem [ref=e4300]:
+                  - link "Standards" [ref=e4301] [cursor=pointer]:
+                    - /url: /standards
+                    - img [ref=e4302]
+                    - generic [ref=e4303]: Standards
+                - listitem [ref=e4304]:
+                  - link "Parts" [ref=e4305] [cursor=pointer]:
+                    - /url: /parts
+                    - img [ref=e4306]
+                    - generic [ref=e4308]: Parts
+                - listitem [ref=e4309]:
+                  - link "IO Modules" [ref=e4310] [cursor=pointer]:
+                    - /url: /io-modules
+                    - img [ref=e4311]
+                    - generic [ref=e4316]: IO Modules
+    - generic [ref=e4317]:
+      - banner [ref=e4318]:
+        - navigation "Breadcrumb" [ref=e4321]:
+          - list [ref=e4322]:
+            - listitem [ref=e4323]:
+              - img [ref=e4325]
+              - generic [ref=e4326]: PANELS
+              - img [ref=e4328]
+              - generic [ref=e4330]: Standards
+        - generic [ref=e4332]:
+          - button "Notifications" [ref=e4333] [cursor=pointer]:
+            - img [ref=e4334]
+          - generic [ref=e4337]:
+            - button "Settings" [ref=e4338] [cursor=pointer]:
+              - img [ref=e4339]
+            - button "Support" [ref=e4342] [cursor=pointer]:
+              - img [ref=e4343]
+            - button "Log out" [ref=e4346] [cursor=pointer]:
+              - img [ref=e4347]
+          - generic [ref=e4350]:
+            - generic [ref=e4351]: DC
+            - paragraph [ref=e4352]: Daniel Cuda
+      - main [ref=e4353]:
+        - generic [ref=e4354]:
+          - generic [ref=e4355]:
+            - generic [ref=e4356]:
+              - navigation "Breadcrumb" [ref=e4357]:
+                - list [ref=e4358]:
+                  - listitem [ref=e4359]:
+                    - link "Standards" [ref=e4360] [cursor=pointer]:
+                      - /url: /standards
+                    - img [ref=e4361]
+                    - generic [ref=e4363]: e2e-std-explore
+              - generic [ref=e4364]:
+                - button "Edit Standard Info" [ref=e4365] [cursor=pointer]:
+                  - text: Edit Standard Info
+                  - img [ref=e4366]
+                - button "Save Changes" [disabled] [ref=e4368]:
+                  - generic [ref=e4369]: Save Changes
+            - heading "e2e-std-explore — CONTROL" [level=1] [ref=e4370]
+          - generic [ref=e4371]:
+            - generic [ref=e4372]:
+              - generic [ref=e4373]:
+                - heading "Standard Info" [level=2] [ref=e4375]
+                - generic [ref=e4376]:
+                  - generic [ref=e4377]:
+                    - generic [ref=e4378]: Standard Name
+                    - textbox [disabled] [ref=e4380]: e2e-std-explore
+                  - generic [ref=e4381]:
+                    - generic [ref=e4382]: Based on Template
+                    - generic [ref=e4383]:
+                      - generic [ref=e4384]: CONTROL
+                      - generic [ref=e4385]: e2e-ctrl-xVAgPbTX
+              - generic [ref=e4386]:
+                - heading "Assigned Companies" [level=2] [ref=e4388]
+                - generic [ref=e4389]:
+                  - generic [ref=e4390]:
+                    - generic [ref=e4391]: Add Companies
+                    - generic [ref=e4393]:
+                      - img
+                      - textbox "Search companies..." [disabled] [ref=e4394]
+                  - paragraph [ref=e4395]: No companies assigned yet.
+            - generic [ref=e4397]:
+              - heading "Standard Configuration (inherited)" [level=2] [ref=e4399]
+              - paragraph [ref=e4400]: End users will see these options when ordering using this standard.
+              - generic [ref=e4401]:
+                - generic [ref=e4402]: Template Info
+                - generic [ref=e4403]:
+                  - generic [ref=e4404]:
+                    - generic [ref=e4405]: Panel type
+                    - generic [ref=e4406]: CONTROL
+                  - generic [ref=e4407]:
+                    - generic [ref=e4408]: Sections
+                    - generic [ref=e4409]: 2 Sections
+              - link "View and Edit Standard" [ref=e4410] [cursor=pointer]:
+                - /url: /standards/template/edit?standardId=cmqbcggk3002i3f01x9783f8g
+                - text: View and Edit Standard
+                - img [ref=e4411]
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e115]

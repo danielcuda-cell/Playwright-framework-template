@@ -1,0 +1,259 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+            - listitem [ref=e155]:
+              - button "Dashboard" [ref=e156] [cursor=pointer]:
+                - generic [ref=e157]: Dashboard
+                - img [ref=e158]
+            - listitem [ref=e160]:
+              - button "Management" [ref=e161] [cursor=pointer]:
+                - generic [ref=e162]: Management
+                - img [ref=e163]
+            - listitem [ref=e165]:
+              - button "Panels" [expanded] [ref=e166] [cursor=pointer]:
+                - generic [ref=e167]: Panels
+                - img [ref=e168]
+              - list [ref=e170]:
+                - listitem [ref=e171]:
+                  - link "Templates" [ref=e172] [cursor=pointer]:
+                    - /url: /templates
+                    - img [ref=e173]
+                    - generic [ref=e178]: Templates
+                - listitem [ref=e179]:
+                  - link "Standards" [ref=e180] [cursor=pointer]:
+                    - /url: /standards
+                    - img [ref=e181]
+                    - generic [ref=e182]: Standards
+                - listitem [ref=e183]:
+                  - link "Parts" [ref=e184] [cursor=pointer]:
+                    - /url: /parts
+                    - img [ref=e185]
+                    - generic [ref=e187]: Parts
+                - listitem [ref=e188]:
+                  - link "IO Modules" [ref=e189] [cursor=pointer]:
+                    - /url: /io-modules
+                    - img [ref=e190]
+                    - generic [ref=e195]: IO Modules
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - img [ref=e27]
+              - generic [ref=e32]: PANELS
+              - img [ref=e34]
+              - generic [ref=e36]: IO Modules
+        - generic [ref=e38]:
+          - button "Notifications" [ref=e39] [cursor=pointer]:
+            - img [ref=e40]
+          - generic [ref=e43]:
+            - button "Settings" [ref=e44] [cursor=pointer]:
+              - img [ref=e45]
+            - button "Support" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+            - button "Log out" [ref=e52] [cursor=pointer]:
+              - img [ref=e53]
+          - generic [ref=e56]:
+            - generic [ref=e57]: DC
+            - paragraph [ref=e58]: Daniel Cuda
+      - main [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - heading "IO Modules" [level=1] [ref=e63]
+              - paragraph [ref=e64]: Manage your IO module catalog
+            - button "Add IO Module" [ref=e65] [cursor=pointer]:
+              - img [ref=e66]
+              - generic [ref=e69]: Add IO Module
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - textbox "Search..." [ref=e75]
+            - generic [ref=e78]:
+              - log [ref=e80]
+              - generic [ref=e81]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: Manufacturer
+                  - combobox [ref=e85]
+                - img [ref=e92]
+            - generic [ref=e96]:
+              - log [ref=e98]
+              - generic [ref=e99]:
+                - generic [ref=e100]:
+                  - generic [ref=e101]: Family
+                  - combobox [ref=e103]
+                - img [ref=e110]
+          - generic [ref=e113]:
+            - table [ref=e115]:
+              - rowgroup [ref=e116]:
+                - row "Module Label Description IO Points Manufacturer Family" [ref=e117]:
+                  - cell "Module" [ref=e118]
+                  - cell "Label" [ref=e119]
+                  - cell "Description" [ref=e120]
+                  - cell "IO Points" [ref=e121]
+                  - cell "Manufacturer" [ref=e122]
+                  - cell "Family" [ref=e123]
+                  - cell [ref=e124]
+              - rowgroup [ref=e125]:
+                - row "test100 test-001 8 — — Edit IO module Delete IO module" [ref=e379]:
+                  - cell "test100" [ref=e380]
+                  - cell "test-001" [ref=e381]
+                  - cell [ref=e382]
+                  - cell "8" [ref=e383]
+                  - cell "—" [ref=e384]
+                  - cell "—" [ref=e385]
+                  - cell "Edit IO module Delete IO module" [ref=e386]:
+                    - generic [ref=e388]:
+                      - button "Edit IO module" [ref=e389] [cursor=pointer]:
+                        - img [ref=e390]
+                      - button "Delete IO module" [ref=e393] [cursor=pointer]:
+                        - img [ref=e394]
+                - row "test-0011 test-0011 desc 2 Allen-Bradley 1734 POINT I/O Edit IO module Delete IO module" [ref=e397]:
+                  - cell "test-0011" [ref=e398]
+                  - cell "test-0011" [ref=e399]
+                  - cell "desc" [ref=e400]
+                  - cell "2" [ref=e401]
+                  - cell "Allen-Bradley" [ref=e402]
+                  - cell "1734 POINT I/O" [ref=e403]
+                  - cell "Edit IO module Delete IO module" [ref=e404]:
+                    - generic [ref=e406]:
+                      - button "Edit IO module" [ref=e407] [cursor=pointer]:
+                        - img [ref=e408]
+                      - button "Delete IO module" [ref=e411] [cursor=pointer]:
+                        - img [ref=e412]
+                - row "test-003 test-003 desc 4 Phoenix Contact 1734 POINT I/O (Updated) Edit IO module Delete IO module" [ref=e415]:
+                  - cell "test-003" [ref=e416]
+                  - cell "test-003" [ref=e417]
+                  - cell "desc" [ref=e418]
+                  - cell "4" [ref=e419]
+                  - cell "Phoenix Contact" [ref=e420]
+                  - cell "1734 POINT I/O (Updated)" [ref=e421]
+                  - cell "Edit IO module Delete IO module" [ref=e422]:
+                    - generic [ref=e424]:
+                      - button "Edit IO module" [ref=e425] [cursor=pointer]:
+                        - img [ref=e426]
+                      - button "Delete IO module" [ref=e429] [cursor=pointer]:
+                        - img [ref=e430]
+                - row "test-004 test-004 desc 1 — — Edit IO module Delete IO module" [ref=e433]:
+                  - cell "test-004" [ref=e434]
+                  - cell "test-004" [ref=e435]
+                  - cell "desc" [ref=e436]
+                  - cell "1" [ref=e437]
+                  - cell "—" [ref=e438]
+                  - cell "—" [ref=e439]
+                  - cell "Edit IO module Delete IO module" [ref=e440]:
+                    - generic [ref=e442]:
+                      - button "Edit IO module" [ref=e443] [cursor=pointer]:
+                        - img [ref=e444]
+                      - button "Delete IO module" [ref=e447] [cursor=pointer]:
+                        - img [ref=e448]
+                - row "test-007 test-007 1 — — Edit IO module Delete IO module" [ref=e451]:
+                  - cell "test-007" [ref=e452]
+                  - cell "test-007" [ref=e453]
+                  - cell [ref=e454]
+                  - cell "1" [ref=e455]
+                  - cell "—" [ref=e456]
+                  - cell "—" [ref=e457]
+                  - cell "Edit IO module Delete IO module" [ref=e458]:
+                    - generic [ref=e460]:
+                      - button "Edit IO module" [ref=e461] [cursor=pointer]:
+                        - img [ref=e462]
+                      - button "Delete IO module" [ref=e465] [cursor=pointer]:
+                        - img [ref=e466]
+                - row "test-008 test 008 desc 1 — — Edit IO module Delete IO module" [ref=e469]:
+                  - cell "test-008" [ref=e470]
+                  - cell "test 008" [ref=e471]
+                  - cell "desc" [ref=e472]
+                  - cell "1" [ref=e473]
+                  - cell "—" [ref=e474]
+                  - cell "—" [ref=e475]
+                  - cell "Edit IO module Delete IO module" [ref=e476]:
+                    - generic [ref=e478]:
+                      - button "Edit IO module" [ref=e479] [cursor=pointer]:
+                        - img [ref=e480]
+                      - button "Delete IO module" [ref=e483] [cursor=pointer]:
+                        - img [ref=e484]
+                - row "test-009 test-009 desc 3 — — Edit IO module Delete IO module" [ref=e487]:
+                  - cell "test-009" [ref=e488]
+                  - cell "test-009" [ref=e489]
+                  - cell "desc" [ref=e490]
+                  - cell "3" [ref=e491]
+                  - cell "—" [ref=e492]
+                  - cell "—" [ref=e493]
+                  - cell "Edit IO module Delete IO module" [ref=e494]:
+                    - generic [ref=e496]:
+                      - button "Edit IO module" [ref=e497] [cursor=pointer]:
+                        - img [ref=e498]
+                      - button "Delete IO module" [ref=e501] [cursor=pointer]:
+                        - img [ref=e502]
+                - row "test021 test021 test021 3 — — Edit IO module Delete IO module" [ref=e505]:
+                  - cell "test021" [ref=e506]
+                  - cell "test021" [ref=e507]
+                  - cell "test021" [ref=e508]
+                  - cell "3" [ref=e509]
+                  - cell "—" [ref=e510]
+                  - cell "—" [ref=e511]
+                  - cell "Edit IO module Delete IO module" [ref=e512]:
+                    - generic [ref=e514]:
+                      - button "Edit IO module" [ref=e515] [cursor=pointer]:
+                        - img [ref=e516]
+                      - button "Delete IO module" [ref=e519] [cursor=pointer]:
+                        - img [ref=e520]
+                - row "1734-IB8 1734-IB8 - 8 Point Digital Input 2 Siemens — Edit IO module Delete IO module" [ref=e523]:
+                  - cell "1734-IB8" [ref=e524]
+                  - cell "1734-IB8 - 8 Point Digital Input" [ref=e525]
+                  - cell [ref=e526]
+                  - cell "2" [ref=e527]
+                  - cell "Siemens" [ref=e528]
+                  - cell "—" [ref=e529]
+                  - cell "Edit IO module Delete IO module" [ref=e530]:
+                    - generic [ref=e532]:
+                      - button "Edit IO module" [ref=e533] [cursor=pointer]:
+                        - img [ref=e534]
+                      - button "Delete IO module" [ref=e537] [cursor=pointer]:
+                        - img [ref=e538]
+                - row "ab-1734-ib8 AB 1734-IB8 8-Point Input Module description 8 — — Edit IO module Delete IO module" [ref=e541]:
+                  - cell "ab-1734-ib8" [ref=e542]
+                  - cell "AB 1734-IB8 8-Point Input Module" [ref=e543]
+                  - cell "description" [ref=e544]
+                  - cell "8" [ref=e545]
+                  - cell "—" [ref=e546]
+                  - cell "—" [ref=e547]
+                  - cell "Edit IO module Delete IO module" [ref=e548]:
+                    - generic [ref=e550]:
+                      - button "Edit IO module" [ref=e551] [cursor=pointer]:
+                        - img [ref=e552]
+                      - button "Delete IO module" [ref=e555] [cursor=pointer]:
+                        - img [ref=e556]
+            - generic [ref=e130]:
+              - generic [ref=e131]: Showing 11-20 of 24 items
+              - generic [ref=e132]:
+                - button "Previous" [ref=e133] [cursor=pointer]:
+                  - img [ref=e134]
+                  - text: Previous
+                - button "1" [ref=e559] [cursor=pointer]
+                - button "2" [disabled] [ref=e560]
+                - button "3" [ref=e561] [cursor=pointer]
+                - button "Next" [ref=e136] [cursor=pointer]:
+                  - text: Next
+                  - img [ref=e137]
+  - button "Feedback" [ref=e139]:
+    - img [ref=e140]
+    - generic [ref=e142]: Feedback
+  - button "Debug" [ref=e143]:
+    - img [ref=e144]
+    - generic [ref=e153]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e154]

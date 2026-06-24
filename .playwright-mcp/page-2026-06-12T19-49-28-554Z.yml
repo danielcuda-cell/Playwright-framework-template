@@ -1,0 +1,1433 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+            - listitem [ref=e116]:
+              - button "Dashboard" [ref=e117] [cursor=pointer]:
+                - generic [ref=e118]: Dashboard
+                - img [ref=e119]
+            - listitem [ref=e121]:
+              - button "Management" [ref=e122] [cursor=pointer]:
+                - generic [ref=e123]: Management
+                - img [ref=e124]
+            - listitem [ref=e126]:
+              - button "Panels" [expanded] [ref=e127] [cursor=pointer]:
+                - generic [ref=e128]: Panels
+                - img [ref=e129]
+              - list [ref=e131]:
+                - listitem [ref=e132]:
+                  - link "Templates" [ref=e133] [cursor=pointer]:
+                    - /url: /templates
+                    - img [ref=e134]
+                    - generic [ref=e139]: Templates
+                - listitem [ref=e140]:
+                  - link "Standards" [ref=e141] [cursor=pointer]:
+                    - /url: /standards
+                    - img [ref=e142]
+                    - generic [ref=e143]: Standards
+                - listitem [ref=e144]:
+                  - link "Parts" [ref=e145] [cursor=pointer]:
+                    - /url: /parts
+                    - img [ref=e146]
+                    - generic [ref=e148]: Parts
+                - listitem [ref=e149]:
+                  - link "IO Modules" [ref=e150] [cursor=pointer]:
+                    - /url: /io-modules
+                    - img [ref=e151]
+                    - generic [ref=e156]: IO Modules
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - img [ref=e27]
+              - generic [ref=e32]: PANELS
+              - img [ref=e34]
+              - generic [ref=e36]: Templates
+        - generic [ref=e38]:
+          - button "Notifications" [ref=e39] [cursor=pointer]:
+            - img [ref=e40]
+          - generic [ref=e43]:
+            - button "Settings" [ref=e44] [cursor=pointer]:
+              - img [ref=e45]
+            - button "Support" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+            - button "Log out" [ref=e52] [cursor=pointer]:
+              - img [ref=e53]
+          - generic [ref=e56]:
+            - generic [ref=e57]: DC
+            - paragraph [ref=e58]: Daniel Cuda
+      - main [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - generic [ref=e62]:
+              - heading "Templates" [level=1] [ref=e63]
+              - paragraph [ref=e64]: Manage base templates for panel configurations
+            - button "Create New Template" [ref=e65] [cursor=pointer]:
+              - img [ref=e66]
+              - generic [ref=e68]: Create New Template
+          - generic [ref=e69]:
+            - generic [ref=e72]:
+              - log [ref=e74]: option Draft (95), selected.
+              - generic [ref=e75]:
+                - generic [ref=e76]:
+                  - generic [ref=e157]: Draft (95)
+                  - combobox [active] [ref=e79]
+                - img [ref=e82]
+            - generic [ref=e86]:
+              - log [ref=e88]
+              - generic [ref=e89]:
+                - generic [ref=e90]:
+                  - generic [ref=e91]: All Panel Types (95)
+                  - combobox [ref=e93]
+                - img [ref=e96]
+          - generic [ref=e159]:
+            - article [ref=e203]:
+              - button "Open template test" [ref=e204] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e205]:
+                  - generic [ref=e206]:
+                    - generic [ref=e207]: POWER
+                    - generic [ref=e208]: Last Update 06/26
+                  - button "More options" [ref=e210] [cursor=pointer]:
+                    - img [ref=e211]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e215]:
+              - button "Open template 4jun756 jose" [ref=e216] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e217]:
+                  - generic [ref=e218]:
+                    - generic [ref=e219]: NETWORK
+                    - generic [ref=e220]: Last Update 06/26
+                  - button "More options" [ref=e222] [cursor=pointer]:
+                    - img [ref=e223]
+                - generic:
+                  - heading "4jun756 jose" [level=3]
+            - article [ref=e227]:
+              - button "Open template 4jun756 jose" [ref=e228] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e229]:
+                  - generic [ref=e230]:
+                    - generic [ref=e231]: NETWORK
+                    - generic [ref=e232]: Last Update 06/26
+                  - button "More options" [ref=e234] [cursor=pointer]:
+                    - img [ref=e235]
+                - generic:
+                  - heading "4jun756 jose" [level=3]
+            - article [ref=e239]:
+              - button "Open template TESTING DUPLICATE FIX V4" [ref=e240] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e241]:
+                  - generic [ref=e242]:
+                    - generic [ref=e243]: NETWORK
+                    - generic [ref=e244]: Last Update 06/26
+                  - button "More options" [ref=e246] [cursor=pointer]:
+                    - img [ref=e247]
+                - generic:
+                  - heading "TESTING DUPLICATE FIX V4" [level=3]
+            - article [ref=e251]:
+              - button "Open template 18-05 14:44 -draft" [ref=e252] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e253]:
+                  - generic [ref=e254]:
+                    - generic [ref=e255]: CONTROL
+                    - generic [ref=e256]: Last Update 06/26
+                  - button "More options" [ref=e258] [cursor=pointer]:
+                    - img [ref=e259]
+                - generic:
+                  - heading "18-05 14:44 -draft" [level=3]
+            - article [ref=e263]:
+              - button "Open template 18 May 1:15PM Rule Delete" [ref=e264] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e265]:
+                  - generic [ref=e266]:
+                    - generic [ref=e267]: CONTROL
+                    - generic [ref=e268]: Last Update 06/26
+                  - button "More options" [ref=e270] [cursor=pointer]:
+                    - img [ref=e271]
+                - generic:
+                  - heading "18 May 1:15PM Rule Delete" [level=3]
+            - article [ref=e275]:
+              - button "Open template 211" [ref=e276] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e277]:
+                  - generic [ref=e278]:
+                    - generic [ref=e279]: CONTROL
+                    - generic [ref=e280]: Last Update 06/26
+                  - button "More options" [ref=e282] [cursor=pointer]:
+                    - img [ref=e283]
+                - generic:
+                  - heading "211" [level=3]
+            - article [ref=e287]:
+              - button "Open template 22-05 Demo Template" [ref=e288] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e289]:
+                  - generic [ref=e290]:
+                    - generic [ref=e291]: CONTROL
+                    - generic [ref=e292]: Last Update 05/26
+                  - button "More options" [ref=e294] [cursor=pointer]:
+                    - img [ref=e295]
+                - generic:
+                  - heading "22-05 Demo Template" [level=3]
+            - article [ref=e299]:
+              - button "Open template 22-05 Demo Template" [ref=e300] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e301]:
+                  - generic [ref=e302]:
+                    - generic [ref=e303]: CONTROL
+                    - generic [ref=e304]: Last Update 05/26
+                  - button "More options" [ref=e306] [cursor=pointer]:
+                    - img [ref=e307]
+                - generic:
+                  - heading "22-05 Demo Template" [level=3]
+            - article [ref=e311]:
+              - button "Open template asdada" [ref=e312] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e313]:
+                  - generic [ref=e314]:
+                    - generic [ref=e315]: CONTROL
+                    - generic [ref=e316]: Last Update 06/26
+                  - button "More options" [ref=e318] [cursor=pointer]:
+                    - img [ref=e319]
+                - generic:
+                  - heading "asdada" [level=3]
+            - article [ref=e323]:
+              - button "Open template Duplication CASE 1" [ref=e324] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e325]:
+                  - generic [ref=e326]:
+                    - generic [ref=e327]: CONTROL
+                    - generic [ref=e328]: Last Update 06/26
+                  - button "More options" [ref=e330] [cursor=pointer]:
+                    - img [ref=e331]
+                - generic:
+                  - heading "Duplication CASE 1" [level=3]
+            - article [ref=e335]:
+              - button "Open template Duplication CASE 2" [ref=e336] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e337]:
+                  - generic [ref=e338]:
+                    - generic [ref=e339]: CONTROL
+                    - generic [ref=e340]: Last Update 06/26
+                  - button "More options" [ref=e342] [cursor=pointer]:
+                    - img [ref=e343]
+                - generic:
+                  - heading "Duplication CASE 2" [level=3]
+            - article [ref=e347]:
+              - button "Open template Duplication CASE 3" [ref=e348] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e349]:
+                  - generic [ref=e350]:
+                    - generic [ref=e351]: CONTROL
+                    - generic [ref=e352]: Last Update 06/26
+                  - button "More options" [ref=e354] [cursor=pointer]:
+                    - img [ref=e355]
+                - generic:
+                  - heading "Duplication CASE 3" [level=3]
+            - article [ref=e359]:
+              - button "Open template Duplication CASE 4" [ref=e360] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e361]:
+                  - generic [ref=e362]:
+                    - generic [ref=e363]: CONTROL
+                    - generic [ref=e364]: Last Update 06/26
+                  - button "More options" [ref=e366] [cursor=pointer]:
+                    - img [ref=e367]
+                - generic:
+                  - heading "Duplication CASE 4" [level=3]
+            - article [ref=e371]:
+              - button "Open template Dupli H" [ref=e372] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e373]:
+                  - generic [ref=e374]:
+                    - generic [ref=e375]: CONTROL
+                    - generic [ref=e376]: Last Update 06/26
+                  - button "More options" [ref=e378] [cursor=pointer]:
+                    - img [ref=e379]
+                - generic:
+                  - heading "Dupli H" [level=3]
+            - article [ref=e383]:
+              - button "Open template Dupli H" [ref=e384] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e387]: CONTROL
+                    - generic [ref=e388]: Last Update 06/26
+                  - button "More options" [ref=e390] [cursor=pointer]:
+                    - img [ref=e391]
+                - generic:
+                  - heading "Dupli H" [level=3]
+            - article [ref=e395]:
+              - button "Open template e2e-ctrl-7oTdF5wB" [ref=e396] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e397]:
+                  - generic [ref=e398]:
+                    - generic [ref=e399]: CONTROL
+                    - generic [ref=e400]: Last Update 06/26
+                  - button "More options" [ref=e402] [cursor=pointer]:
+                    - img [ref=e403]
+                - generic:
+                  - heading "e2e-ctrl-7oTdF5wB" [level=3]
+            - article [ref=e407]:
+              - button "Open template e2e-ctrl-7PcDzcrg" [ref=e408] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e409]:
+                  - generic [ref=e410]:
+                    - generic [ref=e411]: CONTROL
+                    - generic [ref=e412]: Last Update 06/26
+                  - button "More options" [ref=e414] [cursor=pointer]:
+                    - img [ref=e415]
+                - generic:
+                  - heading "e2e-ctrl-7PcDzcrg" [level=3]
+            - article [ref=e419]:
+              - button "Open template e2e-ctrl-8lwnI7Rh" [ref=e420] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e421]:
+                  - generic [ref=e422]:
+                    - generic [ref=e423]: CONTROL
+                    - generic [ref=e424]: Last Update 06/26
+                  - button "More options" [ref=e426] [cursor=pointer]:
+                    - img [ref=e427]
+                - generic:
+                  - heading "e2e-ctrl-8lwnI7Rh" [level=3]
+            - article [ref=e431]:
+              - button "Open template e2e-ctrl-HPUntgho" [ref=e432] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e433]:
+                  - generic [ref=e434]:
+                    - generic [ref=e435]: CONTROL
+                    - generic [ref=e436]: Last Update 06/26
+                  - button "More options" [ref=e438] [cursor=pointer]:
+                    - img [ref=e439]
+                - generic:
+                  - heading "e2e-ctrl-HPUntgho" [level=3]
+            - article [ref=e443]:
+              - button "Open template e2e-ctrl-Qg1rsPJv" [ref=e444] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e445]:
+                  - generic [ref=e446]:
+                    - generic [ref=e447]: CONTROL
+                    - generic [ref=e448]: Last Update 06/26
+                  - button "More options" [ref=e450] [cursor=pointer]:
+                    - img [ref=e451]
+                - generic:
+                  - heading "e2e-ctrl-Qg1rsPJv" [level=3]
+            - article [ref=e455]:
+              - button "Open template e2e-ctrl-xVAgPbTX" [ref=e456] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e457]:
+                  - generic [ref=e458]:
+                    - generic [ref=e459]: CONTROL
+                    - generic [ref=e460]: Last Update 06/26
+                  - button "More options" [ref=e462] [cursor=pointer]:
+                    - img [ref=e463]
+                - generic:
+                  - heading "e2e-ctrl-xVAgPbTX" [level=3]
+            - article [ref=e467]:
+              - button "Open template E2E EXPLORE TEMPLATE" [ref=e468] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e469]:
+                  - generic [ref=e470]:
+                    - generic [ref=e471]: CONTROL
+                    - generic [ref=e472]: Last Update 06/26
+                  - button "More options" [ref=e474] [cursor=pointer]:
+                    - img [ref=e475]
+                - generic:
+                  - heading "E2E EXPLORE TEMPLATE" [level=3]
+            - article [ref=e479]:
+              - button "Open template test" [ref=e480] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e481]:
+                  - generic [ref=e482]:
+                    - generic [ref=e483]: CONTROL
+                    - generic [ref=e484]: Last Update 06/26
+                  - button "More options" [ref=e486] [cursor=pointer]:
+                    - img [ref=e487]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e491]:
+              - button "Open template test" [ref=e492] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e493]:
+                  - generic [ref=e494]:
+                    - generic [ref=e495]: CONTROL
+                    - generic [ref=e496]: Last Update 05/26
+                  - button "More options" [ref=e498] [cursor=pointer]:
+                    - img [ref=e499]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e503]:
+              - button "Open template test" [ref=e504] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e505]:
+                  - generic [ref=e506]:
+                    - generic [ref=e507]: CONTROL
+                    - generic [ref=e508]: Last Update 05/26
+                  - button "More options" [ref=e510] [cursor=pointer]:
+                    - img [ref=e511]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e515]:
+              - button "Open template test" [ref=e516] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e517]:
+                  - generic [ref=e518]:
+                    - generic [ref=e519]: CONTROL
+                    - generic [ref=e520]: Last Update 05/26
+                  - button "More options" [ref=e522] [cursor=pointer]:
+                    - img [ref=e523]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e527]:
+              - button "Open template test" [ref=e528] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e529]:
+                  - generic [ref=e530]:
+                    - generic [ref=e531]: CONTROL
+                    - generic [ref=e532]: Last Update 05/26
+                  - button "More options" [ref=e534] [cursor=pointer]:
+                    - img [ref=e535]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e539]:
+              - button "Open template test" [ref=e540] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e541]:
+                  - generic [ref=e542]:
+                    - generic [ref=e543]: CONTROL
+                    - generic [ref=e544]: Last Update 05/26
+                  - button "More options" [ref=e546] [cursor=pointer]:
+                    - img [ref=e547]
+                - generic:
+                  - heading "test" [level=3]
+            - article [ref=e551]:
+              - button "Open template test 03-06 12:13" [ref=e552] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e553]:
+                  - generic [ref=e554]:
+                    - generic [ref=e555]: CONTROL
+                    - generic [ref=e556]: Last Update 06/26
+                  - button "More options" [ref=e558] [cursor=pointer]:
+                    - img [ref=e559]
+                - generic:
+                  - heading "test 03-06 12:13" [level=3]
+            - article [ref=e563]:
+              - button "Open template test 03-06 12:37" [ref=e564] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e565]:
+                  - generic [ref=e566]:
+                    - generic [ref=e567]: CONTROL
+                    - generic [ref=e568]: Last Update 06/26
+                  - button "More options" [ref=e570] [cursor=pointer]:
+                    - img [ref=e571]
+                - generic:
+                  - heading "test 03-06 12:37" [level=3]
+            - article [ref=e575]:
+              - button "Open template test 03-06 15:43" [ref=e576] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e577]:
+                  - generic [ref=e578]:
+                    - generic [ref=e579]: CONTROL
+                    - generic [ref=e580]: Last Update 06/26
+                  - button "More options" [ref=e582] [cursor=pointer]:
+                    - img [ref=e583]
+                - generic:
+                  - heading "test 03-06 15:43" [level=3]
+            - article [ref=e587]:
+              - button "Open template test 03-06 15:49" [ref=e588] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e589]:
+                  - generic [ref=e590]:
+                    - generic [ref=e591]: CONTROL
+                    - generic [ref=e592]: Last Update 06/26
+                  - button "More options" [ref=e594] [cursor=pointer]:
+                    - img [ref=e595]
+                - generic:
+                  - heading "test 03-06 15:49" [level=3]
+            - article [ref=e599]:
+              - button "Open template TEST 05-06-2026" [ref=e600] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e601]:
+                  - generic [ref=e602]:
+                    - generic [ref=e603]: CONTROL
+                    - generic [ref=e604]: Last Update 06/26
+                  - button "More options" [ref=e606] [cursor=pointer]:
+                    - img [ref=e607]
+                - generic:
+                  - heading "TEST 05-06-2026" [level=3]
+            - article [ref=e611]:
+              - button "Open template test 05-18 14:15" [ref=e612] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e613]:
+                  - generic [ref=e614]:
+                    - generic [ref=e615]: CONTROL
+                    - generic [ref=e616]: Last Update 05/26
+                  - button "More options" [ref=e618] [cursor=pointer]:
+                    - img [ref=e619]
+                - generic:
+                  - heading "test 05-18 14:15" [level=3]
+            - article [ref=e623]:
+              - button "Open template test 05-18 14:15" [ref=e624] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e625]:
+                  - generic [ref=e626]:
+                    - generic [ref=e627]: CONTROL
+                    - generic [ref=e628]: Last Update 05/26
+                  - button "More options" [ref=e630] [cursor=pointer]:
+                    - img [ref=e631]
+                - generic:
+                  - heading "test 05-18 14:15" [level=3]
+            - article [ref=e635]:
+              - button "Open template test 05-26 11:23 - mutliple rules" [ref=e636] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e637]:
+                  - generic [ref=e638]:
+                    - generic [ref=e639]: CONTROL
+                    - generic [ref=e640]: Last Update 05/26
+                  - button "More options" [ref=e642] [cursor=pointer]:
+                    - img [ref=e643]
+                - generic:
+                  - heading "test 05-26 11:23 - mutliple rules" [level=3]
+            - article [ref=e647]:
+              - button "Open template test 08-06 09:58" [ref=e648] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e649]:
+                  - generic [ref=e650]:
+                    - generic [ref=e651]: CONTROL
+                    - generic [ref=e652]: Last Update 06/26
+                  - button "More options" [ref=e654] [cursor=pointer]:
+                    - img [ref=e655]
+                - generic:
+                  - heading "test 08-06 09:58" [level=3]
+            - article [ref=e659]:
+              - button "Open template test 08-06 12:02" [ref=e660] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e661]:
+                  - generic [ref=e662]:
+                    - generic [ref=e663]: CONTROL
+                    - generic [ref=e664]: Last Update 06/26
+                  - button "More options" [ref=e666] [cursor=pointer]:
+                    - img [ref=e667]
+                - generic:
+                  - heading "test 08-06 12:02" [level=3]
+            - article [ref=e671]:
+              - button "Open template test 08-06 14:16" [ref=e672] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e673]:
+                  - generic [ref=e674]:
+                    - generic [ref=e675]: CONTROL
+                    - generic [ref=e676]: Last Update 06/26
+                  - button "More options" [ref=e678] [cursor=pointer]:
+                    - img [ref=e679]
+                - generic:
+                  - heading "test 08-06 14:16" [level=3]
+            - article [ref=e683]:
+              - button "Open template test 08-06 18:04" [ref=e684] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e685]:
+                  - generic [ref=e686]:
+                    - generic [ref=e687]: CONTROL
+                    - generic [ref=e688]: Last Update 06/26
+                  - button "More options" [ref=e690] [cursor=pointer]:
+                    - img [ref=e691]
+                - generic:
+                  - heading "test 08-06 18:04" [level=3]
+            - article [ref=e695]:
+              - button "Open template test 18-05 16:40" [ref=e696] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e697]:
+                  - generic [ref=e698]:
+                    - generic [ref=e699]: CONTROL
+                    - generic [ref=e700]: Last Update 05/26
+                  - button "More options" [ref=e702] [cursor=pointer]:
+                    - img [ref=e703]
+                - generic:
+                  - heading "test 18-05 16:40" [level=3]
+            - article [ref=e707]:
+              - button "Open template test 200" [ref=e708] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e709]:
+                  - generic [ref=e710]:
+                    - generic [ref=e711]: CONTROL
+                    - generic [ref=e712]: Last Update 06/26
+                  - button "More options" [ref=e714] [cursor=pointer]:
+                    - img [ref=e715]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e719]:
+              - button "Open template test 200" [ref=e720] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e721]:
+                  - generic [ref=e722]:
+                    - generic [ref=e723]: CONTROL
+                    - generic [ref=e724]: Last Update 06/26
+                  - button "More options" [ref=e726] [cursor=pointer]:
+                    - img [ref=e727]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e731]:
+              - button "Open template test 200" [ref=e732] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e733]:
+                  - generic [ref=e734]:
+                    - generic [ref=e735]: CONTROL
+                    - generic [ref=e736]: Last Update 06/26
+                  - button "More options" [ref=e738] [cursor=pointer]:
+                    - img [ref=e739]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e743]:
+              - button "Open template test 200" [ref=e744] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e745]:
+                  - generic [ref=e746]:
+                    - generic [ref=e747]: CONTROL
+                    - generic [ref=e748]: Last Update 06/26
+                  - button "More options" [ref=e750] [cursor=pointer]:
+                    - img [ref=e751]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e755]:
+              - button "Open template test 200" [ref=e756] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e757]:
+                  - generic [ref=e758]:
+                    - generic [ref=e759]: CONTROL
+                    - generic [ref=e760]: Last Update 06/26
+                  - button "More options" [ref=e762] [cursor=pointer]:
+                    - img [ref=e763]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e767]:
+              - button "Open template test 200" [ref=e768] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e769]:
+                  - generic [ref=e770]:
+                    - generic [ref=e771]: CONTROL
+                    - generic [ref=e772]: Last Update 06/26
+                  - button "More options" [ref=e774] [cursor=pointer]:
+                    - img [ref=e775]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e779]:
+              - button "Open template test 200" [ref=e780] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e781]:
+                  - generic [ref=e782]:
+                    - generic [ref=e783]: CONTROL
+                    - generic [ref=e784]: Last Update 06/26
+                  - button "More options" [ref=e786] [cursor=pointer]:
+                    - img [ref=e787]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e791]:
+              - button "Open template test 200" [ref=e792] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e793]:
+                  - generic [ref=e794]:
+                    - generic [ref=e795]: CONTROL
+                    - generic [ref=e796]: Last Update 06/26
+                  - button "More options" [ref=e798] [cursor=pointer]:
+                    - img [ref=e799]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e803]:
+              - button "Open template test 200" [ref=e804] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e805]:
+                  - generic [ref=e806]:
+                    - generic [ref=e807]: CONTROL
+                    - generic [ref=e808]: Last Update 06/26
+                  - button "More options" [ref=e810] [cursor=pointer]:
+                    - img [ref=e811]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e815]:
+              - button "Open template test 200" [ref=e816] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e817]:
+                  - generic [ref=e818]:
+                    - generic [ref=e819]: CONTROL
+                    - generic [ref=e820]: Last Update 06/26
+                  - button "More options" [ref=e822] [cursor=pointer]:
+                    - img [ref=e823]
+                - generic:
+                  - heading "test 200" [level=3]
+            - article [ref=e827]:
+              - button "Open template test 20-05 11:38" [ref=e828] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e829]:
+                  - generic [ref=e830]:
+                    - generic [ref=e831]: CONTROL
+                    - generic [ref=e832]: Last Update 05/26
+                  - button "More options" [ref=e834] [cursor=pointer]:
+                    - img [ref=e835]
+                - generic:
+                  - heading "test 20-05 11:38" [level=3]
+            - article [ref=e839]:
+              - button "Open template test 201" [ref=e840] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e841]:
+                  - generic [ref=e842]:
+                    - generic [ref=e843]: CONTROL
+                    - generic [ref=e844]: Last Update 06/26
+                  - button "More options" [ref=e846] [cursor=pointer]:
+                    - img [ref=e847]
+                - generic:
+                  - heading "test 201" [level=3]
+            - article [ref=e851]:
+              - button "Open template test 201" [ref=e852] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e853]:
+                  - generic [ref=e854]:
+                    - generic [ref=e855]: CONTROL
+                    - generic [ref=e856]: Last Update 06/26
+                  - button "More options" [ref=e858] [cursor=pointer]:
+                    - img [ref=e859]
+                - generic:
+                  - heading "test 201" [level=3]
+            - article [ref=e863]:
+              - button "Open template test 201" [ref=e864] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e865]:
+                  - generic [ref=e866]:
+                    - generic [ref=e867]: CONTROL
+                    - generic [ref=e868]: Last Update 06/26
+                  - button "More options" [ref=e870] [cursor=pointer]:
+                    - img [ref=e871]
+                - generic:
+                  - heading "test 201" [level=3]
+            - article [ref=e875]:
+              - button "Open template test 202" [ref=e876] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e877]:
+                  - generic [ref=e878]:
+                    - generic [ref=e879]: CONTROL
+                    - generic [ref=e880]: Last Update 06/26
+                  - button "More options" [ref=e882] [cursor=pointer]:
+                    - img [ref=e883]
+                - generic:
+                  - heading "test 202" [level=3]
+            - article [ref=e887]:
+              - button "Open template test 202" [ref=e888] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e889]:
+                  - generic [ref=e890]:
+                    - generic [ref=e891]: CONTROL
+                    - generic [ref=e892]: Last Update 06/26
+                  - button "More options" [ref=e894] [cursor=pointer]:
+                    - img [ref=e895]
+                - generic:
+                  - heading "test 202" [level=3]
+            - article [ref=e899]:
+              - button "Open template test 202" [ref=e900] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e901]:
+                  - generic [ref=e902]:
+                    - generic [ref=e903]: CONTROL
+                    - generic [ref=e904]: Last Update 06/26
+                  - button "More options" [ref=e906] [cursor=pointer]:
+                    - img [ref=e907]
+                - generic:
+                  - heading "test 202" [level=3]
+            - article [ref=e911]:
+              - button "Open template test 203" [ref=e912] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e913]:
+                  - generic [ref=e914]:
+                    - generic [ref=e915]: CONTROL
+                    - generic [ref=e916]: Last Update 06/26
+                  - button "More options" [ref=e918] [cursor=pointer]:
+                    - img [ref=e919]
+                - generic:
+                  - heading "test 203" [level=3]
+            - article [ref=e923]:
+              - button "Open template test 204" [ref=e924] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e925]:
+                  - generic [ref=e926]:
+                    - generic [ref=e927]: CONTROL
+                    - generic [ref=e928]: Last Update 06/26
+                  - button "More options" [ref=e930] [cursor=pointer]:
+                    - img [ref=e931]
+                - generic:
+                  - heading "test 204" [level=3]
+            - article [ref=e935]:
+              - button "Open template test 204" [ref=e936] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e937]:
+                  - generic [ref=e938]:
+                    - generic [ref=e939]: CONTROL
+                    - generic [ref=e940]: Last Update 06/26
+                  - button "More options" [ref=e942] [cursor=pointer]:
+                    - img [ref=e943]
+                - generic:
+                  - heading "test 204" [level=3]
+            - article [ref=e947]:
+              - button "Open template test 205" [ref=e948] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e949]:
+                  - generic [ref=e950]:
+                    - generic [ref=e951]: CONTROL
+                    - generic [ref=e952]: Last Update 06/26
+                  - button "More options" [ref=e954] [cursor=pointer]:
+                    - img [ref=e955]
+                - generic:
+                  - heading "test 205" [level=3]
+            - article [ref=e959]:
+              - button "Open template test 206" [ref=e960] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e961]:
+                  - generic [ref=e962]:
+                    - generic [ref=e963]: CONTROL
+                    - generic [ref=e964]: Last Update 06/26
+                  - button "More options" [ref=e966] [cursor=pointer]:
+                    - img [ref=e967]
+                - generic:
+                  - heading "test 206" [level=3]
+            - article [ref=e971]:
+              - button "Open template test 206" [ref=e972] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e973]:
+                  - generic [ref=e974]:
+                    - generic [ref=e975]: CONTROL
+                    - generic [ref=e976]: Last Update 06/26
+                  - button "More options" [ref=e978] [cursor=pointer]:
+                    - img [ref=e979]
+                - generic:
+                  - heading "test 206" [level=3]
+            - article [ref=e983]:
+              - button "Open template test 206" [ref=e984] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e985]:
+                  - generic [ref=e986]:
+                    - generic [ref=e987]: CONTROL
+                    - generic [ref=e988]: Last Update 06/26
+                  - button "More options" [ref=e990] [cursor=pointer]:
+                    - img [ref=e991]
+                - generic:
+                  - heading "test 206" [level=3]
+            - article [ref=e995]:
+              - button "Open template test 207" [ref=e996] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e997]:
+                  - generic [ref=e998]:
+                    - generic [ref=e999]: CONTROL
+                    - generic [ref=e1000]: Last Update 06/26
+                  - button "More options" [ref=e1002] [cursor=pointer]:
+                    - img [ref=e1003]
+                - generic:
+                  - heading "test 207" [level=3]
+            - article [ref=e1007]:
+              - button "Open template test 210" [ref=e1008] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1009]:
+                  - generic [ref=e1010]:
+                    - generic [ref=e1011]: CONTROL
+                    - generic [ref=e1012]: Last Update 06/26
+                  - button "More options" [ref=e1014] [cursor=pointer]:
+                    - img [ref=e1015]
+                - generic:
+                  - heading "test 210" [level=3]
+            - article [ref=e1019]:
+              - button "Open template test 213" [ref=e1020] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1021]:
+                  - generic [ref=e1022]:
+                    - generic [ref=e1023]: CONTROL
+                    - generic [ref=e1024]: Last Update 06/26
+                  - button "More options" [ref=e1026] [cursor=pointer]:
+                    - img [ref=e1027]
+                - generic:
+                  - heading "test 213" [level=3]
+            - article [ref=e1031]:
+              - button "Open template test 213" [ref=e1032] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1033]:
+                  - generic [ref=e1034]:
+                    - generic [ref=e1035]: CONTROL
+                    - generic [ref=e1036]: Last Update 06/26
+                  - button "More options" [ref=e1038] [cursor=pointer]:
+                    - img [ref=e1039]
+                - generic:
+                  - heading "test 213" [level=3]
+            - article [ref=e1043]:
+              - button "Open template test 27-05 14:50" [ref=e1044] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1045]:
+                  - generic [ref=e1046]:
+                    - generic [ref=e1047]: CONTROL
+                    - generic [ref=e1048]: Last Update 05/26
+                  - button "More options" [ref=e1050] [cursor=pointer]:
+                    - img [ref=e1051]
+                - generic:
+                  - heading "test 27-05 14:50" [level=3]
+            - article [ref=e1055]:
+              - button "Open template test 27-05 15:01" [ref=e1056] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1057]:
+                  - generic [ref=e1058]:
+                    - generic [ref=e1059]: CONTROL
+                    - generic [ref=e1060]: Last Update 05/26
+                  - button "More options" [ref=e1062] [cursor=pointer]:
+                    - img [ref=e1063]
+                - generic:
+                  - heading "test 27-05 15:01" [level=3]
+            - article [ref=e1067]:
+              - button "Open template test 27-05 15:20" [ref=e1068] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1069]:
+                  - generic [ref=e1070]:
+                    - generic [ref=e1071]: CONTROL
+                    - generic [ref=e1072]: Last Update 05/26
+                  - button "More options" [ref=e1074] [cursor=pointer]:
+                    - img [ref=e1075]
+                - generic:
+                  - heading "test 27-05 15:20" [level=3]
+            - article [ref=e1079]:
+              - button "Open template test 29-05 12:47" [ref=e1080] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1081]:
+                  - generic [ref=e1082]:
+                    - generic [ref=e1083]: CONTROL
+                    - generic [ref=e1084]: Last Update 05/26
+                  - button "More options" [ref=e1086] [cursor=pointer]:
+                    - img [ref=e1087]
+                - generic:
+                  - heading "test 29-05 12:47" [level=3]
+            - article [ref=e1091]:
+              - button "Open template test 29-05 13:37" [ref=e1092] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1093]:
+                  - generic [ref=e1094]:
+                    - generic [ref=e1095]: CONTROL
+                    - generic [ref=e1096]: Last Update 05/26
+                  - button "More options" [ref=e1098] [cursor=pointer]:
+                    - img [ref=e1099]
+                - generic:
+                  - heading "test 29-05 13:37" [level=3]
+            - article [ref=e1103]:
+              - button "Open template test 29-05 13:37" [ref=e1104] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1105]:
+                  - generic [ref=e1106]:
+                    - generic [ref=e1107]: CONTROL
+                    - generic [ref=e1108]: Last Update 05/26
+                  - button "More options" [ref=e1110] [cursor=pointer]:
+                    - img [ref=e1111]
+                - generic:
+                  - heading "test 29-05 13:37" [level=3]
+            - article [ref=e1115]:
+              - button "Open template test 29-05 13:37" [ref=e1116] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1117]:
+                  - generic [ref=e1118]:
+                    - generic [ref=e1119]: CONTROL
+                    - generic [ref=e1120]: Last Update 05/26
+                  - button "More options" [ref=e1122] [cursor=pointer]:
+                    - img [ref=e1123]
+                - generic:
+                  - heading "test 29-05 13:37" [level=3]
+            - article [ref=e1127]:
+              - button "Open template test 29-05 15:16" [ref=e1128] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1129]:
+                  - generic [ref=e1130]:
+                    - generic [ref=e1131]: CONTROL
+                    - generic [ref=e1132]: Last Update 05/26
+                  - button "More options" [ref=e1134] [cursor=pointer]:
+                    - img [ref=e1135]
+                - generic:
+                  - heading "test 29-05 15:16" [level=3]
+            - article [ref=e1139]:
+              - button "Open template test 302" [ref=e1140] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1141]:
+                  - generic [ref=e1142]:
+                    - generic [ref=e1143]: CONTROL
+                    - generic [ref=e1144]: Last Update 05/26
+                  - button "More options" [ref=e1146] [cursor=pointer]:
+                    - img [ref=e1147]
+                - generic:
+                  - heading "test 302" [level=3]
+            - article [ref=e1151]:
+              - button "Open template test 302 (test 123) (test 123) (test 123) (test 123) (test 123) (test 123)" [ref=e1152] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1153]:
+                  - generic [ref=e1154]:
+                    - generic [ref=e1155]: CONTROL
+                    - generic [ref=e1156]: Last Update 05/26
+                  - button "More options" [ref=e1158] [cursor=pointer]:
+                    - img [ref=e1159]
+                - generic:
+                  - heading "test 302 (test 123) (test 123) (test 123) (test 123) (test 123) (test 123)" [level=3]
+            - article [ref=e1163]:
+              - button "Open template test 405" [ref=e1164] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1165]:
+                  - generic [ref=e1166]:
+                    - generic [ref=e1167]: CONTROL
+                    - generic [ref=e1168]: Last Update 05/26
+                  - button "More options" [ref=e1170] [cursor=pointer]:
+                    - img [ref=e1171]
+                - generic:
+                  - heading "test 405" [level=3]
+            - article [ref=e1175]:
+              - button "Open template test-916" [ref=e1176] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1177]:
+                  - generic [ref=e1178]:
+                    - generic [ref=e1179]: CONTROL
+                    - generic [ref=e1180]: Last Update 05/26
+                  - button "More options" [ref=e1182] [cursor=pointer]:
+                    - img [ref=e1183]
+                - generic:
+                  - heading "test-916" [level=3]
+            - article [ref=e1187]:
+              - button "Open template Test H" [ref=e1188] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1189]:
+                  - generic [ref=e1190]:
+                    - generic [ref=e1191]: CONTROL
+                    - generic [ref=e1192]: Last Update 06/26
+                  - button "More options" [ref=e1194] [cursor=pointer]:
+                    - img [ref=e1195]
+                - generic:
+                  - heading "Test H" [level=3]
+            - article [ref=e1199]:
+              - button "Open template Test H" [ref=e1200] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1201]:
+                  - generic [ref=e1202]:
+                    - generic [ref=e1203]: CONTROL
+                    - generic [ref=e1204]: Last Update 06/26
+                  - button "More options" [ref=e1206] [cursor=pointer]:
+                    - img [ref=e1207]
+                - generic:
+                  - heading "Test H" [level=3]
+            - article [ref=e1211]:
+              - button "Open template TESTING DUPLICATE FIX 4 1119" [ref=e1212] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1213]:
+                  - generic [ref=e1214]:
+                    - generic [ref=e1215]: CONTROL
+                    - generic [ref=e1216]: Last Update 06/26
+                  - button "More options" [ref=e1218] [cursor=pointer]:
+                    - img [ref=e1219]
+                - generic:
+                  - heading "TESTING DUPLICATE FIX 4 1119" [level=3]
+            - article [ref=e1223]:
+              - button "Open template TESTING DUPLICATE FIX V2" [ref=e1224] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1225]:
+                  - generic [ref=e1226]:
+                    - generic [ref=e1227]: CONTROL
+                    - generic [ref=e1228]: Last Update 06/26
+                  - button "More options" [ref=e1230] [cursor=pointer]:
+                    - img [ref=e1231]
+                - generic:
+                  - heading "TESTING DUPLICATE FIX V2" [level=3]
+            - article [ref=e1235]:
+              - button "Open template Test new 22322" [ref=e1236] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1237]:
+                  - generic [ref=e1238]:
+                    - generic [ref=e1239]: CONTROL
+                    - generic [ref=e1240]: Last Update 06/26
+                  - button "More options" [ref=e1242] [cursor=pointer]:
+                    - img [ref=e1243]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1247]:
+              - button "Open template Test new 22322" [ref=e1248] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1249]:
+                  - generic [ref=e1250]:
+                    - generic [ref=e1251]: CONTROL
+                    - generic [ref=e1252]: Last Update 06/26
+                  - button "More options" [ref=e1254] [cursor=pointer]:
+                    - img [ref=e1255]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1259]:
+              - button "Open template Test new 22322" [ref=e1260] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1261]:
+                  - generic [ref=e1262]:
+                    - generic [ref=e1263]: CONTROL
+                    - generic [ref=e1264]: Last Update 06/26
+                  - button "More options" [ref=e1266] [cursor=pointer]:
+                    - img [ref=e1267]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1271]:
+              - button "Open template Test new 22322" [ref=e1272] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1273]:
+                  - generic [ref=e1274]:
+                    - generic [ref=e1275]: CONTROL
+                    - generic [ref=e1276]: Last Update 06/26
+                  - button "More options" [ref=e1278] [cursor=pointer]:
+                    - img [ref=e1279]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1283]:
+              - button "Open template Test new 22322" [ref=e1284] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1285]:
+                  - generic [ref=e1286]:
+                    - generic [ref=e1287]: CONTROL
+                    - generic [ref=e1288]: Last Update 06/26
+                  - button "More options" [ref=e1290] [cursor=pointer]:
+                    - img [ref=e1291]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1295]:
+              - button "Open template Test new 22322" [ref=e1296] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1297]:
+                  - generic [ref=e1298]:
+                    - generic [ref=e1299]: CONTROL
+                    - generic [ref=e1300]: Last Update 06/26
+                  - button "More options" [ref=e1302] [cursor=pointer]:
+                    - img [ref=e1303]
+                - generic:
+                  - heading "Test new 22322" [level=3]
+            - article [ref=e1307]:
+              - button "Open template yuli" [ref=e1308] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1309]:
+                  - generic [ref=e1310]:
+                    - generic [ref=e1311]: CONTROL
+                    - generic [ref=e1312]: Last Update 06/26
+                  - button "More options" [ref=e1314] [cursor=pointer]:
+                    - img [ref=e1315]
+                - generic:
+                  - heading "yuli" [level=3]
+            - article [ref=e1319]:
+              - button "Open template yuli" [ref=e1320] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1321]:
+                  - generic [ref=e1322]:
+                    - generic [ref=e1323]: CONTROL
+                    - generic [ref=e1324]: Last Update 06/26
+                  - button "More options" [ref=e1326] [cursor=pointer]:
+                    - img [ref=e1327]
+                - generic:
+                  - heading "yuli" [level=3]
+            - article [ref=e1331]:
+              - button "Open template yuli" [ref=e1332] [cursor=pointer]
+              - generic:
+                - generic:
+                  - generic: DRAFT
+                  - img
+                - generic [ref=e1333]:
+                  - generic [ref=e1334]:
+                    - generic [ref=e1335]: CONTROL
+                    - generic [ref=e1336]: Last Update 06/26
+                  - button "More options" [ref=e1338] [cursor=pointer]:
+                    - img [ref=e1339]
+                - generic:
+                  - heading "yuli" [level=3]
+  - button "Feedback" [ref=e100]:
+    - img [ref=e101]
+    - generic [ref=e103]: Feedback
+  - button "Debug" [ref=e104]:
+    - img [ref=e105]
+    - generic [ref=e114]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e115]

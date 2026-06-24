@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - img "Access Approval Left" [ref=e4]
+    - generic [ref=e5]:
+      - button "Log out" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+        - generic [ref=e11]: Log Out
+      - generic [ref=e14]:
+        - img [ref=e16]
+        - heading "Access requires approval" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Submit a request and we'll notify the appropriate person to review your access
+        - link "Complete information" [ref=e20] [cursor=pointer]:
+          - /url: /pending-approval/complete-profile
+          - button "Complete information" [ref=e21]:
+            - generic [ref=e22]: Complete information
+  - button "Feedback" [ref=e23]:
+    - img [ref=e24]
+    - generic [ref=e26]: Feedback
+  - button "Debug" [ref=e27]:
+    - img [ref=e28]
+    - generic [ref=e37]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e38]

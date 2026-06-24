@@ -1,0 +1,363 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Daeda panel logo" [ref=e6]
+          - button "Collapse sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+        - navigation [ref=e11]:
+          - list [ref=e12]:
+            - listitem [ref=e13]:
+              - link "Home" [ref=e14] [cursor=pointer]:
+                - /url: /home
+                - img [ref=e15]
+                - generic [ref=e18]: Home
+            - listitem [ref=e78]:
+              - button "Dashboard" [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: Dashboard
+                - img [ref=e81]
+            - listitem [ref=e83]:
+              - button "Management" [ref=e84] [cursor=pointer]:
+                - generic [ref=e85]: Management
+                - img [ref=e86]
+            - listitem [ref=e88]:
+              - button "Panels" [expanded] [active] [ref=e89] [cursor=pointer]:
+                - generic [ref=e90]: Panels
+                - img [ref=e91]
+              - list [ref=e561]:
+                - listitem [ref=e562]:
+                  - link "Templates" [ref=e563] [cursor=pointer]:
+                    - /url: /templates
+                    - img [ref=e564]
+                    - generic [ref=e569]: Templates
+                - listitem [ref=e570]:
+                  - link "Standards" [ref=e571] [cursor=pointer]:
+                    - /url: /standards
+                    - img [ref=e572]
+                    - generic [ref=e573]: Standards
+                - listitem [ref=e574]:
+                  - link "Parts" [ref=e575] [cursor=pointer]:
+                    - /url: /parts
+                    - img [ref=e576]
+                    - generic [ref=e578]: Parts
+                - listitem [ref=e579]:
+                  - link "IO Modules" [ref=e580] [cursor=pointer]:
+                    - /url: /io-modules
+                    - img [ref=e581]
+                    - generic [ref=e586]: IO Modules
+    - generic [ref=e19]:
+      - banner [ref=e20]:
+        - navigation "Breadcrumb" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - img [ref=e27]
+              - generic [ref=e32]: PANELS
+              - img [ref=e34]
+              - generic [ref=e36]: IO Modules
+        - generic [ref=e38]:
+          - button "Notifications" [ref=e39] [cursor=pointer]:
+            - img [ref=e40]
+          - generic [ref=e43]:
+            - button "Settings" [ref=e44] [cursor=pointer]:
+              - img [ref=e45]
+            - button "Support" [ref=e48] [cursor=pointer]:
+              - img [ref=e49]
+            - button "Log out" [ref=e52] [cursor=pointer]:
+              - img [ref=e53]
+          - generic [ref=e56]:
+            - generic [ref=e57]: DC
+            - paragraph [ref=e58]: Daniel Cuda
+      - main [ref=e59]:
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - heading "Hi Daniel Cuda," [level=2] [ref=e97]
+                - paragraph [ref=e98]: You have 276 order drafts ready to submit.
+              - generic [ref=e99]:
+                - button "All companies" [ref=e101]:
+                  - img [ref=e102]
+                  - generic [ref=e107]: All companies
+                  - img [ref=e108]
+                - generic [ref=e110]:
+                  - button "New Project" [ref=e111] [cursor=pointer]:
+                    - img [ref=e112]
+                    - generic [ref=e115]: New Project
+                  - button "New Order" [ref=e116] [cursor=pointer]:
+                    - img [ref=e117]
+                    - generic [ref=e120]: New Order
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - img [ref=e123]
+                - generic [ref=e125]:
+                  - paragraph [ref=e126]: Drafts
+                  - paragraph [ref=e127]: "276"
+              - generic [ref=e128]:
+                - img [ref=e129]
+                - generic [ref=e132]:
+                  - paragraph [ref=e133]: Submitted
+                  - paragraph [ref=e134]: "6"
+              - generic [ref=e135]:
+                - img [ref=e136]
+                - generic [ref=e139]:
+                  - paragraph [ref=e140]: In Progress
+                  - paragraph [ref=e141]: "3"
+              - generic [ref=e142]:
+                - img [ref=e143]
+                - generic [ref=e146]:
+                  - paragraph [ref=e147]: Completed
+                  - paragraph [ref=e148]: "4"
+            - generic [ref=e149]:
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - heading "Starting Panel Templates" [level=2] [ref=e152]
+                  - button "More information" [ref=e153]:
+                    - img [ref=e154]
+                - button "View all" [ref=e156] [cursor=pointer]
+              - generic [ref=e157]:
+                - article [ref=e158]:
+                  - generic [ref=e159]:
+                    - generic [ref=e160]: Last update 06/10
+                    - button "Create standard from template Daedalus Template 01" [ref=e161]:
+                      - img [ref=e162]
+                  - img [ref=e165]
+                  - generic [ref=e166]:
+                    - paragraph [ref=e168]: POWER
+                    - heading "Daedalus Template 01" [level=3] [ref=e169]
+                - article [ref=e170]:
+                  - generic [ref=e171]:
+                    - generic [ref=e172]: Last update 06/11
+                    - button "Create standard from template 4jun756 jose" [ref=e173]:
+                      - img [ref=e174]
+                  - img [ref=e177]
+                  - generic [ref=e178]:
+                    - paragraph [ref=e180]: NETWORK
+                    - heading "4jun756 jose" [level=3] [ref=e181]
+                - article [ref=e182]:
+                  - generic [ref=e183]:
+                    - generic [ref=e184]: Last update 06/10
+                    - button "Create standard from template test" [ref=e185]:
+                      - img [ref=e186]
+                  - img [ref=e189]
+                  - generic [ref=e190]:
+                    - paragraph [ref=e192]: CONTROL
+                    - heading "test" [level=3] [ref=e193]
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - generic [ref=e197]:
+                    - heading "My Projects" [level=2] [ref=e198]
+                    - button "More information" [ref=e199]:
+                      - img [ref=e200]
+                  - button "View all" [ref=e202] [cursor=pointer]
+                - generic [ref=e203]:
+                  - generic [ref=e204]:
+                    - img [ref=e205]
+                    - generic [ref=e208]:
+                      - heading "test 3" [level=2] [ref=e209]
+                      - paragraph [ref=e210]: 3 orders
+                    - img [ref=e211]
+                  - generic [ref=e216]:
+                    - img [ref=e217]
+                    - generic [ref=e220]:
+                      - heading "test" [level=2] [ref=e221]
+                      - paragraph [ref=e222]: 5 orders
+                    - img [ref=e223]
+                  - generic [ref=e228]:
+                    - img [ref=e229]
+                    - generic [ref=e232]:
+                      - heading "test project 1 - edited" [level=2] [ref=e233]
+                      - paragraph [ref=e234]: 0 orders
+                    - img [ref=e235]
+                  - generic [ref=e240]:
+                    - img [ref=e241]
+                    - generic [ref=e244]:
+                      - heading "test" [level=2] [ref=e245]
+                      - paragraph [ref=e246]: 4 orders
+                    - img [ref=e247]
+                  - generic [ref=e252]:
+                    - img [ref=e253]
+                    - generic [ref=e256]:
+                      - heading "test 2" [level=2] [ref=e257]
+                      - paragraph [ref=e258]: 10 orders
+                    - img [ref=e259]
+              - generic [ref=e263]:
+                - generic [ref=e264]:
+                  - generic [ref=e265]:
+                    - heading "Latest Orders" [level=2] [ref=e266]
+                    - button "More information" [ref=e267]:
+                      - img [ref=e268]
+                  - button "View all" [ref=e270] [cursor=pointer]
+                - generic [ref=e271]:
+                  - generic [ref=e272]:
+                    - generic [ref=e273]: Order no.
+                    - generic [ref=e274]: Panels
+                    - generic [ref=e275]: Status
+                  - generic [ref=e277]:
+                    - generic [ref=e278]:
+                      - generic [ref=e279]: "#331"
+                      - generic [ref=e280]: Jun 11, 2026
+                    - generic [ref=e281]: "0"
+                    - paragraph [ref=e284]: Draft
+                  - generic [ref=e286]:
+                    - generic [ref=e287]:
+                      - generic [ref=e288]: "#329"
+                      - generic [ref=e289]: Jun 10, 2026
+                    - generic [ref=e290]: "2"
+                    - paragraph [ref=e293]: Draft
+                  - generic [ref=e295]:
+                    - generic [ref=e296]:
+                      - generic [ref=e297]: "#328"
+                      - generic [ref=e298]: Jun 10, 2026
+                    - generic [ref=e299]: "0"
+                    - paragraph [ref=e302]: Draft
+                  - generic [ref=e304]:
+                    - generic [ref=e305]:
+                      - generic [ref=e306]: "#327"
+                      - generic [ref=e307]: Jun 10, 2026
+                    - generic [ref=e308]: "2"
+                    - paragraph [ref=e311]: Draft
+                  - generic [ref=e313]:
+                    - generic [ref=e314]:
+                      - generic [ref=e315]: "#326"
+                      - generic [ref=e316]: Jun 10, 2026
+                    - generic [ref=e317]: "0"
+                    - paragraph [ref=e320]: Canceled
+            - generic [ref=e321]:
+              - generic [ref=e323]:
+                - heading "Order Timeline" [level=2] [ref=e324]
+                - button "More information" [ref=e325]:
+                  - img [ref=e326]
+              - generic [ref=e328]:
+                - generic [ref=e329]:
+                  - generic [ref=e330]:
+                    - generic [ref=e331]: "#331"
+                    - generic [ref=e332]: Substation Alpha
+                  - generic [ref=e333]:
+                    - generic [ref=e335]:
+                      - generic [ref=e337]: Created
+                      - generic [ref=e338]: Jun 11, 2026
+                    - generic [ref=e343]: Submitted
+                    - generic [ref=e348]: In Progress
+                    - generic [ref=e353]: Completed
+                - generic [ref=e354]:
+                  - generic [ref=e355]:
+                    - generic [ref=e356]: "#329"
+                    - generic [ref=e357]: Substation Alpha
+                  - generic [ref=e358]:
+                    - generic [ref=e360]:
+                      - generic [ref=e362]: Created
+                      - generic [ref=e363]: Jun 10, 2026
+                    - generic [ref=e368]: Submitted
+                    - generic [ref=e373]: In Progress
+                    - generic [ref=e378]: Completed
+                - generic [ref=e379]:
+                  - generic [ref=e380]:
+                    - generic [ref=e381]: "#328"
+                    - generic [ref=e382]: Substation Alpha
+                  - generic [ref=e383]:
+                    - generic [ref=e385]:
+                      - generic [ref=e387]: Created
+                      - generic [ref=e388]: Jun 10, 2026
+                    - generic [ref=e393]: Submitted
+                    - generic [ref=e398]: In Progress
+                    - generic [ref=e403]: Completed
+                - generic [ref=e404]:
+                  - generic [ref=e405]:
+                    - generic [ref=e406]: "#327"
+                    - generic [ref=e407]: Substation Alpha
+                  - generic [ref=e408]:
+                    - generic [ref=e410]:
+                      - generic [ref=e412]: Created
+                      - generic [ref=e413]: Jun 10, 2026
+                    - generic [ref=e418]: Submitted
+                    - generic [ref=e423]: In Progress
+                    - generic [ref=e428]: Completed
+                - generic [ref=e429]:
+                  - generic [ref=e430]:
+                    - generic [ref=e431]: "#326"
+                    - generic [ref=e432]: test
+                  - generic [ref=e433]:
+                    - generic [ref=e435]:
+                      - generic [ref=e437]: Created
+                      - generic [ref=e438]: Jun 10, 2026
+                    - generic [ref=e443]: Submitted
+                    - generic [ref=e448]: In Progress
+                    - generic [ref=e451]:
+                      - generic [ref=e453]: Canceled
+                      - generic [ref=e454]: Jun 10, 2026
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - heading "Order History" [level=3] [ref=e457]
+              - button "More information" [ref=e458]:
+                - img [ref=e459]
+            - generic [ref=e461]:
+              - generic [ref=e462]:
+                - paragraph [ref=e463]: "Order #331 draft was created"
+                - paragraph [ref=e464]: Substation Alpha
+                - generic [ref=e465]:
+                  - paragraph [ref=e466]: Today 10:46 AM
+                  - img [ref=e467] [cursor=pointer]
+              - generic [ref=e472]:
+                - paragraph [ref=e473]: "Order #329 draft was created"
+                - paragraph [ref=e474]: Substation Alpha
+                - generic [ref=e475]:
+                  - paragraph [ref=e476]: Yesterday 6:00 PM
+                  - img [ref=e477] [cursor=pointer]
+              - generic [ref=e482]:
+                - paragraph [ref=e483]: "Order #328 draft was created"
+                - paragraph [ref=e484]: Substation Alpha
+                - generic [ref=e485]:
+                  - paragraph [ref=e486]: Yesterday 5:48 PM
+                  - img [ref=e487] [cursor=pointer]
+              - generic [ref=e492]:
+                - paragraph [ref=e493]: "Order #327 draft was created"
+                - paragraph [ref=e494]: Substation Alpha
+                - generic [ref=e495]:
+                  - paragraph [ref=e496]: Yesterday 3:10 PM
+                  - img [ref=e497] [cursor=pointer]
+              - generic [ref=e502]:
+                - paragraph [ref=e503]: "Order #325 was canceled"
+                - paragraph [ref=e504]: test project name
+                - generic [ref=e505]:
+                  - paragraph [ref=e506]: Yesterday 2:53 PM
+                  - img [ref=e507] [cursor=pointer]
+              - generic [ref=e512]:
+                - paragraph [ref=e513]: "Order #326 was canceled"
+                - paragraph [ref=e514]: test
+                - generic [ref=e515]:
+                  - paragraph [ref=e516]: Yesterday 2:53 PM
+                  - img [ref=e517] [cursor=pointer]
+              - generic [ref=e522]:
+                - paragraph [ref=e523]: "Order #312 was canceled"
+                - paragraph [ref=e524]: test 2
+                - generic [ref=e525]:
+                  - paragraph [ref=e526]: Yesterday 11:51 AM
+                  - img [ref=e527] [cursor=pointer]
+              - generic [ref=e532]:
+                - paragraph [ref=e533]: "Order #313 was canceled"
+                - paragraph [ref=e534]: test 2
+                - generic [ref=e535]:
+                  - paragraph [ref=e536]: Yesterday 11:51 AM
+                  - img [ref=e537] [cursor=pointer]
+              - generic [ref=e542]:
+                - paragraph [ref=e543]: "Order #326 draft was created"
+                - paragraph [ref=e544]: test
+                - generic [ref=e545]:
+                  - paragraph [ref=e546]: Yesterday 11:48 AM
+                  - img [ref=e547] [cursor=pointer]
+              - generic [ref=e552]:
+                - paragraph [ref=e553]: "Order #325 draft was created"
+                - paragraph [ref=e554]: test project name
+                - generic [ref=e555]:
+                  - paragraph [ref=e556]: Yesterday 11:46 AM
+                  - img [ref=e557] [cursor=pointer]
+  - button "Feedback" [ref=e62]:
+    - img [ref=e63]
+    - generic [ref=e65]: Feedback
+  - button "Debug" [ref=e66]:
+    - img [ref=e67]
+    - generic [ref=e76]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e77]

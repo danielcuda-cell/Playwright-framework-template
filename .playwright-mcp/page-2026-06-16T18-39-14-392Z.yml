@@ -1,0 +1,51 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - img "Access Approval Left" [ref=e4]
+    - generic [ref=e5]:
+      - button "Log out" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+        - generic [ref=e11]: Log Out
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - heading "Complete your profile" [level=2] [ref=e41]
+          - paragraph [ref=e42]: Submit a request and we'll notify the appropriate person to review your access
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: FULL NAME *
+            - generic [ref=e48]:
+              - img [ref=e49]
+              - textbox "Enter your full name" [ref=e52]
+            - generic [ref=e90]: Full name cannot start/end with whitespace
+          - generic [ref=e54]:
+            - generic [ref=e55]: JOB FUNCTION *
+            - generic [ref=e56]:
+              - log [ref=e58]: option Engineering, selected.
+              - generic [ref=e59]:
+                - generic [ref=e60]:
+                  - generic [ref=e101]: Engineering
+                  - combobox [active] [ref=e63]
+                - img [ref=e66]
+          - generic [ref=e68]:
+            - generic [ref=e69]: PHONE *
+            - generic [ref=e71]:
+              - img [ref=e72]
+              - textbox "Enter your phone number" [ref=e74]
+            - generic [ref=e91]: Phone number is required
+          - generic [ref=e75]:
+            - generic [ref=e76]: EMAIL ADDRESS *
+            - generic [ref=e78]:
+              - img [ref=e79]
+              - textbox "Enter your email address" [disabled] [ref=e82]: e2e-explore-test@mailslurp.com
+          - generic [ref=e83]:
+            - generic [ref=e84]: SPECIAL NOTES
+            - textbox "How did you find us?" [ref=e87]
+          - button "Submit request" [ref=e88] [cursor=pointer]:
+            - generic [ref=e89]: Submit request
+  - button "Feedback" [ref=e23]:
+    - img [ref=e24]
+    - generic [ref=e26]: Feedback
+  - button "Debug" [ref=e27]:
+    - img [ref=e28]
+    - generic [ref=e37]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e38]

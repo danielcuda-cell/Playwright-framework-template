@@ -1,0 +1,35 @@
+[    2016ms] [LOG] Timestamp: 2026-06-16T18:41:21.212Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2016ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2016ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2018ms] [INFO] Timestamp: 2026-06-16T18:41:21.212Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2018ms] [INFO] Metadata: {requestId: req_1781635280544_0002, method: GET, url: /profile/me, status: 200, duration: 668} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2056ms] [LOG] Timestamp: 2026-06-16T18:41:21.252Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2056ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2056ms] [LOG] Response: {items: Array(10), pagination: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2057ms] [INFO] Timestamp: 2026-06-16T18:41:21.252Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2057ms] [INFO] Metadata: {requestId: req_1781635280544_0003, method: GET, url: /users, status: 200, duration: 708} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2060ms] [LOG] Timestamp: 2026-06-16T18:41:21.256Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2061ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2063ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2063ms] [INFO] Timestamp: 2026-06-16T18:41:21.256Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2064ms] [INFO] Metadata: {requestId: req_1781635280544_0001, method: GET, url: /modules, status: 200, duration: 712} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2068ms] [LOG] Timestamp: 2026-06-16T18:41:21.264Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2068ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2068ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(7)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2068ms] [INFO] Timestamp: 2026-06-16T18:41:21.264Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2068ms] [INFO] Metadata: {requestId: req_1781635280544_0006, method: GET, url: /profile/job-functions, status: 200, duration: 720} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2071ms] [LOG] Timestamp: 2026-06-16T18:41:21.267Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2071ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2071ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2071ms] [INFO] Timestamp: 2026-06-16T18:41:21.267Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2072ms] [INFO] Metadata: {requestId: req_1781635280544_0005, method: GET, url: /users/company, status: 200, duration: 723} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2266ms] [LOG] Timestamp: 2026-06-16T18:41:21.461Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2266ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2266ms] [LOG] Response: {statusCode: 200, message: Array(1), data: Array(4)} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[    2266ms] [INFO] Timestamp: 2026-06-16T18:41:21.461Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[    2266ms] [INFO] Metadata: {requestId: req_1781635280544_0004, method: GET, url: /users/roles, status: 200, duration: 917} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[   21656ms] [LOG] Timestamp: 2026-06-16T18:41:40.852Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[   21656ms] [LOG] Request Headers: {Accept: application/json, text/plain, */*, Content-Type: application/json} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[   21657ms] [LOG] Response: {items: Array(1), pagination: Object} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/b6cca9468703ae41.js:0
+[   21657ms] [INFO] Timestamp: 2026-06-16T18:41:40.852Z @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0
+[   21657ms] [INFO] Metadata: {requestId: req_1781635300139_0007, method: GET, url: /users, status: 200, duration: 713} @ https://app.dev.dap.daedalusindustrial.com/_next/static/chunks/d71642e308c712bf.js:0

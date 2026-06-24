@@ -1,0 +1,9 @@
+- generic [active] [ref=e1]:
+  - button "Feedback" [ref=e62]:
+    - img [ref=e63]
+    - generic [ref=e65]: Feedback
+  - button "Debug" [ref=e66]:
+    - img [ref=e67]
+    - generic [ref=e76]: Debug
+  - region "Notifications alt+T"
+  - alert [ref=e77]

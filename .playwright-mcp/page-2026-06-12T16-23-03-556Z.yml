@@ -1,0 +1,140 @@
+- generic [active] [ref=e1]:
+  - main [ref=e804]:
+    - generic [ref=e805]:
+      - generic [ref=e807]:
+        - button "Back" [ref=e808] [cursor=pointer]:
+          - img [ref=e809]
+        - generic [ref=e811]: Template Builder
+      - generic [ref=e824]:
+        - generic [ref=e825]:
+          - generic [ref=e826]:
+            - generic [ref=e827]: TEMPLATE NAME
+            - textbox "Enter a template name" [disabled] [ref=e830]: E2E EXPLORE TEMPLATE
+          - generic [ref=e831]:
+            - button "Edit" [ref=e1865] [cursor=pointer]:
+              - generic [ref=e1866]: Edit
+            - button "View Changelog" [ref=e1867] [cursor=pointer]:
+              - generic [ref=e833]: View Changelog
+        - generic [ref=e834]:
+          - generic [ref=e835]:
+            - generic [ref=e836]:
+              - heading "Components" [level=2] [ref=e837]
+              - paragraph [ref=e838]: Drag fields to sections
+            - generic [ref=e839]:
+              - button "Text input" [disabled] [ref=e840]:
+                - generic [ref=e841]:
+                  - img [ref=e842]
+                  - generic [ref=e845]: Text input
+              - button "Text area" [disabled] [ref=e846]:
+                - generic [ref=e847]:
+                  - img [ref=e848]
+                  - generic [ref=e851]: Text area
+              - button "Dropdown" [disabled] [ref=e852]:
+                - generic [ref=e853]:
+                  - img [ref=e854]
+                  - generic [ref=e857]: Dropdown
+              - button "Radio group" [disabled] [ref=e858]:
+                - generic [ref=e859]:
+                  - img [ref=e860]
+                  - generic [ref=e864]: Radio group
+              - button "Rack" [disabled] [ref=e865]:
+                - generic [ref=e866]:
+                  - img [ref=e867]
+                  - generic [ref=e869]: Rack
+              - button "Rack size" [disabled] [ref=e870]:
+                - generic [ref=e871]:
+                  - img [ref=e872]
+                  - generic [ref=e874]: Rack size
+              - button "Checkbox" [disabled] [ref=e875]:
+                - generic [ref=e876]:
+                  - img [ref=e877]
+                  - generic [ref=e880]: Checkbox
+              - button "Date" [disabled] [ref=e881]:
+                - generic [ref=e882]:
+                  - img [ref=e883]
+                  - generic [ref=e886]: Date
+              - button "Number" [disabled] [ref=e887]:
+                - generic [ref=e888]:
+                  - img [ref=e889]
+                  - generic [ref=e892]: Number
+              - button "Toggle" [disabled] [ref=e893]:
+                - generic [ref=e894]:
+                  - img [ref=e895]
+                  - generic [ref=e898]: Toggle
+          - generic [ref=e901]:
+            - generic [ref=e909]:
+              - generic [ref=e1868]: SECTION 1
+              - button "Rack 1 DROPDOWN drop 1 Option 1 Option 2 Option 3 Required Cancel Save DROPDOWN drop 2 Option 1 Option 2 Option 3 Required Cancel Save DROPDOWN drop 3 Option 1 Option 2 Option 3 Required Cancel Save Rack 2" [disabled] [ref=e1869]:
+                - generic [ref=e1016]:
+                  - generic [ref=e1018]:
+                    - heading "Rack 1" [level=3] [ref=e1020]
+                    - generic [ref=e1145]:
+                      - button "DROPDOWN drop 1 Option 1 Option 2 Option 3 Required Cancel Save" [disabled] [ref=e1870]:
+                        - generic [ref=e1147]:
+                          - paragraph [ref=e1152]: DROPDOWN
+                          - generic [ref=e1174]:
+                            - paragraph [ref=e1239]: drop 1
+                            - generic [ref=e1185]:
+                              - paragraph [ref=e1240]: Option 1
+                              - paragraph [ref=e1244]: Option 2
+                              - paragraph [ref=e1248]: Option 3
+                          - generic:
+                            - generic:
+                              - switch "Required" [disabled] [ref=e1198]:
+                                - generic [ref=e1202]: Required
+                              - generic [ref=e1203]:
+                                - button "Cancel" [disabled] [ref=e1204]:
+                                  - generic [ref=e1205]: Cancel
+                                - button "Save" [disabled] [ref=e1206]:
+                                  - generic [ref=e1207]: Save
+                      - button "DROPDOWN drop 2 Option 1 Option 2 Option 3 Required Cancel Save" [disabled] [ref=e1871]:
+                        - generic [ref=e1361]:
+                          - paragraph [ref=e1366]: DROPDOWN
+                          - generic [ref=e1388]:
+                            - paragraph [ref=e1452]: drop 2
+                            - generic [ref=e1399]:
+                              - paragraph [ref=e1453]: Option 1
+                              - paragraph [ref=e1457]: Option 2
+                              - paragraph [ref=e1461]: Option 3
+                          - generic:
+                            - generic:
+                              - switch "Required" [disabled] [ref=e1412]:
+                                - generic [ref=e1416]: Required
+                              - generic [ref=e1417]:
+                                - button "Cancel" [disabled] [ref=e1418]:
+                                  - generic [ref=e1419]: Cancel
+                                - button "Save" [disabled] [ref=e1420]:
+                                  - generic [ref=e1421]: Save
+                      - button "DROPDOWN drop 3 Option 1 Option 2 Option 3 Required Cancel Save" [disabled] [ref=e1872]:
+                        - generic [ref=e1513]:
+                          - paragraph [ref=e1518]: DROPDOWN
+                          - generic [ref=e1540]:
+                            - paragraph [ref=e1604]: drop 3
+                            - generic [ref=e1551]:
+                              - paragraph [ref=e1605]: Option 1
+                              - paragraph [ref=e1609]: Option 2
+                              - paragraph [ref=e1613]: Option 3
+                          - generic:
+                            - generic:
+                              - switch "Required" [disabled] [ref=e1564]:
+                                - generic [ref=e1568]: Required
+                              - generic [ref=e1569]:
+                                - button "Cancel" [disabled] [ref=e1570]:
+                                  - generic [ref=e1571]: Cancel
+                                - button "Save" [disabled] [ref=e1572]:
+                                  - generic [ref=e1573]: Save
+                  - heading "Rack 2" [level=3] [ref=e1084]
+            - generic [ref=e1873]: SECTION 2
+  - button "Feedback" [ref=e62]:
+    - img [ref=e63]
+    - generic [ref=e65]: Feedback
+  - button "Debug" [ref=e66]:
+    - img [ref=e67]
+    - generic [ref=e76]: Debug
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e1874]:
+        - img [ref=e1876]
+        - generic [ref=e1879]: Template saved as draft successfully
+  - alert [ref=e77]
+  - status [ref=e906]
