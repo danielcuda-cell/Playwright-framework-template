@@ -22,8 +22,13 @@ export class UsersPage {
 
     // ─── Edit User dialog ─────────────────────────────────────────────────────────
     private readonly editUserDialog: Locator;
+    private readonly editFullNameInput: Locator;
+    private readonly editPhoneInput: Locator;
     private readonly editRoleSelect: Locator;
     private readonly saveUserButton: Locator;
+
+    // ─── Delete User dialog ───────────────────────────────────────────────────────
+    private readonly deleteUserDialog: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -43,9 +48,13 @@ export class UsersPage {
         this.closeDialogButton    = this.createUserDialog.getByRole('button', { name: 'Close' });
         this.dialogErrorBanner    = this.createUserDialog.locator('.bg-alert-50');
 
-        this.editUserDialog  = page.locator('dialog').filter({ hasText: 'Edit User' });
-        this.editRoleSelect  = this.editUserDialog.locator('#role-option-selected');
-        this.saveUserButton  = this.editUserDialog.getByRole('button', { name: 'Save' });
+        this.editUserDialog    = page.locator('dialog').filter({ hasText: 'Edit User' });
+        this.editFullNameInput = this.editUserDialog.getByPlaceholder('Enter full name');
+        this.editPhoneInput    = this.editUserDialog.getByPlaceholder('+1 (234) 567-8901');
+        this.editRoleSelect    = this.editUserDialog.locator('#role-option-selected');
+        this.saveUserButton    = this.editUserDialog.getByRole('button', { name: 'Save changes' });
+
+        this.deleteUserDialog  = page.locator('dialog').filter({ hasText: 'Delete User' });
     }
 
     // ─── Navigation ───────────────────────────────────────────────────────────────
@@ -179,6 +188,46 @@ export class UsersPage {
 
     async assertNoToastVisible() {
         await expect(this.page.locator('[class*="toast"], [role="status"]')).not.toBeVisible({ timeout: 3000 });
+    }
+
+    async editUser(email: string, changes: { fullName?: string; phone?: string; role?: string }) {
+        await this.searchUser(email);
+        const row = this.page.locator('tr', { hasText: email });
+        await row.getByTitle('Edit User').click();
+        await expect(this.editUserDialog).toBeVisible({ timeout: 5000 });
+
+        if (changes.fullName) await this.editFullNameInput.fill(changes.fullName);
+        if (changes.phone)    await this.editPhoneInput.fill(changes.phone);
+        if (changes.role) {
+            await this.editRoleSelect.fill(changes.role);
+            await this.editUserDialog.getByRole('option', { name: changes.role, exact: true }).click();
+        }
+
+        await this.saveUserButton.click();
+        await expect(this.editUserDialog).not.toBeVisible({ timeout: 10000 });
+    }
+
+    async deleteUser(email: string) {
+        await this.searchUser(email);
+        const row = this.page.locator('tr', { hasText: email });
+        await row.getByTitle('Delete User').click();
+        await expect(this.deleteUserDialog).toBeVisible({ timeout: 5000 });
+        await this.deleteUserDialog.getByRole('button', { name: 'Delete' }).click();
+        await expect(this.deleteUserDialog).not.toBeVisible({ timeout: 10000 });
+    }
+
+    async assertUserNotVisible(email: string) {
+        await this.searchUser(email);
+        await expect(this.page.locator('tr', { hasText: email })).not.toBeVisible({ timeout: 5000 });
+    }
+
+    async assertRequiredFieldErrors() {
+        await expect(this.createUserDialog.getByText('Full name is required')).toBeVisible();
+        await expect(this.createUserDialog.getByText('Phone number is required')).toBeVisible();
+        await expect(this.createUserDialog.getByText('Invalid email address')).toBeVisible();
+        await expect(this.createUserDialog.getByText('Job function is required')).toBeVisible();
+        await expect(this.createUserDialog.getByText('Role is required')).toBeVisible();
+        await expect(this.createUserDialog.getByText('Company is required')).toBeVisible();
     }
 
     async assertUserData(email: string, data: {

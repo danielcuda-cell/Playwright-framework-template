@@ -121,4 +121,26 @@ export class CompaniesPage {
     async assertPaginationInfo(text: string) {
         await expect(this.paginationInfo).toContainText(text);
     }
+
+    async selectCompanyByName(companyName: string) {
+        // Click the company name button (left column) to open the detail panel
+        await this.page.getByRole('main').getByRole('button', { name: companyName }).first().click();
+        // Wait for the detail panel's "Link Users" button to confirm it loaded
+        await this.page.getByRole('button', { name: 'Link Users' }).waitFor({ timeout: 10000 });
+    }
+
+    async assertUserInCompanyUsers(email: string) {
+        // The Company Users detail panel table has "Unlink" buttons, distinguishing it from the company list
+        await expect(
+            this.page.locator('table').filter({ hasText: 'Unlink' }).getByRole('cell', { name: email })
+        ).toBeVisible({ timeout: 10000 });
+    }
+
+    async assertUserNotInCompanyUsers(email: string) {
+        const usersTable = this.page.locator('table').filter({ hasText: 'Unlink' });
+        if (await usersTable.count() === 0) return;
+        await expect(
+            usersTable.getByRole('cell', { name: email })
+        ).not.toBeVisible({ timeout: 5000 });
+    }
 }
