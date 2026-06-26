@@ -1,0 +1,142 @@
+Title,Description,Priority,Type,Status,Steps,Outcome,bdd_scenario,Tags,Preconditions
+TC01 – Admin loads the Orders page,Verify the admin can navigate to the Orders page and the table loads correctly with all required columns and pagination.,High,Functional,Active,"1. Log in as admin and navigate to /admin/orders. | Expected: The page loads and a heading ""Orders"" is visible.
+2. Observe the filter bar. | Expected: Five dropdowns are displayed with default labels: ""All projects"", ""All statuses"", ""All clients"", ""All panel types"", ""All users"".
+3. Observe the search bar. | Expected: A search input with placeholder ""Search orders..."" is visible.
+4. Observe the table header row. | Expected: Columns Order #, Date, User, Project, Client, Panels, Spare Parts, Estimated, Quote, Status, Last Update and a ""Row actions"" column are all present.
+5. Observe the first page of results. | Expected: Up to 10 order rows are displayed in the table body.
+6. Observe the pagination footer. | Expected: Footer shows ""Showing 1-10 of N items"" and pagination controls (Previous, page numbers, Next) are visible.","- The Orders page loads successfully.
+- All required columns are present in the table.
+- The footer shows ""Showing 1-10 of N items"" and pagination controls are rendered.","Feature: Admin Orders page load
+  Scenario: Admin views the paginated Orders table on page load
+    Given the admin is authenticated
+    When the admin navigates to /admin/orders
+    Then a table is displayed with all required columns
+    And the footer shows ""Showing 1-10 of N items""",AdminOrders,Admin user with Super Admin role must be logged in
+TC02 – Admin filters orders by status,Verify that selecting a status from the ""All statuses"" dropdown filters the table to only show orders with that status.,High,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads showing all orders; footer displays the total count.
+2. Click the ""All statuses"" dropdown. | Expected: A dropdown opens listing: Draft, Submitted, In progress, Completed, Rejected, Canceled.
+3. Select ""Submitted"". | Expected: The dropdown label changes to ""Submitted"", a clear (×) icon appears next to the dropdown, and a ""Clear filters"" button appears in the filter bar.
+4. Observe the table body. | Expected: All visible rows show ""Submitted"" in the Status column; no rows with other statuses are shown.
+5. Observe the pagination footer. | Expected: Footer updates to reflect the filtered count (e.g., ""Showing 1-N of M items"" where M ≤ total).","- The table shows only orders with status ""Submitted"".
+- The footer result count reflects the filtered set.
+- The ""Clear filters"" button is visible.","Feature: Filter by status
+  Scenario: Admin filters orders by status
+    Given the admin is on the Orders page
+    When the admin selects ""Submitted"" from the ""All statuses"" dropdown
+    Then only orders with status ""Submitted"" are shown in the table
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page with existing orders of at least one status type
+TC03 – Admin filters orders by client,Verify that selecting a client from the ""All clients"" dropdown filters the table to show only orders belonging to that client.,High,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders visible.
+2. Click the ""All clients"" dropdown. | Expected: A dropdown opens listing available clients.
+3. Select a client (e.g., ""Daedalus Industries""). | Expected: The dropdown label changes to the selected client name, a clear (×) icon appears on the dropdown, and the ""Clear filters"" button appears.
+4. Observe the table body. | Expected: All visible rows show the selected client in the Client column; rows from other clients are not shown.
+5. Observe the pagination footer. | Expected: Footer updates to show the count of orders for that client only.","- The table shows only orders for the selected client.
+- The footer count reflects the filtered result set.","Feature: Filter by client
+  Scenario: Admin filters orders by client
+    Given the admin is on the Orders page
+    When the admin selects a client from the ""All clients"" dropdown
+    Then only orders belonging to that client are displayed
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page; at least two different clients must have orders
+TC04 – Admin filters orders by project,Verify that selecting a project from the ""All projects"" dropdown filters the table to show only orders associated with that project.,Medium,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders visible.
+2. Click the ""All projects"" dropdown. | Expected: A dropdown opens listing available projects.
+3. Select a project (e.g., ""Substation Alpha""). | Expected: The dropdown label changes to the selected project name, a clear (×) icon appears on the dropdown, and the ""Clear filters"" button appears.
+4. Observe the table body. | Expected: All visible rows show the selected project in the Project column; orders from other projects are not displayed.
+5. Observe the pagination footer. | Expected: Footer updates to the count of orders for that project.","- The table shows only orders associated with the selected project.
+- The footer count reflects the filtered result set.","Feature: Filter by project
+  Scenario: Admin filters orders by project
+    Given the admin is on the Orders page
+    When the admin selects a project from the ""All projects"" dropdown
+    Then only orders for that project are shown
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page; at least two different projects must have orders
+TC05 – Admin filters orders by user,Verify that selecting a user from the ""All users"" dropdown filters the table to show only orders created by that user.,Medium,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders visible.
+2. Click the ""All users"" dropdown. | Expected: A dropdown opens listing available users.
+3. Select a user (e.g., ""Daniel Cuda""). | Expected: The dropdown label changes to the selected user name, a clear (×) icon appears on the dropdown, and the ""Clear filters"" button appears.
+4. Observe the table body. | Expected: All visible rows show the selected user in the User column; orders from other users are not shown.
+5. Observe the pagination footer. | Expected: Footer updates to the count of orders created by that user.","- The table shows only orders created by the selected user.
+- The footer count reflects the filtered result set.","Feature: Filter by user
+  Scenario: Admin filters orders by user
+    Given the admin is on the Orders page
+    When the admin selects a user from the ""All users"" dropdown
+    Then only orders created by that user are shown
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page; at least two different users must have orders
+TC06 – Admin filters orders by panel type,Verify that selecting a panel type from the ""All panel types"" dropdown filters the table to show only orders containing at least one panel of that type.,Medium,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders visible.
+2. Click the ""All panel types"" dropdown. | Expected: A dropdown opens listing available panel types (e.g., POWER, NETWORK, CONTROL).
+3. Select a panel type (e.g., ""POWER""). | Expected: The dropdown label changes to the selected panel type, a clear (×) icon appears on the dropdown, and the ""Clear filters"" button appears.
+4. Observe the table body. | Expected: All visible rows contain at least one panel of the selected type in the Panels column; orders with no panels of that type are not shown.
+5. Observe the pagination footer. | Expected: Footer updates to the count of matching orders.","- The table shows only orders with at least one panel of the selected type.
+- The footer count reflects the filtered result set.","Feature: Filter by panel type
+  Scenario: Admin filters orders by panel type
+    Given the admin is on the Orders page
+    When the admin selects a panel type from the ""All panel types"" dropdown
+    Then only orders containing that panel type are shown
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page; orders with different panel types must exist
+TC07 – Admin searches for an order,Verify that typing in the search bar filters the table in real time by Order #, user name, or project name.,High,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders and the search input shows placeholder ""Search orders..."".
+2. Click the search input and type a known Order # (e.g., ""#337""). | Expected: As the user types, the table filters in real time; the row for order #337 is displayed and non-matching rows disappear.
+3. Clear the search input and type a known user name (e.g., ""Daniel""). | Expected: The table updates to show only orders where the User column contains ""Daniel"".
+4. Clear the search input and type a known project name (e.g., ""Substation Alpha""). | Expected: The table updates to show only orders where the Project column contains ""Substation Alpha"".
+5. Observe the pagination footer during each search. | Expected: The footer updates to reflect the count of matching orders.","- The table filters in real time for Order #, user name, and project name.
+- Non-matching rows are hidden.
+- The footer count updates with each search term.","Feature: Search orders
+  Scenario: Admin searches for an order by Order #, user, or project
+    Given the admin is on the Orders page
+    When the admin types a search term in the ""Search orders..."" input
+    Then the table filters in real time to show only matching rows
+    And the footer count updates accordingly",AdminOrders,Admin user must be on the Orders page; at least one order matching the search terms must exist
+TC08 – Multiple filters applied simultaneously,Verify that combining multiple filters and/or a search term applies AND logic — the table shows only orders matching all active constraints.,High,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders.
+2. Select ""Draft"" from the ""All statuses"" dropdown. | Expected: The table updates to show only Draft orders; footer shows the Draft order count; ""Clear filters"" button appears.
+3. Select ""Daedalus Industries"" from the ""All clients"" dropdown. | Expected: The table further narrows to show only Draft orders from Daedalus Industries; footer count decreases or stays the same.
+4. Type ""Daniel"" in the search bar. | Expected: The table further narrows to show only Draft orders from Daedalus Industries where the user or project name contains ""Daniel""; footer count updates.
+5. Observe each row in the table. | Expected: Every visible row satisfies all three active constraints simultaneously (status = Draft AND client = Daedalus Industries AND search matches ""Daniel"").","- The table displays only orders matching all active filters and the search term combined with AND logic.
+- The footer count reflects the combined filter result.
+- The ""Clear filters"" button is visible.","Feature: Combined filters
+  Scenario: Admin applies multiple filters simultaneously
+    Given the admin is on the Orders page
+    When the admin selects a status, a client, and types a search term
+    Then the table shows only orders matching all active constraints
+    And the footer count reflects the combined result",AdminOrders,Admin user must be on the Orders page; orders matching each individual filter must exist
+TC09 – Admin clears all filters,Verify that the ""Clear filters"" button resets all dropdowns and the search bar to their default state and reloads all orders.,High,Functional,Active,"1. Navigate to /admin/orders and note the unfiltered total (e.g., ""Showing 1-10 of 337 items""). | Expected: The page loads with all orders and no ""Clear filters"" button is visible.
+2. Select ""Draft"" from the ""All statuses"" dropdown. | Expected: The dropdown label changes to ""Draft"", a clear (×) icon appears on the dropdown, and the ""Clear filters"" button appears in the filter bar.
+3. Type ""Daniel"" in the search bar. | Expected: The table narrows further; all active filter indicators remain visible.
+4. Click the ""Clear filters"" button. | Expected: All filter dropdowns reset to their default labels (""All statuses"", ""All projects"", ""All clients"", ""All panel types"", ""All users""), the search bar clears, and the table reloads showing all orders.
+5. Observe the footer and the ""Clear filters"" button. | Expected: Footer returns to the original total (e.g., ""Showing 1-10 of 337 items"") and the ""Clear filters"" button is no longer visible.","- All filters and the search bar are reset to default.
+- The table displays all orders as on initial load.
+- The ""Clear filters"" button disappears after reset.","Feature: Clear filters
+  Scenario: Admin clears all active filters
+    Given the admin has at least one active filter or search term
+    When the admin clicks the ""Clear filters"" button
+    Then all dropdowns reset to their default values, the search bar clears
+    And the table reloads showing all orders and the ""Clear filters"" button is hidden",AdminOrders,Admin user must be on the Orders page; at least one filter or search term must be active
+TC10 – Admin sorts orders by Order #,Verify that clicking the Order # column header toggles the sort between ascending and descending order.,Medium,Functional,Active,"1. Navigate to /admin/orders and note the initial order of the rows. | Expected: The page loads; rows are displayed in default order (most recent first by default).
+2. Click the ""Order #"" column header button. | Expected: The table re-sorts so Order # values are in ascending order (lowest # at the top); the sort icon on the header indicates ascending sort.
+3. Observe at least the first 3 rows. | Expected: Order numbers in the first 3 rows increase from top to bottom (e.g., #1, #2, #3).
+4. Click the ""Order #"" column header button again. | Expected: The table re-sorts in descending order (highest # at the top); the sort icon toggles to indicate descending sort.
+5. Observe at least the first 3 rows after the second click. | Expected: Order numbers in the first 3 rows decrease from top to bottom (e.g., #337, #336, #335).","- Clicking Order # once sorts the table ascending by Order #.
+- Clicking Order # again sorts descending.
+- The sort icon updates to reflect the active sort direction.","Feature: Sort by Order #
+  Scenario: Admin sorts the orders table by Order #
+    Given the admin is on the Orders page
+    When the admin clicks the ""Order #"" column header
+    Then the table sorts by Order # in ascending order
+    And clicking again sorts by Order # in descending order",AdminOrders,Admin user must be on the Orders page; more than one order must exist
+TC11 – Admin paginates through results,Verify that the pagination controls navigate between pages and the footer updates to reflect the current range.,High,Functional,Active,"1. Navigate to /admin/orders. | Expected: Page 1 is active; footer shows ""Showing 1-10 of N items""; Previous button is disabled; Next button is enabled.
+2. Click the ""Next"" button. | Expected: The table loads the next 10 orders; footer updates to ""Showing 11-20 of N items""; Previous button becomes enabled.
+3. Click page number ""3"" in the pagination controls. | Expected: The table jumps to page 3; footer updates to ""Showing 21-30 of N items"".
+4. Click the ""Previous"" button. | Expected: The table goes back to page 2; footer updates to ""Showing 11-20 of N items"".
+5. Click page number ""1"". | Expected: The table returns to page 1; footer shows ""Showing 1-10 of N items""; Previous button is disabled again.","- Each page navigation updates the table to show the correct 10 orders.
+- The footer always reflects the current range (e.g., ""Showing X-Y of N items"").
+- Previous is disabled on page 1; Next is disabled on the last page.","Feature: Pagination
+  Scenario: Admin navigates through paginated order results
+    Given the Orders table has more than 10 results
+    When the admin clicks Next, a page number, or Previous
+    Then the table displays the corresponding page of results
+    And the footer updates to show the current range",AdminOrders,Admin user must be on the Orders page; at least 11 orders must exist
+TC12 – No results match the current filters,Verify that when applied filters or a search term yield no matching orders an empty state is displayed.,Medium,Functional,Active,"1. Navigate to /admin/orders. | Expected: The page loads with all orders visible.
+2. Type a string that matches no order, user, or project (e.g., ""ZZZNOTFOUND999"") in the search bar. | Expected: The table body shows an empty state (no rows) and the ""Clear filters"" button appears.
+3. Observe the footer. | Expected: Footer shows a ""No results"" message or ""Showing 0 items"" (indicating zero matching orders).
+4. Observe the table body. | Expected: No order rows are rendered; an empty state message is visible.
+5. Click ""Clear filters"" (or clear the search bar manually). | Expected: The table restores all orders and the footer returns to the original total count.","- The table body is empty when no orders match the active filters.
+- The footer reflects zero results.
+- Clearing the filter restores the full order list.","Feature: Empty state
+  Scenario: No orders match the applied filters or search term
+    Given the admin applies a filter or search term with no matching orders
+    When the table is re-rendered
+    Then the table body shows an empty state
+    And the footer shows no results",AdminOrders,Admin user must be on the Orders page
