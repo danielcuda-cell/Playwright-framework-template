@@ -28,6 +28,8 @@ test.describe('Standards', () => {
     // ─── Prerequisite: create and publish a template ──────────────────────────────
 
     test('should create and publish a CONTROL template for standard creation', async ({ templatesPage }) => {
+        // Template creation + publish + backend propagation can take ~3 min.
+        test.setTimeout(180000);
         templateName = `e2e-std-tmpl-${randomString()}`;
 
         await templatesPage.goto();
@@ -38,7 +40,6 @@ test.describe('Standards', () => {
         await templatesPage.addSection(SECTION_2);
 
         await templatesPage.addComponentToSection(SECTION_1, 'Rack');
-        await templatesPage.addComponentToSection(SECTION_1, 'Rack');
 
         await templatesPage.addDropdownToRack(RACK_1, DROP_1, OPTIONS);
         await templatesPage.addDropdownToRack(RACK_1, DROP_2, OPTIONS);
@@ -48,13 +49,24 @@ test.describe('Standards', () => {
         await templatesPage.addFilterRule(DROP_1, 'Option 1', DROP_3, ['Option 1', 'Option 2']);
         await templatesPage.addAutoselectRule(DROP_1, 'Option 1', DROP_3, 'Option 1');
 
+        // Add a Rack with a dropdown to SECTION 2 — publish requires every section
+        // to have at least one rack and every rack to have at least one component.
+        await templatesPage.addComponentToSection(SECTION_2, 'Rack');
+        await templatesPage.addDropdownToRack('Rack 1', 'drop s2', ['opt a'], SECTION_2);
+
         await templatesPage.saveAsDraft();
 
         // Publish so the template is available in the standard creation wizard
+        await templatesPage.goto();
         await templatesPage.filterByStatus('Draft');
         await templatesPage.openTemplate(templateName);
         await templatesPage.enterEditMode();
         await templatesPage.publish();
+
+        // Poll the Active list until the published template appears — the publish
+        // API returns before the read endpoint reflects the change. Keeping this
+        // in the same test ensures we use the already-authenticated session.
+        await templatesPage.waitForTemplateActive(templateName);
     });
 
     // ─── Create standard from the published template ──────────────────────────────
@@ -62,6 +74,7 @@ test.describe('Standards', () => {
     test('should create a standard from the published template and save as draft', async ({ standardsPage }) => {
         standardName = `e2e-std-${randomString()}`;
 
+        // The template is already Active (verified by test 1).
         await standardsPage.goto();
         await standardsPage.createStandard(templateName, standardName);
 

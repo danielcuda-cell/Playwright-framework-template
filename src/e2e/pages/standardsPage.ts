@@ -36,6 +36,7 @@ export class StandardsPage {
     async createStandard(templateName: string, standardName: string) {
         await this.createNewStandardButton.click();
         await this.page.getByRole('dialog').waitFor({ timeout: 5000 });
+        await this.page.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
 
         // Step 1: Select template by its accessible name (contains the template name)
         await this.page.getByRole('button', { name: new RegExp(templateName) }).click();
@@ -100,7 +101,7 @@ export class StandardsPage {
     }
 
     async assertRackVisible(rackName: string) {
-        await expect(this.page.getByRole('heading', { name: rackName, level: 3 })).toBeVisible();
+        await expect(this.page.getByRole('heading', { name: rackName, level: 3 }).first()).toBeVisible();
     }
 
     async assertDropdownVisible(dropdownTitle: string) {

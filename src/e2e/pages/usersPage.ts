@@ -141,7 +141,7 @@ export class UsersPage {
 
     async selectCompany(value: string) {
         await this.companySelect.fill(value);
-        await this.createUserDialog.getByRole('option', { name: value }).click();
+        await this.createUserDialog.getByRole('option', { name: value, exact: true }).click();
     }
 
     async submitCreateUserForm() {

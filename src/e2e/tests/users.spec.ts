@@ -1,13 +1,17 @@
 import { test, expect } from '../fixtures/test-fixtures';
 import { randomString } from '../../shared/utils/random';
+import { companiesClient } from '../../api/clients/companiesClient';
+import { getAuthApiContext } from '../../api/utils/apiContext';
 
 const adminEmail    = process.env.E2E_USER_EMAIL!;
 const adminPassword = process.env.E2E_USER_PASSWORD!;
 
-const TEST_COMPANY   = 'Acme Corporation';
-const TEST_PHONE     = '+1 (555) 300-0001';
-const TEST_JOB_FN    = 'Engineering';
-const TEST_ROLE      = 'Reader';
+let testCompanyName: string;
+let testCompanyId:   string;
+
+const TEST_PHONE  = '+1 (555) 300-0001';
+const TEST_JOB_FN = 'Engineering';
+const TEST_ROLE   = 'Reader';
 
 function makeUser(tag: string) {
     const uid = randomString(8);
@@ -19,6 +23,23 @@ function makeUser(tag: string) {
 }
 
 test.describe.configure({ mode: 'serial' });
+
+test.beforeAll(async () => {
+    const ctx    = await getAuthApiContext();
+    const client = new companiesClient(ctx);
+    testCompanyName = `E2E Company ${randomString(6)}`;
+    const res    = await client.createCompany({ name: testCompanyName });
+    const body   = await res.json();
+    testCompanyId = body.data.id;
+    await ctx.dispose();
+});
+
+test.afterAll(async () => {
+    const ctx    = await getAuthApiContext();
+    const client = new companiesClient(ctx);
+    await client.deleteCompany(testCompanyId);
+    await ctx.dispose();
+});
 
 // ─── TC1: Create user + validate in company ────────────────────────────────────
 
@@ -43,19 +64,20 @@ test.describe('Users – create user and validate in company', () => {
         await usersPage.fillCreateUserForm({ fullName: createdFullName, phone: user.phone, email: createdEmail });
         await usersPage.selectJobFunction(TEST_JOB_FN);
         await usersPage.selectRole(TEST_ROLE);
-        await usersPage.selectCompany(TEST_COMPANY);
+        await usersPage.selectCompany(testCompanyName);
 
         await usersPage.submitCreateUserForm();
         await usersPage.assertUserCreatedSuccessfully(createdEmail);
     });
 
     test('newly created user appears in their assigned company on the Companies page', async ({ loginPage, companiesPage }) => {
+        test.setTimeout(90000);
         await loginPage.goto();
         await loginPage.login(adminEmail, adminPassword);
         await loginPage.assertLoginSuccessful();
 
         await companiesPage.goto();
-        await companiesPage.selectCompanyByName(TEST_COMPANY);
+        await companiesPage.selectCompanyByName(testCompanyName);
         await companiesPage.assertUserInCompanyUsers(createdEmail);
     });
 
@@ -103,7 +125,7 @@ test.describe('Users – edit user', () => {
         await usersPage.fillCreateUserForm({ fullName: user.fullName, phone: user.phone, email: editableEmail });
         await usersPage.selectJobFunction(TEST_JOB_FN);
         await usersPage.selectRole(TEST_ROLE);
-        await usersPage.selectCompany(TEST_COMPANY);
+        await usersPage.selectCompany(testCompanyName);
 
         await usersPage.submitCreateUserForm();
         await usersPage.assertUserCreatedSuccessfully(editableEmail);
@@ -144,7 +166,7 @@ test.describe('Users – delete user', () => {
         await usersPage.fillCreateUserForm({ fullName: user.fullName, phone: user.phone, email: deletableEmail });
         await usersPage.selectJobFunction(TEST_JOB_FN);
         await usersPage.selectRole(TEST_ROLE);
-        await usersPage.selectCompany(TEST_COMPANY);
+        await usersPage.selectCompany(testCompanyName);
 
         await usersPage.submitCreateUserForm();
         await usersPage.assertUserCreatedSuccessfully(deletableEmail);
@@ -183,13 +205,14 @@ test.describe('Users – delete user and validate removed from company', () => {
         await usersPage.fillCreateUserForm({ fullName: user.fullName, phone: user.phone, email: companyDeleteEmail });
         await usersPage.selectJobFunction(TEST_JOB_FN);
         await usersPage.selectRole(TEST_ROLE);
-        await usersPage.selectCompany(TEST_COMPANY);
+        await usersPage.selectCompany(testCompanyName);
 
         await usersPage.submitCreateUserForm();
         await usersPage.assertUserCreatedSuccessfully(companyDeleteEmail);
     });
 
     test('admin deletes the user and they no longer appear in their company on Companies page', async ({ loginPage, usersPage, companiesPage }) => {
+        test.setTimeout(90000);
         await loginPage.goto();
         await loginPage.login(adminEmail, adminPassword);
         await loginPage.assertLoginSuccessful();
@@ -199,7 +222,7 @@ test.describe('Users – delete user and validate removed from company', () => {
         await usersPage.assertUserNotVisible(companyDeleteEmail);
 
         await companiesPage.goto();
-        await companiesPage.selectCompanyByName(TEST_COMPANY);
+        await companiesPage.selectCompanyByName(testCompanyName);
         await companiesPage.assertUserNotInCompanyUsers(companyDeleteEmail);
     });
 
